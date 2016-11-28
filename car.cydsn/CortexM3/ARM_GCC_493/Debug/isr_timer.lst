@@ -1,0 +1,2126 @@
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"isr_timer.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.isr_timer_Interrupt,"ax",%progbits
+  19              		.align	2
+  20              		.global	isr_timer_Interrupt
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	isr_timer_Interrupt, %function
+  24              	isr_timer_Interrupt:
+  25              	.LFB3:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\isr_timer.c"
+   1:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/isr_timer.c **** * File Name: isr_timer.c  
+   3:.\Generated_Source\PSoC5/isr_timer.c **** * Version 1.70
+   4:.\Generated_Source\PSoC5/isr_timer.c **** *
+   5:.\Generated_Source\PSoC5/isr_timer.c **** *  Description:
+   6:.\Generated_Source\PSoC5/isr_timer.c **** *   API for controlling the state of an interrupt.
+   7:.\Generated_Source\PSoC5/isr_timer.c **** *
+   8:.\Generated_Source\PSoC5/isr_timer.c **** *
+   9:.\Generated_Source\PSoC5/isr_timer.c **** *  Note:
+  10:.\Generated_Source\PSoC5/isr_timer.c **** *
+  11:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/isr_timer.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/isr_timer.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/isr_timer.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/isr_timer.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/isr_timer.c **** 
+  18:.\Generated_Source\PSoC5/isr_timer.c **** 
+  19:.\Generated_Source\PSoC5/isr_timer.c **** #include <cydevice_trm.h>
+  20:.\Generated_Source\PSoC5/isr_timer.c **** #include <CyLib.h>
+  21:.\Generated_Source\PSoC5/isr_timer.c **** #include <isr_timer.h>
+  22:.\Generated_Source\PSoC5/isr_timer.c **** #include "cyapicallbacks.h"
+  23:.\Generated_Source\PSoC5/isr_timer.c **** 
+  24:.\Generated_Source\PSoC5/isr_timer.c **** #if !defined(isr_timer__REMOVED) /* Check for removal by optimization */
+  25:.\Generated_Source\PSoC5/isr_timer.c **** 
+  26:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+  27:.\Generated_Source\PSoC5/isr_timer.c **** *  Place your includes, defines and code here 
+  28:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************/
+  29:.\Generated_Source\PSoC5/isr_timer.c **** /* `#START isr_timer_intc` */
+  30:.\Generated_Source\PSoC5/isr_timer.c **** #include "buzzer.h"
+  31:.\Generated_Source\PSoC5/isr_timer.c **** uint16 time_1ms;
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/isr_timer.c **** uint16 time_5ms;   
+  33:.\Generated_Source\PSoC5/isr_timer.c **** uint8  time_5ms_state;
+  34:.\Generated_Source\PSoC5/isr_timer.c **** uint16 time_1s;  
+  35:.\Generated_Source\PSoC5/isr_timer.c ****  uint16 time_1s_state;    
+  36:.\Generated_Source\PSoC5/isr_timer.c **** /* `#END` */
+  37:.\Generated_Source\PSoC5/isr_timer.c **** 
+  38:.\Generated_Source\PSoC5/isr_timer.c **** #ifndef CYINT_IRQ_BASE
+  39:.\Generated_Source\PSoC5/isr_timer.c **** #define CYINT_IRQ_BASE      16
+  40:.\Generated_Source\PSoC5/isr_timer.c **** #endif /* CYINT_IRQ_BASE */
+  41:.\Generated_Source\PSoC5/isr_timer.c **** #ifndef CYINT_VECT_TABLE
+  42:.\Generated_Source\PSoC5/isr_timer.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  43:.\Generated_Source\PSoC5/isr_timer.c **** #endif /* CYINT_VECT_TABLE */
+  44:.\Generated_Source\PSoC5/isr_timer.c **** 
+  45:.\Generated_Source\PSoC5/isr_timer.c **** /* Declared in startup, used to set unused interrupts to. */
+  46:.\Generated_Source\PSoC5/isr_timer.c **** CY_ISR_PROTO(IntDefaultHandler);
+  47:.\Generated_Source\PSoC5/isr_timer.c **** 
+  48:.\Generated_Source\PSoC5/isr_timer.c **** 
+  49:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+  50:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_Start
+  51:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+  52:.\Generated_Source\PSoC5/isr_timer.c **** *
+  53:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+  54:.\Generated_Source\PSoC5/isr_timer.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  55:.\Generated_Source\PSoC5/isr_timer.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  56:.\Generated_Source\PSoC5/isr_timer.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  57:.\Generated_Source\PSoC5/isr_timer.c **** *  interrupt controller.
+  58:.\Generated_Source\PSoC5/isr_timer.c **** *
+  59:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:  
+  60:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+  61:.\Generated_Source\PSoC5/isr_timer.c **** *
+  62:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+  63:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+  64:.\Generated_Source\PSoC5/isr_timer.c **** *
+  65:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+  66:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_Start(void)
+  67:.\Generated_Source\PSoC5/isr_timer.c **** {
+  68:.\Generated_Source\PSoC5/isr_timer.c ****     /* For all we know the interrupt is active. */
+  69:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_Disable();
+  70:.\Generated_Source\PSoC5/isr_timer.c **** 
+  71:.\Generated_Source\PSoC5/isr_timer.c ****     /* Set the ISR to point to the isr_timer Interrupt. */
+  72:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_SetVector(&isr_timer_Interrupt);
+  73:.\Generated_Source\PSoC5/isr_timer.c **** 
+  74:.\Generated_Source\PSoC5/isr_timer.c ****     /* Set the priority. */
+  75:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_SetPriority((uint8)isr_timer_INTC_PRIOR_NUMBER);
+  76:.\Generated_Source\PSoC5/isr_timer.c **** 
+  77:.\Generated_Source\PSoC5/isr_timer.c ****     /* Enable it. */
+  78:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_Enable();
+  79:.\Generated_Source\PSoC5/isr_timer.c **** }
+  80:.\Generated_Source\PSoC5/isr_timer.c **** 
+  81:.\Generated_Source\PSoC5/isr_timer.c **** 
+  82:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+  83:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_StartEx
+  84:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+  85:.\Generated_Source\PSoC5/isr_timer.c **** *
+  86:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+  87:.\Generated_Source\PSoC5/isr_timer.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  88:.\Generated_Source\PSoC5/isr_timer.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 3
+
+
+  89:.\Generated_Source\PSoC5/isr_timer.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  90:.\Generated_Source\PSoC5/isr_timer.c **** *  the interrupt to the interrupt controller.
+  91:.\Generated_Source\PSoC5/isr_timer.c **** *  
+  92:.\Generated_Source\PSoC5/isr_timer.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  93:.\Generated_Source\PSoC5/isr_timer.c **** *  used to provide consistent definition across compilers:
+  94:.\Generated_Source\PSoC5/isr_timer.c **** *  
+  95:.\Generated_Source\PSoC5/isr_timer.c **** *  Function definition example:
+  96:.\Generated_Source\PSoC5/isr_timer.c **** *   CY_ISR(MyISR)
+  97:.\Generated_Source\PSoC5/isr_timer.c **** *   {
+  98:.\Generated_Source\PSoC5/isr_timer.c **** *   }
+  99:.\Generated_Source\PSoC5/isr_timer.c **** *   Function prototype example:
+ 100:.\Generated_Source\PSoC5/isr_timer.c **** *   CY_ISR_PROTO(MyISR);
+ 101:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 102:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:  
+ 103:.\Generated_Source\PSoC5/isr_timer.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 104:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 105:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 106:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 107:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 108:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 109:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_StartEx(cyisraddress address)
+ 110:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 111:.\Generated_Source\PSoC5/isr_timer.c ****     /* For all we know the interrupt is active. */
+ 112:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_Disable();
+ 113:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 114:.\Generated_Source\PSoC5/isr_timer.c ****     /* Set the ISR to point to the isr_timer Interrupt. */
+ 115:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_SetVector(address);
+ 116:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 117:.\Generated_Source\PSoC5/isr_timer.c ****     /* Set the priority. */
+ 118:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_SetPriority((uint8)isr_timer_INTC_PRIOR_NUMBER);
+ 119:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 120:.\Generated_Source\PSoC5/isr_timer.c ****     /* Enable it. */
+ 121:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_Enable();
+ 122:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 123:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 124:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 125:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 126:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_Stop
+ 127:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 128:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 129:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 130:.\Generated_Source\PSoC5/isr_timer.c **** *   Disables and removes the interrupt.
+ 131:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 132:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:  
+ 133:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 134:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 135:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 136:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 137:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 138:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 139:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_Stop(void)
+ 140:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 141:.\Generated_Source\PSoC5/isr_timer.c ****     /* Disable this interrupt. */
+ 142:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_Disable();
+ 143:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 144:.\Generated_Source\PSoC5/isr_timer.c ****     /* Set the ISR to point to the passive one. */
+ 145:.\Generated_Source\PSoC5/isr_timer.c ****     isr_timer_SetVector(&IntDefaultHandler);
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 4
+
+
+ 146:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 147:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 148:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 149:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 150:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_Interrupt
+ 151:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 152:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 153:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 154:.\Generated_Source\PSoC5/isr_timer.c **** *   The default Interrupt Service Routine for isr_timer.
+ 155:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 156:.\Generated_Source\PSoC5/isr_timer.c **** *   Add custom code between the coments to keep the next version of this file
+ 157:.\Generated_Source\PSoC5/isr_timer.c **** *   from over writting your code.
+ 158:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 159:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:  
+ 160:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 161:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 162:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 163:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 164:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 165:.\Generated_Source\PSoC5/isr_timer.c **** CY_ISR(isr_timer_Interrupt)
+ 166:.\Generated_Source\PSoC5/isr_timer.c **** {
+  27              		.loc 1 166 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 3, -8
+  34              		.cfi_offset 14, -4
+ 167:.\Generated_Source\PSoC5/isr_timer.c ****     #ifdef isr_timer_INTERRUPT_INTERRUPT_CALLBACK
+ 168:.\Generated_Source\PSoC5/isr_timer.c ****         isr_timer_Interrupt_InterruptCallback();
+ 169:.\Generated_Source\PSoC5/isr_timer.c ****     #endif /* isr_timer_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 170:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 171:.\Generated_Source\PSoC5/isr_timer.c ****     /*  Place your Interrupt code here. */
+ 172:.\Generated_Source\PSoC5/isr_timer.c ****     /* `#START isr_timer_Interrupt` */
+ 173:.\Generated_Source\PSoC5/isr_timer.c ****          time_5ms++;
+  35              		.loc 1 173 0
+  36 0002 0F4A     		ldr	r2, .L5
+  37 0004 1388     		ldrh	r3, [r2]
+  38 0006 0133     		adds	r3, r3, #1
+  39 0008 9BB2     		uxth	r3, r3
+  40 000a 1380     		strh	r3, [r2]	@ movhi
+ 174:.\Generated_Source\PSoC5/isr_timer.c ****          time_1s++;
+  41              		.loc 1 174 0
+  42 000c 0D49     		ldr	r1, .L5+4
+  43 000e 0A88     		ldrh	r2, [r1]
+  44 0010 0132     		adds	r2, r2, #1
+  45 0012 92B2     		uxth	r2, r2
+  46 0014 0A80     		strh	r2, [r1]	@ movhi
+ 175:.\Generated_Source\PSoC5/isr_timer.c ****     if(time_1s >1000)
+  47              		.loc 1 175 0
+  48 0016 B2F57A7F 		cmp	r2, #1000
+  49 001a 05D9     		bls	.L2
+ 176:.\Generated_Source\PSoC5/isr_timer.c ****     {
+ 177:.\Generated_Source\PSoC5/isr_timer.c ****         time_1s_state = 1;
+  50              		.loc 1 177 0
+  51 001c 0121     		movs	r1, #1
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 5
+
+
+  52 001e 0A4A     		ldr	r2, .L5+8
+  53 0020 1180     		strh	r1, [r2]	@ movhi
+ 178:.\Generated_Source\PSoC5/isr_timer.c ****         time_1s = 0;
+  54              		.loc 1 178 0
+  55 0022 0021     		movs	r1, #0
+  56 0024 074A     		ldr	r2, .L5+4
+  57 0026 1180     		strh	r1, [r2]	@ movhi
+  58              	.L2:
+ 179:.\Generated_Source\PSoC5/isr_timer.c ****     }
+ 180:.\Generated_Source\PSoC5/isr_timer.c ****       if(time_5ms > 5)
+  59              		.loc 1 180 0
+  60 0028 052B     		cmp	r3, #5
+  61 002a 07D9     		bls	.L1
+  62              	.LBB2:
+ 181:.\Generated_Source\PSoC5/isr_timer.c ****       {
+ 182:.\Generated_Source\PSoC5/isr_timer.c ****         cb_bzr_Main();
+  63              		.loc 1 182 0
+  64 002c FFF7FEFF 		bl	cb_bzr_Main
+  65              	.LVL0:
+ 183:.\Generated_Source\PSoC5/isr_timer.c ****         time_5ms_state = 1;
+  66              		.loc 1 183 0
+  67 0030 0122     		movs	r2, #1
+  68 0032 064B     		ldr	r3, .L5+12
+  69 0034 1A70     		strb	r2, [r3]
+ 184:.\Generated_Source\PSoC5/isr_timer.c ****         time_5ms = 0;
+  70              		.loc 1 184 0
+  71 0036 0022     		movs	r2, #0
+  72 0038 014B     		ldr	r3, .L5
+  73 003a 1A80     		strh	r2, [r3]	@ movhi
+  74              	.L1:
+  75 003c 08BD     		pop	{r3, pc}
+  76              	.L6:
+  77 003e 00BF     		.align	2
+  78              	.L5:
+  79 0040 00000000 		.word	time_5ms
+  80 0044 00000000 		.word	time_1s
+  81 0048 00000000 		.word	time_1s_state
+  82 004c 00000000 		.word	time_5ms_state
+  83              	.LBE2:
+  84              		.cfi_endproc
+  85              	.LFE3:
+  86              		.size	isr_timer_Interrupt, .-isr_timer_Interrupt
+  87              		.section	.text.isr_timer_SetVector,"ax",%progbits
+  88              		.align	2
+  89              		.global	isr_timer_SetVector
+  90              		.thumb
+  91              		.thumb_func
+  92              		.type	isr_timer_SetVector, %function
+  93              	isr_timer_SetVector:
+  94              	.LFB4:
+ 185:.\Generated_Source\PSoC5/isr_timer.c ****       }
+ 186:.\Generated_Source\PSoC5/isr_timer.c ****     /* `#END` */
+ 187:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 188:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 189:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 190:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 191:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_SetVector
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 6
+
+
+ 192:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 193:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 194:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 195:.\Generated_Source\PSoC5/isr_timer.c **** *   Change the ISR vector for the Interrupt. Note calling isr_timer_Start
+ 196:.\Generated_Source\PSoC5/isr_timer.c **** *   will override any effect this method would have had. To set the vector 
+ 197:.\Generated_Source\PSoC5/isr_timer.c **** *   before the component has been started use isr_timer_StartEx instead.
+ 198:.\Generated_Source\PSoC5/isr_timer.c **** * 
+ 199:.\Generated_Source\PSoC5/isr_timer.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 200:.\Generated_Source\PSoC5/isr_timer.c **** *   used to provide consistent definition across compilers:
+ 201:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 202:.\Generated_Source\PSoC5/isr_timer.c **** *   Function definition example:
+ 203:.\Generated_Source\PSoC5/isr_timer.c **** *   CY_ISR(MyISR)
+ 204:.\Generated_Source\PSoC5/isr_timer.c **** *   {
+ 205:.\Generated_Source\PSoC5/isr_timer.c **** *   }
+ 206:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 207:.\Generated_Source\PSoC5/isr_timer.c **** *   Function prototype example:
+ 208:.\Generated_Source\PSoC5/isr_timer.c **** *     CY_ISR_PROTO(MyISR);
+ 209:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 210:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 211:.\Generated_Source\PSoC5/isr_timer.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 212:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 213:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 214:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 215:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 216:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 217:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_SetVector(cyisraddress address)
+ 218:.\Generated_Source\PSoC5/isr_timer.c **** {
+  95              		.loc 1 218 0
+  96              		.cfi_startproc
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99              		@ link register save eliminated.
+ 100              	.LVL1:
+ 219:.\Generated_Source\PSoC5/isr_timer.c ****     cyisraddress * ramVectorTable;
+ 220:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 221:.\Generated_Source\PSoC5/isr_timer.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+ 101              		.loc 1 221 0
+ 102 0000 014B     		ldr	r3, .L8
+ 103 0002 1B68     		ldr	r3, [r3]
+ 104              	.LVL2:
+ 222:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 223:.\Generated_Source\PSoC5/isr_timer.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_timer__INTC_NUMBER] = address;
+ 105              		.loc 1 223 0
+ 106 0004 5864     		str	r0, [r3, #68]
+ 107 0006 7047     		bx	lr
+ 108              	.L9:
+ 109              		.align	2
+ 110              	.L8:
+ 111 0008 08ED00E0 		.word	-536810232
+ 112              		.cfi_endproc
+ 113              	.LFE4:
+ 114              		.size	isr_timer_SetVector, .-isr_timer_SetVector
+ 115              		.section	.text.isr_timer_GetVector,"ax",%progbits
+ 116              		.align	2
+ 117              		.global	isr_timer_GetVector
+ 118              		.thumb
+ 119              		.thumb_func
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 7
+
+
+ 120              		.type	isr_timer_GetVector, %function
+ 121              	isr_timer_GetVector:
+ 122              	.LFB5:
+ 224:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 225:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 226:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 227:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 228:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_GetVector
+ 229:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 230:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 231:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 232:.\Generated_Source\PSoC5/isr_timer.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 233:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 234:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 235:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 236:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 237:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 238:.\Generated_Source\PSoC5/isr_timer.c **** *   Address of the ISR in the interrupt vector table.
+ 239:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 240:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 241:.\Generated_Source\PSoC5/isr_timer.c **** cyisraddress isr_timer_GetVector(void)
+ 242:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 123              		.loc 1 242 0
+ 124              		.cfi_startproc
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127              		@ link register save eliminated.
+ 243:.\Generated_Source\PSoC5/isr_timer.c ****     cyisraddress * ramVectorTable;
+ 244:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 245:.\Generated_Source\PSoC5/isr_timer.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+ 128              		.loc 1 245 0
+ 129 0000 014B     		ldr	r3, .L11
+ 130 0002 1B68     		ldr	r3, [r3]
+ 131              	.LVL3:
+ 246:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 247:.\Generated_Source\PSoC5/isr_timer.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_timer__INTC_NUMBER];
+ 248:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 132              		.loc 1 248 0
+ 133 0004 586C     		ldr	r0, [r3, #68]
+ 134 0006 7047     		bx	lr
+ 135              	.L12:
+ 136              		.align	2
+ 137              	.L11:
+ 138 0008 08ED00E0 		.word	-536810232
+ 139              		.cfi_endproc
+ 140              	.LFE5:
+ 141              		.size	isr_timer_GetVector, .-isr_timer_GetVector
+ 142              		.section	.text.isr_timer_SetPriority,"ax",%progbits
+ 143              		.align	2
+ 144              		.global	isr_timer_SetPriority
+ 145              		.thumb
+ 146              		.thumb_func
+ 147              		.type	isr_timer_SetPriority, %function
+ 148              	isr_timer_SetPriority:
+ 149              	.LFB6:
+ 249:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 250:.\Generated_Source\PSoC5/isr_timer.c **** 
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 8
+
+
+ 251:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 252:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_SetPriority
+ 253:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 254:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 255:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 256:.\Generated_Source\PSoC5/isr_timer.c **** *   Sets the Priority of the Interrupt. 
+ 257:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 258:.\Generated_Source\PSoC5/isr_timer.c **** *   Note calling isr_timer_Start or isr_timer_StartEx will 
+ 259:.\Generated_Source\PSoC5/isr_timer.c **** *   override any effect this API would have had. This API should only be called
+ 260:.\Generated_Source\PSoC5/isr_timer.c **** *   after isr_timer_Start or isr_timer_StartEx has been called. 
+ 261:.\Generated_Source\PSoC5/isr_timer.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 262:.\Generated_Source\PSoC5/isr_timer.c **** *   Interrupt Editor.
+ 263:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 264:.\Generated_Source\PSoC5/isr_timer.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 265:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 266:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 267:.\Generated_Source\PSoC5/isr_timer.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 268:.\Generated_Source\PSoC5/isr_timer.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 269:.\Generated_Source\PSoC5/isr_timer.c **** *             PSoC 4: Priority is from 0 to 3.
+ 270:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 271:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 272:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 273:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 274:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 275:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_SetPriority(uint8 priority)
+ 276:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 150              		.loc 1 276 0
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 0, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+ 155              	.LVL4:
+ 277:.\Generated_Source\PSoC5/isr_timer.c ****     *isr_timer_INTC_PRIOR = priority << 5;
+ 156              		.loc 1 277 0
+ 157 0000 4001     		lsls	r0, r0, #5
+ 158              	.LVL5:
+ 159 0002 C0B2     		uxtb	r0, r0
+ 160 0004 014B     		ldr	r3, .L14
+ 161 0006 1870     		strb	r0, [r3]
+ 162 0008 7047     		bx	lr
+ 163              	.L15:
+ 164 000a 00BF     		.align	2
+ 165              	.L14:
+ 166 000c 01E400E0 		.word	-536812543
+ 167              		.cfi_endproc
+ 168              	.LFE6:
+ 169              		.size	isr_timer_SetPriority, .-isr_timer_SetPriority
+ 170              		.section	.text.isr_timer_GetPriority,"ax",%progbits
+ 171              		.align	2
+ 172              		.global	isr_timer_GetPriority
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.type	isr_timer_GetPriority, %function
+ 176              	isr_timer_GetPriority:
+ 177              	.LFB7:
+ 278:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 279:.\Generated_Source\PSoC5/isr_timer.c **** 
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 9
+
+
+ 280:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 281:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 282:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_GetPriority
+ 283:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 284:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 285:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 286:.\Generated_Source\PSoC5/isr_timer.c **** *   Gets the Priority of the Interrupt.
+ 287:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 288:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 289:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 290:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 291:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 292:.\Generated_Source\PSoC5/isr_timer.c **** *   Priority of the interrupt, 0 being the highest priority
+ 293:.\Generated_Source\PSoC5/isr_timer.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 294:.\Generated_Source\PSoC5/isr_timer.c **** *    PSoC 4: Priority is from 0 to 3.
+ 295:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 296:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 297:.\Generated_Source\PSoC5/isr_timer.c **** uint8 isr_timer_GetPriority(void)
+ 298:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 178              		.loc 1 298 0
+ 179              		.cfi_startproc
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182              		@ link register save eliminated.
+ 299:.\Generated_Source\PSoC5/isr_timer.c ****     uint8 priority;
+ 300:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 301:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 302:.\Generated_Source\PSoC5/isr_timer.c ****     priority = *isr_timer_INTC_PRIOR >> 5;
+ 183              		.loc 1 302 0
+ 184 0000 014B     		ldr	r3, .L17
+ 185 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 186              	.LVL6:
+ 303:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 304:.\Generated_Source\PSoC5/isr_timer.c ****     return priority;
+ 305:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 187              		.loc 1 305 0
+ 188 0004 4009     		lsrs	r0, r0, #5
+ 189              	.LVL7:
+ 190 0006 7047     		bx	lr
+ 191              	.L18:
+ 192              		.align	2
+ 193              	.L17:
+ 194 0008 01E400E0 		.word	-536812543
+ 195              		.cfi_endproc
+ 196              	.LFE7:
+ 197              		.size	isr_timer_GetPriority, .-isr_timer_GetPriority
+ 198              		.section	.text.isr_timer_Enable,"ax",%progbits
+ 199              		.align	2
+ 200              		.global	isr_timer_Enable
+ 201              		.thumb
+ 202              		.thumb_func
+ 203              		.type	isr_timer_Enable, %function
+ 204              	isr_timer_Enable:
+ 205              	.LFB8:
+ 306:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 307:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 308:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 10
+
+
+ 309:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_Enable
+ 310:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 311:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 312:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 313:.\Generated_Source\PSoC5/isr_timer.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 314:.\Generated_Source\PSoC5/isr_timer.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 315:.\Generated_Source\PSoC5/isr_timer.c **** *   function, which sets the vector and the priority, has been called.
+ 316:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 317:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 318:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 319:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 320:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 321:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 322:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 323:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 324:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_Enable(void)
+ 325:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 206              		.loc 1 325 0
+ 207              		.cfi_startproc
+ 208              		@ args = 0, pretend = 0, frame = 0
+ 209              		@ frame_needed = 0, uses_anonymous_args = 0
+ 210              		@ link register save eliminated.
+ 326:.\Generated_Source\PSoC5/isr_timer.c ****     /* Enable the general interrupt. */
+ 327:.\Generated_Source\PSoC5/isr_timer.c ****     *isr_timer_INTC_SET_EN = isr_timer__INTC_MASK;
+ 211              		.loc 1 327 0
+ 212 0000 0222     		movs	r2, #2
+ 213 0002 014B     		ldr	r3, .L20
+ 214 0004 1A60     		str	r2, [r3]
+ 215 0006 7047     		bx	lr
+ 216              	.L21:
+ 217              		.align	2
+ 218              	.L20:
+ 219 0008 00E100E0 		.word	-536813312
+ 220              		.cfi_endproc
+ 221              	.LFE8:
+ 222              		.size	isr_timer_Enable, .-isr_timer_Enable
+ 223              		.section	.text.isr_timer_GetState,"ax",%progbits
+ 224              		.align	2
+ 225              		.global	isr_timer_GetState
+ 226              		.thumb
+ 227              		.thumb_func
+ 228              		.type	isr_timer_GetState, %function
+ 229              	isr_timer_GetState:
+ 230              	.LFB9:
+ 328:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 329:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 330:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 331:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 332:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_GetState
+ 333:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 334:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 335:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 336:.\Generated_Source\PSoC5/isr_timer.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 337:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 338:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 339:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 340:.\Generated_Source\PSoC5/isr_timer.c **** *
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 11
+
+
+ 341:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 342:.\Generated_Source\PSoC5/isr_timer.c **** *   1 if enabled, 0 if disabled.
+ 343:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 344:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 345:.\Generated_Source\PSoC5/isr_timer.c **** uint8 isr_timer_GetState(void)
+ 346:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 231              		.loc 1 346 0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+ 235              		@ link register save eliminated.
+ 347:.\Generated_Source\PSoC5/isr_timer.c ****     /* Get the state of the general interrupt. */
+ 348:.\Generated_Source\PSoC5/isr_timer.c ****     return ((*isr_timer_INTC_SET_EN & (uint32)isr_timer__INTC_MASK) != 0u) ? 1u:0u;
+ 236              		.loc 1 348 0
+ 237 0000 044B     		ldr	r3, .L25
+ 238 0002 1B68     		ldr	r3, [r3]
+ 239 0004 13F0020F 		tst	r3, #2
+ 240 0008 01D0     		beq	.L24
+ 241 000a 0120     		movs	r0, #1
+ 242 000c 7047     		bx	lr
+ 243              	.L24:
+ 244 000e 0020     		movs	r0, #0
+ 349:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 245              		.loc 1 349 0
+ 246 0010 7047     		bx	lr
+ 247              	.L26:
+ 248 0012 00BF     		.align	2
+ 249              	.L25:
+ 250 0014 00E100E0 		.word	-536813312
+ 251              		.cfi_endproc
+ 252              	.LFE9:
+ 253              		.size	isr_timer_GetState, .-isr_timer_GetState
+ 254              		.section	.text.isr_timer_Disable,"ax",%progbits
+ 255              		.align	2
+ 256              		.global	isr_timer_Disable
+ 257              		.thumb
+ 258              		.thumb_func
+ 259              		.type	isr_timer_Disable, %function
+ 260              	isr_timer_Disable:
+ 261              	.LFB10:
+ 350:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 351:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 352:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 353:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_Disable
+ 354:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 355:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 356:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 357:.\Generated_Source\PSoC5/isr_timer.c **** *   Disables the Interrupt in the interrupt controller.
+ 358:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 359:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 360:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 361:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 362:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 363:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 364:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 365:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 366:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_Disable(void)
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 12
+
+
+ 367:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 262              		.loc 1 367 0
+ 263              		.cfi_startproc
+ 264              		@ args = 0, pretend = 0, frame = 0
+ 265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 266              		@ link register save eliminated.
+ 368:.\Generated_Source\PSoC5/isr_timer.c ****     /* Disable the general interrupt. */
+ 369:.\Generated_Source\PSoC5/isr_timer.c ****     *isr_timer_INTC_CLR_EN = isr_timer__INTC_MASK;
+ 267              		.loc 1 369 0
+ 268 0000 0222     		movs	r2, #2
+ 269 0002 014B     		ldr	r3, .L28
+ 270 0004 1A60     		str	r2, [r3]
+ 271 0006 7047     		bx	lr
+ 272              	.L29:
+ 273              		.align	2
+ 274              	.L28:
+ 275 0008 80E100E0 		.word	-536813184
+ 276              		.cfi_endproc
+ 277              	.LFE10:
+ 278              		.size	isr_timer_Disable, .-isr_timer_Disable
+ 279              		.section	.text.isr_timer_Start,"ax",%progbits
+ 280              		.align	2
+ 281              		.global	isr_timer_Start
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.type	isr_timer_Start, %function
+ 285              	isr_timer_Start:
+ 286              	.LFB0:
+  67:.\Generated_Source\PSoC5/isr_timer.c ****     /* For all we know the interrupt is active. */
+ 287              		.loc 1 67 0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 0
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291 0000 08B5     		push	{r3, lr}
+ 292              		.cfi_def_cfa_offset 8
+ 293              		.cfi_offset 3, -8
+ 294              		.cfi_offset 14, -4
+  69:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 295              		.loc 1 69 0
+ 296 0002 FFF7FEFF 		bl	isr_timer_Disable
+ 297              	.LVL8:
+  72:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 298              		.loc 1 72 0
+ 299 0006 0448     		ldr	r0, .L32
+ 300 0008 FFF7FEFF 		bl	isr_timer_SetVector
+ 301              	.LVL9:
+  75:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 302              		.loc 1 75 0
+ 303 000c 0720     		movs	r0, #7
+ 304 000e FFF7FEFF 		bl	isr_timer_SetPriority
+ 305              	.LVL10:
+  78:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 306              		.loc 1 78 0
+ 307 0012 FFF7FEFF 		bl	isr_timer_Enable
+ 308              	.LVL11:
+ 309 0016 08BD     		pop	{r3, pc}
+ 310              	.L33:
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 13
+
+
+ 311              		.align	2
+ 312              	.L32:
+ 313 0018 00000000 		.word	isr_timer_Interrupt
+ 314              		.cfi_endproc
+ 315              	.LFE0:
+ 316              		.size	isr_timer_Start, .-isr_timer_Start
+ 317              		.section	.text.isr_timer_StartEx,"ax",%progbits
+ 318              		.align	2
+ 319              		.global	isr_timer_StartEx
+ 320              		.thumb
+ 321              		.thumb_func
+ 322              		.type	isr_timer_StartEx, %function
+ 323              	isr_timer_StartEx:
+ 324              	.LFB1:
+ 110:.\Generated_Source\PSoC5/isr_timer.c ****     /* For all we know the interrupt is active. */
+ 325              		.loc 1 110 0
+ 326              		.cfi_startproc
+ 327              		@ args = 0, pretend = 0, frame = 0
+ 328              		@ frame_needed = 0, uses_anonymous_args = 0
+ 329              	.LVL12:
+ 330 0000 10B5     		push	{r4, lr}
+ 331              		.cfi_def_cfa_offset 8
+ 332              		.cfi_offset 4, -8
+ 333              		.cfi_offset 14, -4
+ 334 0002 0446     		mov	r4, r0
+ 112:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 335              		.loc 1 112 0
+ 336 0004 FFF7FEFF 		bl	isr_timer_Disable
+ 337              	.LVL13:
+ 115:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 338              		.loc 1 115 0
+ 339 0008 2046     		mov	r0, r4
+ 340 000a FFF7FEFF 		bl	isr_timer_SetVector
+ 341              	.LVL14:
+ 118:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 342              		.loc 1 118 0
+ 343 000e 0720     		movs	r0, #7
+ 344 0010 FFF7FEFF 		bl	isr_timer_SetPriority
+ 345              	.LVL15:
+ 121:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 346              		.loc 1 121 0
+ 347 0014 FFF7FEFF 		bl	isr_timer_Enable
+ 348              	.LVL16:
+ 349 0018 10BD     		pop	{r4, pc}
+ 350              		.cfi_endproc
+ 351              	.LFE1:
+ 352              		.size	isr_timer_StartEx, .-isr_timer_StartEx
+ 353 001a 00BF     		.section	.text.isr_timer_Stop,"ax",%progbits
+ 354              		.align	2
+ 355              		.global	isr_timer_Stop
+ 356              		.thumb
+ 357              		.thumb_func
+ 358              		.type	isr_timer_Stop, %function
+ 359              	isr_timer_Stop:
+ 360              	.LFB2:
+ 140:.\Generated_Source\PSoC5/isr_timer.c ****     /* Disable this interrupt. */
+ 361              		.loc 1 140 0
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 14
+
+
+ 362              		.cfi_startproc
+ 363              		@ args = 0, pretend = 0, frame = 0
+ 364              		@ frame_needed = 0, uses_anonymous_args = 0
+ 365 0000 08B5     		push	{r3, lr}
+ 366              		.cfi_def_cfa_offset 8
+ 367              		.cfi_offset 3, -8
+ 368              		.cfi_offset 14, -4
+ 142:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 369              		.loc 1 142 0
+ 370 0002 FFF7FEFF 		bl	isr_timer_Disable
+ 371              	.LVL17:
+ 145:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 372              		.loc 1 145 0
+ 373 0006 0248     		ldr	r0, .L38
+ 374 0008 FFF7FEFF 		bl	isr_timer_SetVector
+ 375              	.LVL18:
+ 376 000c 08BD     		pop	{r3, pc}
+ 377              	.L39:
+ 378 000e 00BF     		.align	2
+ 379              	.L38:
+ 380 0010 00000000 		.word	IntDefaultHandler
+ 381              		.cfi_endproc
+ 382              	.LFE2:
+ 383              		.size	isr_timer_Stop, .-isr_timer_Stop
+ 384              		.section	.text.isr_timer_SetPending,"ax",%progbits
+ 385              		.align	2
+ 386              		.global	isr_timer_SetPending
+ 387              		.thumb
+ 388              		.thumb_func
+ 389              		.type	isr_timer_SetPending, %function
+ 390              	isr_timer_SetPending:
+ 391              	.LFB11:
+ 370:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 371:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 372:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 373:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 374:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_SetPending
+ 375:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 376:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 377:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 378:.\Generated_Source\PSoC5/isr_timer.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 379:.\Generated_Source\PSoC5/isr_timer.c **** *   generating the interrupt.
+ 380:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 381:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 382:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 383:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 384:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 385:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 386:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 387:.\Generated_Source\PSoC5/isr_timer.c **** * Side Effects:
+ 388:.\Generated_Source\PSoC5/isr_timer.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 389:.\Generated_Source\PSoC5/isr_timer.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 390:.\Generated_Source\PSoC5/isr_timer.c **** *   interrupts).
+ 391:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 392:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 393:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_SetPending(void)
+ 394:.\Generated_Source\PSoC5/isr_timer.c **** {
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 15
+
+
+ 392              		.loc 1 394 0
+ 393              		.cfi_startproc
+ 394              		@ args = 0, pretend = 0, frame = 0
+ 395              		@ frame_needed = 0, uses_anonymous_args = 0
+ 396              		@ link register save eliminated.
+ 395:.\Generated_Source\PSoC5/isr_timer.c ****     *isr_timer_INTC_SET_PD = isr_timer__INTC_MASK;
+ 397              		.loc 1 395 0
+ 398 0000 0222     		movs	r2, #2
+ 399 0002 014B     		ldr	r3, .L41
+ 400 0004 1A60     		str	r2, [r3]
+ 401 0006 7047     		bx	lr
+ 402              	.L42:
+ 403              		.align	2
+ 404              	.L41:
+ 405 0008 00E200E0 		.word	-536813056
+ 406              		.cfi_endproc
+ 407              	.LFE11:
+ 408              		.size	isr_timer_SetPending, .-isr_timer_SetPending
+ 409              		.section	.text.isr_timer_ClearPending,"ax",%progbits
+ 410              		.align	2
+ 411              		.global	isr_timer_ClearPending
+ 412              		.thumb
+ 413              		.thumb_func
+ 414              		.type	isr_timer_ClearPending, %function
+ 415              	isr_timer_ClearPending:
+ 416              	.LFB12:
+ 396:.\Generated_Source\PSoC5/isr_timer.c **** }
+ 397:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 398:.\Generated_Source\PSoC5/isr_timer.c **** 
+ 399:.\Generated_Source\PSoC5/isr_timer.c **** /*******************************************************************************
+ 400:.\Generated_Source\PSoC5/isr_timer.c **** * Function Name: isr_timer_ClearPending
+ 401:.\Generated_Source\PSoC5/isr_timer.c **** ********************************************************************************
+ 402:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 403:.\Generated_Source\PSoC5/isr_timer.c **** * Summary:
+ 404:.\Generated_Source\PSoC5/isr_timer.c **** *   Clears a pending interrupt in the interrupt controller.
+ 405:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 406:.\Generated_Source\PSoC5/isr_timer.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 407:.\Generated_Source\PSoC5/isr_timer.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 408:.\Generated_Source\PSoC5/isr_timer.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 409:.\Generated_Source\PSoC5/isr_timer.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 410:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 411:.\Generated_Source\PSoC5/isr_timer.c **** * Parameters:
+ 412:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 413:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 414:.\Generated_Source\PSoC5/isr_timer.c **** * Return:
+ 415:.\Generated_Source\PSoC5/isr_timer.c **** *   None
+ 416:.\Generated_Source\PSoC5/isr_timer.c **** *
+ 417:.\Generated_Source\PSoC5/isr_timer.c **** *******************************************************************************/
+ 418:.\Generated_Source\PSoC5/isr_timer.c **** void isr_timer_ClearPending(void)
+ 419:.\Generated_Source\PSoC5/isr_timer.c **** {
+ 417              		.loc 1 419 0
+ 418              		.cfi_startproc
+ 419              		@ args = 0, pretend = 0, frame = 0
+ 420              		@ frame_needed = 0, uses_anonymous_args = 0
+ 421              		@ link register save eliminated.
+ 420:.\Generated_Source\PSoC5/isr_timer.c ****     *isr_timer_INTC_CLR_PD = isr_timer__INTC_MASK;
+ 422              		.loc 1 420 0
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 16
+
+
+ 423 0000 0222     		movs	r2, #2
+ 424 0002 014B     		ldr	r3, .L44
+ 425 0004 1A60     		str	r2, [r3]
+ 426 0006 7047     		bx	lr
+ 427              	.L45:
+ 428              		.align	2
+ 429              	.L44:
+ 430 0008 80E200E0 		.word	-536812928
+ 431              		.cfi_endproc
+ 432              	.LFE12:
+ 433              		.size	isr_timer_ClearPending, .-isr_timer_ClearPending
+ 434              		.comm	time_1s_state,2,2
+ 435              		.comm	time_1s,2,2
+ 436              		.comm	time_5ms_state,1,1
+ 437              		.comm	time_5ms,2,2
+ 438              		.comm	time_1ms,2,2
+ 439              		.text
+ 440              	.Letext0:
+ 441              		.file 2 "Generated_Source\\PSoC5/cytypes.h"
+ 442              		.section	.debug_info,"",%progbits
+ 443              	.Ldebug_info0:
+ 444 0000 5B030000 		.4byte	0x35b
+ 445 0004 0400     		.2byte	0x4
+ 446 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 447 000a 04       		.byte	0x4
+ 448 000b 01       		.uleb128 0x1
+ 449 000c 5C010000 		.4byte	.LASF39
+ 450 0010 01       		.byte	0x1
+ 451 0011 81020000 		.4byte	.LASF40
+ 452 0015 DC020000 		.4byte	.LASF41
+ 453 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 454 001d 00000000 		.4byte	0
+ 455 0021 00000000 		.4byte	.Ldebug_line0
+ 456 0025 02       		.uleb128 0x2
+ 457 0026 04       		.byte	0x4
+ 458 0027 05       		.byte	0x5
+ 459 0028 696E7400 		.ascii	"int\000"
+ 460 002c 03       		.uleb128 0x3
+ 461 002d 04       		.byte	0x4
+ 462 002e 07       		.byte	0x7
+ 463 002f EA010000 		.4byte	.LASF0
+ 464 0033 03       		.uleb128 0x3
+ 465 0034 01       		.byte	0x1
+ 466 0035 06       		.byte	0x6
+ 467 0036 C7020000 		.4byte	.LASF1
+ 468 003a 03       		.uleb128 0x3
+ 469 003b 01       		.byte	0x1
+ 470 003c 08       		.byte	0x8
+ 471 003d C7000000 		.4byte	.LASF2
+ 472 0041 03       		.uleb128 0x3
+ 473 0042 02       		.byte	0x2
+ 474 0043 05       		.byte	0x5
+ 475 0044 34010000 		.4byte	.LASF3
+ 476 0048 03       		.uleb128 0x3
+ 477 0049 02       		.byte	0x2
+ 478 004a 07       		.byte	0x7
+ 479 004b 52000000 		.4byte	.LASF4
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 17
+
+
+ 480 004f 03       		.uleb128 0x3
+ 481 0050 04       		.byte	0x4
+ 482 0051 05       		.byte	0x5
+ 483 0052 B5020000 		.4byte	.LASF5
+ 484 0056 03       		.uleb128 0x3
+ 485 0057 04       		.byte	0x4
+ 486 0058 07       		.byte	0x7
+ 487 0059 E2000000 		.4byte	.LASF6
+ 488 005d 03       		.uleb128 0x3
+ 489 005e 08       		.byte	0x8
+ 490 005f 05       		.byte	0x5
+ 491 0060 49020000 		.4byte	.LASF7
+ 492 0064 03       		.uleb128 0x3
+ 493 0065 08       		.byte	0x8
+ 494 0066 07       		.byte	0x7
+ 495 0067 FF010000 		.4byte	.LASF8
+ 496 006b 03       		.uleb128 0x3
+ 497 006c 04       		.byte	0x4
+ 498 006d 07       		.byte	0x7
+ 499 006e 40020000 		.4byte	.LASF9
+ 500 0072 04       		.uleb128 0x4
+ 501 0073 04       		.byte	0x4
+ 502 0074 78000000 		.4byte	0x78
+ 503 0078 05       		.uleb128 0x5
+ 504 0079 03       		.uleb128 0x3
+ 505 007a 01       		.byte	0x1
+ 506 007b 08       		.byte	0x8
+ 507 007c 6D020000 		.4byte	.LASF10
+ 508 0080 06       		.uleb128 0x6
+ 509 0081 F4000000 		.4byte	.LASF11
+ 510 0085 02       		.byte	0x2
+ 511 0086 C2       		.byte	0xc2
+ 512 0087 3A000000 		.4byte	0x3a
+ 513 008b 06       		.uleb128 0x6
+ 514 008c 3E010000 		.4byte	.LASF12
+ 515 0090 02       		.byte	0x2
+ 516 0091 C3       		.byte	0xc3
+ 517 0092 48000000 		.4byte	0x48
+ 518 0096 06       		.uleb128 0x6
+ 519 0097 55010000 		.4byte	.LASF13
+ 520 009b 02       		.byte	0x2
+ 521 009c C4       		.byte	0xc4
+ 522 009d 56000000 		.4byte	0x56
+ 523 00a1 03       		.uleb128 0x3
+ 524 00a2 04       		.byte	0x4
+ 525 00a3 04       		.byte	0x4
+ 526 00a4 C1000000 		.4byte	.LASF14
+ 527 00a8 03       		.uleb128 0x3
+ 528 00a9 08       		.byte	0x8
+ 529 00aa 04       		.byte	0x4
+ 530 00ab 2D010000 		.4byte	.LASF15
+ 531 00af 07       		.uleb128 0x7
+ 532 00b0 DD000000 		.4byte	.LASF16
+ 533 00b4 02       		.byte	0x2
+ 534 00b5 6C01     		.2byte	0x16c
+ 535 00b7 BB000000 		.4byte	0xbb
+ 536 00bb 08       		.uleb128 0x8
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 18
+
+
+ 537 00bc 80000000 		.4byte	0x80
+ 538 00c0 07       		.uleb128 0x7
+ 539 00c1 14000000 		.4byte	.LASF17
+ 540 00c5 02       		.byte	0x2
+ 541 00c6 6E01     		.2byte	0x16e
+ 542 00c8 CC000000 		.4byte	0xcc
+ 543 00cc 08       		.uleb128 0x8
+ 544 00cd 96000000 		.4byte	0x96
+ 545 00d1 07       		.uleb128 0x7
+ 546 00d2 16020000 		.4byte	.LASF18
+ 547 00d6 02       		.byte	0x2
+ 548 00d7 7E01     		.2byte	0x17e
+ 549 00d9 72000000 		.4byte	0x72
+ 550 00dd 09       		.uleb128 0x9
+ 551 00de FA000000 		.4byte	.LASF19
+ 552 00e2 01       		.byte	0x1
+ 553 00e3 A5       		.byte	0xa5
+ 554 00e4 00000000 		.4byte	.LFB3
+ 555 00e8 50000000 		.4byte	.LFE3-.LFB3
+ 556 00ec 01       		.uleb128 0x1
+ 557 00ed 9C       		.byte	0x9c
+ 558 00ee 17010000 		.4byte	0x117
+ 559 00f2 0A       		.uleb128 0xa
+ 560 00f3 2C000000 		.4byte	.LBB2
+ 561 00f7 24000000 		.4byte	.LBE2-.LBB2
+ 562 00fb 0B       		.uleb128 0xb
+ 563 00fc 34020000 		.4byte	.LASF42
+ 564 0100 01       		.byte	0x1
+ 565 0101 B6       		.byte	0xb6
+ 566 0102 25000000 		.4byte	0x25
+ 567 0106 0C010000 		.4byte	0x10c
+ 568 010a 0C       		.uleb128 0xc
+ 569 010b 00       		.byte	0
+ 570 010c 0D       		.uleb128 0xd
+ 571 010d 30000000 		.4byte	.LVL0
+ 572 0111 51030000 		.4byte	0x351
+ 573 0115 00       		.byte	0
+ 574 0116 00       		.byte	0
+ 575 0117 09       		.uleb128 0x9
+ 576 0118 00000000 		.4byte	.LASF20
+ 577 011c 01       		.byte	0x1
+ 578 011d D9       		.byte	0xd9
+ 579 011e 00000000 		.4byte	.LFB4
+ 580 0122 0C000000 		.4byte	.LFE4-.LFB4
+ 581 0126 01       		.uleb128 0x1
+ 582 0127 9C       		.byte	0x9c
+ 583 0128 47010000 		.4byte	0x147
+ 584 012c 0E       		.uleb128 0xe
+ 585 012d F7010000 		.4byte	.LASF23
+ 586 0131 01       		.byte	0x1
+ 587 0132 D9       		.byte	0xd9
+ 588 0133 D1000000 		.4byte	0xd1
+ 589 0137 01       		.uleb128 0x1
+ 590 0138 50       		.byte	0x50
+ 591 0139 0F       		.uleb128 0xf
+ 592 013a 72020000 		.4byte	.LASF21
+ 593 013e 01       		.byte	0x1
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 19
+
+
+ 594 013f DB       		.byte	0xdb
+ 595 0140 47010000 		.4byte	0x147
+ 596 0144 01       		.uleb128 0x1
+ 597 0145 53       		.byte	0x53
+ 598 0146 00       		.byte	0
+ 599 0147 04       		.uleb128 0x4
+ 600 0148 04       		.byte	0x4
+ 601 0149 D1000000 		.4byte	0xd1
+ 602 014d 10       		.uleb128 0x10
+ 603 014e 86000000 		.4byte	.LASF25
+ 604 0152 01       		.byte	0x1
+ 605 0153 F1       		.byte	0xf1
+ 606 0154 D1000000 		.4byte	0xd1
+ 607 0158 00000000 		.4byte	.LFB5
+ 608 015c 0C000000 		.4byte	.LFE5-.LFB5
+ 609 0160 01       		.uleb128 0x1
+ 610 0161 9C       		.byte	0x9c
+ 611 0162 74010000 		.4byte	0x174
+ 612 0166 0F       		.uleb128 0xf
+ 613 0167 72020000 		.4byte	.LASF21
+ 614 016b 01       		.byte	0x1
+ 615 016c F3       		.byte	0xf3
+ 616 016d 47010000 		.4byte	0x147
+ 617 0171 01       		.uleb128 0x1
+ 618 0172 53       		.byte	0x53
+ 619 0173 00       		.byte	0
+ 620 0174 11       		.uleb128 0x11
+ 621 0175 57020000 		.4byte	.LASF22
+ 622 0179 01       		.byte	0x1
+ 623 017a 1301     		.2byte	0x113
+ 624 017c 00000000 		.4byte	.LFB6
+ 625 0180 10000000 		.4byte	.LFE6-.LFB6
+ 626 0184 01       		.uleb128 0x1
+ 627 0185 9C       		.byte	0x9c
+ 628 0186 9B010000 		.4byte	0x19b
+ 629 018a 12       		.uleb128 0x12
+ 630 018b 0E010000 		.4byte	.LASF24
+ 631 018f 01       		.byte	0x1
+ 632 0190 1301     		.2byte	0x113
+ 633 0192 80000000 		.4byte	0x80
+ 634 0196 00000000 		.4byte	.LLST0
+ 635 019a 00       		.byte	0
+ 636 019b 13       		.uleb128 0x13
+ 637 019c 17010000 		.4byte	.LASF26
+ 638 01a0 01       		.byte	0x1
+ 639 01a1 2901     		.2byte	0x129
+ 640 01a3 80000000 		.4byte	0x80
+ 641 01a7 00000000 		.4byte	.LFB7
+ 642 01ab 0C000000 		.4byte	.LFE7-.LFB7
+ 643 01af 01       		.uleb128 0x1
+ 644 01b0 9C       		.byte	0x9c
+ 645 01b1 C6010000 		.4byte	0x1c6
+ 646 01b5 14       		.uleb128 0x14
+ 647 01b6 0E010000 		.4byte	.LASF24
+ 648 01ba 01       		.byte	0x1
+ 649 01bb 2B01     		.2byte	0x12b
+ 650 01bd 80000000 		.4byte	0x80
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 20
+
+
+ 651 01c1 21000000 		.4byte	.LLST1
+ 652 01c5 00       		.byte	0
+ 653 01c6 15       		.uleb128 0x15
+ 654 01c7 23020000 		.4byte	.LASF27
+ 655 01cb 01       		.byte	0x1
+ 656 01cc 4401     		.2byte	0x144
+ 657 01ce 00000000 		.4byte	.LFB8
+ 658 01d2 0C000000 		.4byte	.LFE8-.LFB8
+ 659 01d6 01       		.uleb128 0x1
+ 660 01d7 9C       		.byte	0x9c
+ 661 01d8 16       		.uleb128 0x16
+ 662 01d9 1A000000 		.4byte	.LASF43
+ 663 01dd 01       		.byte	0x1
+ 664 01de 5901     		.2byte	0x159
+ 665 01e0 80000000 		.4byte	0x80
+ 666 01e4 00000000 		.4byte	.LFB9
+ 667 01e8 18000000 		.4byte	.LFE9-.LFB9
+ 668 01ec 01       		.uleb128 0x1
+ 669 01ed 9C       		.byte	0x9c
+ 670 01ee 15       		.uleb128 0x15
+ 671 01ef 65000000 		.4byte	.LASF28
+ 672 01f3 01       		.byte	0x1
+ 673 01f4 6E01     		.2byte	0x16e
+ 674 01f6 00000000 		.4byte	.LFB10
+ 675 01fa 0C000000 		.4byte	.LFE10-.LFB10
+ 676 01fe 01       		.uleb128 0x1
+ 677 01ff 9C       		.byte	0x9c
+ 678 0200 09       		.uleb128 0x9
+ 679 0201 45010000 		.4byte	.LASF29
+ 680 0205 01       		.byte	0x1
+ 681 0206 42       		.byte	0x42
+ 682 0207 00000000 		.4byte	.LFB0
+ 683 020b 1C000000 		.4byte	.LFE0-.LFB0
+ 684 020f 01       		.uleb128 0x1
+ 685 0210 9C       		.byte	0x9c
+ 686 0211 52020000 		.4byte	0x252
+ 687 0215 0D       		.uleb128 0xd
+ 688 0216 06000000 		.4byte	.LVL8
+ 689 021a EE010000 		.4byte	0x1ee
+ 690 021e 17       		.uleb128 0x17
+ 691 021f 0C000000 		.4byte	.LVL9
+ 692 0223 17010000 		.4byte	0x117
+ 693 0227 35020000 		.4byte	0x235
+ 694 022b 18       		.uleb128 0x18
+ 695 022c 01       		.uleb128 0x1
+ 696 022d 50       		.byte	0x50
+ 697 022e 05       		.uleb128 0x5
+ 698 022f 03       		.byte	0x3
+ 699 0230 00000000 		.4byte	isr_timer_Interrupt
+ 700 0234 00       		.byte	0
+ 701 0235 17       		.uleb128 0x17
+ 702 0236 12000000 		.4byte	.LVL10
+ 703 023a 74010000 		.4byte	0x174
+ 704 023e 48020000 		.4byte	0x248
+ 705 0242 18       		.uleb128 0x18
+ 706 0243 01       		.uleb128 0x1
+ 707 0244 50       		.byte	0x50
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 21
+
+
+ 708 0245 01       		.uleb128 0x1
+ 709 0246 37       		.byte	0x37
+ 710 0247 00       		.byte	0
+ 711 0248 0D       		.uleb128 0xd
+ 712 0249 16000000 		.4byte	.LVL11
+ 713 024d C6010000 		.4byte	0x1c6
+ 714 0251 00       		.byte	0
+ 715 0252 09       		.uleb128 0x9
+ 716 0253 9A000000 		.4byte	.LASF30
+ 717 0257 01       		.byte	0x1
+ 718 0258 6D       		.byte	0x6d
+ 719 0259 00000000 		.4byte	.LFB1
+ 720 025d 1A000000 		.4byte	.LFE1-.LFB1
+ 721 0261 01       		.uleb128 0x1
+ 722 0262 9C       		.byte	0x9c
+ 723 0263 B0020000 		.4byte	0x2b0
+ 724 0267 19       		.uleb128 0x19
+ 725 0268 F7010000 		.4byte	.LASF23
+ 726 026c 01       		.byte	0x1
+ 727 026d 6D       		.byte	0x6d
+ 728 026e D1000000 		.4byte	0xd1
+ 729 0272 38000000 		.4byte	.LLST2
+ 730 0276 0D       		.uleb128 0xd
+ 731 0277 08000000 		.4byte	.LVL13
+ 732 027b EE010000 		.4byte	0x1ee
+ 733 027f 17       		.uleb128 0x17
+ 734 0280 0E000000 		.4byte	.LVL14
+ 735 0284 17010000 		.4byte	0x117
+ 736 0288 93020000 		.4byte	0x293
+ 737 028c 18       		.uleb128 0x18
+ 738 028d 01       		.uleb128 0x1
+ 739 028e 50       		.byte	0x50
+ 740 028f 02       		.uleb128 0x2
+ 741 0290 74       		.byte	0x74
+ 742 0291 00       		.sleb128 0
+ 743 0292 00       		.byte	0
+ 744 0293 17       		.uleb128 0x17
+ 745 0294 14000000 		.4byte	.LVL15
+ 746 0298 74010000 		.4byte	0x174
+ 747 029c A6020000 		.4byte	0x2a6
+ 748 02a0 18       		.uleb128 0x18
+ 749 02a1 01       		.uleb128 0x1
+ 750 02a2 50       		.byte	0x50
+ 751 02a3 01       		.uleb128 0x1
+ 752 02a4 37       		.byte	0x37
+ 753 02a5 00       		.byte	0
+ 754 02a6 0D       		.uleb128 0xd
+ 755 02a7 18000000 		.4byte	.LVL16
+ 756 02ab C6010000 		.4byte	0x1c6
+ 757 02af 00       		.byte	0
+ 758 02b0 09       		.uleb128 0x9
+ 759 02b1 A6020000 		.4byte	.LASF31
+ 760 02b5 01       		.byte	0x1
+ 761 02b6 8B       		.byte	0x8b
+ 762 02b7 00000000 		.4byte	.LFB2
+ 763 02bb 14000000 		.4byte	.LFE2-.LFB2
+ 764 02bf 01       		.uleb128 0x1
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 22
+
+
+ 765 02c0 9C       		.byte	0x9c
+ 766 02c1 D8020000 		.4byte	0x2d8
+ 767 02c5 0D       		.uleb128 0xd
+ 768 02c6 06000000 		.4byte	.LVL17
+ 769 02ca EE010000 		.4byte	0x1ee
+ 770 02ce 0D       		.uleb128 0xd
+ 771 02cf 0C000000 		.4byte	.LVL18
+ 772 02d3 17010000 		.4byte	0x117
+ 773 02d7 00       		.byte	0
+ 774 02d8 15       		.uleb128 0x15
+ 775 02d9 AC000000 		.4byte	.LASF32
+ 776 02dd 01       		.byte	0x1
+ 777 02de 8901     		.2byte	0x189
+ 778 02e0 00000000 		.4byte	.LFB11
+ 779 02e4 0C000000 		.4byte	.LFE11-.LFB11
+ 780 02e8 01       		.uleb128 0x1
+ 781 02e9 9C       		.byte	0x9c
+ 782 02ea 15       		.uleb128 0x15
+ 783 02eb 3B000000 		.4byte	.LASF33
+ 784 02ef 01       		.byte	0x1
+ 785 02f0 A201     		.2byte	0x1a2
+ 786 02f2 00000000 		.4byte	.LFB12
+ 787 02f6 0C000000 		.4byte	.LFE12-.LFB12
+ 788 02fa 01       		.uleb128 0x1
+ 789 02fb 9C       		.byte	0x9c
+ 790 02fc 1A       		.uleb128 0x1a
+ 791 02fd BE020000 		.4byte	.LASF34
+ 792 0301 01       		.byte	0x1
+ 793 0302 1F       		.byte	0x1f
+ 794 0303 8B000000 		.4byte	0x8b
+ 795 0307 05       		.uleb128 0x5
+ 796 0308 03       		.byte	0x3
+ 797 0309 00000000 		.4byte	time_1ms
+ 798 030d 1A       		.uleb128 0x1a
+ 799 030e D3020000 		.4byte	.LASF35
+ 800 0312 01       		.byte	0x1
+ 801 0313 20       		.byte	0x20
+ 802 0314 8B000000 		.4byte	0x8b
+ 803 0318 05       		.uleb128 0x5
+ 804 0319 03       		.byte	0x3
+ 805 031a 00000000 		.4byte	time_5ms
+ 806 031e 1A       		.uleb128 0x1a
+ 807 031f 77000000 		.4byte	.LASF36
+ 808 0323 01       		.byte	0x1
+ 809 0324 21       		.byte	0x21
+ 810 0325 80000000 		.4byte	0x80
+ 811 0329 05       		.uleb128 0x5
+ 812 032a 03       		.byte	0x3
+ 813 032b 00000000 		.4byte	time_5ms_state
+ 814 032f 1A       		.uleb128 0x1a
+ 815 0330 D5000000 		.4byte	.LASF37
+ 816 0334 01       		.byte	0x1
+ 817 0335 22       		.byte	0x22
+ 818 0336 8B000000 		.4byte	0x8b
+ 819 033a 05       		.uleb128 0x5
+ 820 033b 03       		.byte	0x3
+ 821 033c 00000000 		.4byte	time_1s
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 23
+
+
+ 822 0340 1A       		.uleb128 0x1a
+ 823 0341 2D000000 		.4byte	.LASF38
+ 824 0345 01       		.byte	0x1
+ 825 0346 23       		.byte	0x23
+ 826 0347 8B000000 		.4byte	0x8b
+ 827 034b 05       		.uleb128 0x5
+ 828 034c 03       		.byte	0x3
+ 829 034d 00000000 		.4byte	time_1s_state
+ 830 0351 1B       		.uleb128 0x1b
+ 831 0352 34020000 		.4byte	.LASF42
+ 832 0356 01       		.byte	0x1
+ 833 0357 B6       		.byte	0xb6
+ 834 0358 25000000 		.4byte	0x25
+ 835 035c 0C       		.uleb128 0xc
+ 836 035d 00       		.byte	0
+ 837 035e 00       		.byte	0
+ 838              		.section	.debug_abbrev,"",%progbits
+ 839              	.Ldebug_abbrev0:
+ 840 0000 01       		.uleb128 0x1
+ 841 0001 11       		.uleb128 0x11
+ 842 0002 01       		.byte	0x1
+ 843 0003 25       		.uleb128 0x25
+ 844 0004 0E       		.uleb128 0xe
+ 845 0005 13       		.uleb128 0x13
+ 846 0006 0B       		.uleb128 0xb
+ 847 0007 03       		.uleb128 0x3
+ 848 0008 0E       		.uleb128 0xe
+ 849 0009 1B       		.uleb128 0x1b
+ 850 000a 0E       		.uleb128 0xe
+ 851 000b 55       		.uleb128 0x55
+ 852 000c 17       		.uleb128 0x17
+ 853 000d 11       		.uleb128 0x11
+ 854 000e 01       		.uleb128 0x1
+ 855 000f 10       		.uleb128 0x10
+ 856 0010 17       		.uleb128 0x17
+ 857 0011 00       		.byte	0
+ 858 0012 00       		.byte	0
+ 859 0013 02       		.uleb128 0x2
+ 860 0014 24       		.uleb128 0x24
+ 861 0015 00       		.byte	0
+ 862 0016 0B       		.uleb128 0xb
+ 863 0017 0B       		.uleb128 0xb
+ 864 0018 3E       		.uleb128 0x3e
+ 865 0019 0B       		.uleb128 0xb
+ 866 001a 03       		.uleb128 0x3
+ 867 001b 08       		.uleb128 0x8
+ 868 001c 00       		.byte	0
+ 869 001d 00       		.byte	0
+ 870 001e 03       		.uleb128 0x3
+ 871 001f 24       		.uleb128 0x24
+ 872 0020 00       		.byte	0
+ 873 0021 0B       		.uleb128 0xb
+ 874 0022 0B       		.uleb128 0xb
+ 875 0023 3E       		.uleb128 0x3e
+ 876 0024 0B       		.uleb128 0xb
+ 877 0025 03       		.uleb128 0x3
+ 878 0026 0E       		.uleb128 0xe
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 24
+
+
+ 879 0027 00       		.byte	0
+ 880 0028 00       		.byte	0
+ 881 0029 04       		.uleb128 0x4
+ 882 002a 0F       		.uleb128 0xf
+ 883 002b 00       		.byte	0
+ 884 002c 0B       		.uleb128 0xb
+ 885 002d 0B       		.uleb128 0xb
+ 886 002e 49       		.uleb128 0x49
+ 887 002f 13       		.uleb128 0x13
+ 888 0030 00       		.byte	0
+ 889 0031 00       		.byte	0
+ 890 0032 05       		.uleb128 0x5
+ 891 0033 15       		.uleb128 0x15
+ 892 0034 00       		.byte	0
+ 893 0035 27       		.uleb128 0x27
+ 894 0036 19       		.uleb128 0x19
+ 895 0037 00       		.byte	0
+ 896 0038 00       		.byte	0
+ 897 0039 06       		.uleb128 0x6
+ 898 003a 16       		.uleb128 0x16
+ 899 003b 00       		.byte	0
+ 900 003c 03       		.uleb128 0x3
+ 901 003d 0E       		.uleb128 0xe
+ 902 003e 3A       		.uleb128 0x3a
+ 903 003f 0B       		.uleb128 0xb
+ 904 0040 3B       		.uleb128 0x3b
+ 905 0041 0B       		.uleb128 0xb
+ 906 0042 49       		.uleb128 0x49
+ 907 0043 13       		.uleb128 0x13
+ 908 0044 00       		.byte	0
+ 909 0045 00       		.byte	0
+ 910 0046 07       		.uleb128 0x7
+ 911 0047 16       		.uleb128 0x16
+ 912 0048 00       		.byte	0
+ 913 0049 03       		.uleb128 0x3
+ 914 004a 0E       		.uleb128 0xe
+ 915 004b 3A       		.uleb128 0x3a
+ 916 004c 0B       		.uleb128 0xb
+ 917 004d 3B       		.uleb128 0x3b
+ 918 004e 05       		.uleb128 0x5
+ 919 004f 49       		.uleb128 0x49
+ 920 0050 13       		.uleb128 0x13
+ 921 0051 00       		.byte	0
+ 922 0052 00       		.byte	0
+ 923 0053 08       		.uleb128 0x8
+ 924 0054 35       		.uleb128 0x35
+ 925 0055 00       		.byte	0
+ 926 0056 49       		.uleb128 0x49
+ 927 0057 13       		.uleb128 0x13
+ 928 0058 00       		.byte	0
+ 929 0059 00       		.byte	0
+ 930 005a 09       		.uleb128 0x9
+ 931 005b 2E       		.uleb128 0x2e
+ 932 005c 01       		.byte	0x1
+ 933 005d 3F       		.uleb128 0x3f
+ 934 005e 19       		.uleb128 0x19
+ 935 005f 03       		.uleb128 0x3
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 25
+
+
+ 936 0060 0E       		.uleb128 0xe
+ 937 0061 3A       		.uleb128 0x3a
+ 938 0062 0B       		.uleb128 0xb
+ 939 0063 3B       		.uleb128 0x3b
+ 940 0064 0B       		.uleb128 0xb
+ 941 0065 27       		.uleb128 0x27
+ 942 0066 19       		.uleb128 0x19
+ 943 0067 11       		.uleb128 0x11
+ 944 0068 01       		.uleb128 0x1
+ 945 0069 12       		.uleb128 0x12
+ 946 006a 06       		.uleb128 0x6
+ 947 006b 40       		.uleb128 0x40
+ 948 006c 18       		.uleb128 0x18
+ 949 006d 9742     		.uleb128 0x2117
+ 950 006f 19       		.uleb128 0x19
+ 951 0070 01       		.uleb128 0x1
+ 952 0071 13       		.uleb128 0x13
+ 953 0072 00       		.byte	0
+ 954 0073 00       		.byte	0
+ 955 0074 0A       		.uleb128 0xa
+ 956 0075 0B       		.uleb128 0xb
+ 957 0076 01       		.byte	0x1
+ 958 0077 11       		.uleb128 0x11
+ 959 0078 01       		.uleb128 0x1
+ 960 0079 12       		.uleb128 0x12
+ 961 007a 06       		.uleb128 0x6
+ 962 007b 00       		.byte	0
+ 963 007c 00       		.byte	0
+ 964 007d 0B       		.uleb128 0xb
+ 965 007e 2E       		.uleb128 0x2e
+ 966 007f 01       		.byte	0x1
+ 967 0080 3F       		.uleb128 0x3f
+ 968 0081 19       		.uleb128 0x19
+ 969 0082 03       		.uleb128 0x3
+ 970 0083 0E       		.uleb128 0xe
+ 971 0084 3A       		.uleb128 0x3a
+ 972 0085 0B       		.uleb128 0xb
+ 973 0086 3B       		.uleb128 0x3b
+ 974 0087 0B       		.uleb128 0xb
+ 975 0088 49       		.uleb128 0x49
+ 976 0089 13       		.uleb128 0x13
+ 977 008a 3C       		.uleb128 0x3c
+ 978 008b 19       		.uleb128 0x19
+ 979 008c 01       		.uleb128 0x1
+ 980 008d 13       		.uleb128 0x13
+ 981 008e 00       		.byte	0
+ 982 008f 00       		.byte	0
+ 983 0090 0C       		.uleb128 0xc
+ 984 0091 18       		.uleb128 0x18
+ 985 0092 00       		.byte	0
+ 986 0093 00       		.byte	0
+ 987 0094 00       		.byte	0
+ 988 0095 0D       		.uleb128 0xd
+ 989 0096 898201   		.uleb128 0x4109
+ 990 0099 00       		.byte	0
+ 991 009a 11       		.uleb128 0x11
+ 992 009b 01       		.uleb128 0x1
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 26
+
+
+ 993 009c 31       		.uleb128 0x31
+ 994 009d 13       		.uleb128 0x13
+ 995 009e 00       		.byte	0
+ 996 009f 00       		.byte	0
+ 997 00a0 0E       		.uleb128 0xe
+ 998 00a1 05       		.uleb128 0x5
+ 999 00a2 00       		.byte	0
+ 1000 00a3 03       		.uleb128 0x3
+ 1001 00a4 0E       		.uleb128 0xe
+ 1002 00a5 3A       		.uleb128 0x3a
+ 1003 00a6 0B       		.uleb128 0xb
+ 1004 00a7 3B       		.uleb128 0x3b
+ 1005 00a8 0B       		.uleb128 0xb
+ 1006 00a9 49       		.uleb128 0x49
+ 1007 00aa 13       		.uleb128 0x13
+ 1008 00ab 02       		.uleb128 0x2
+ 1009 00ac 18       		.uleb128 0x18
+ 1010 00ad 00       		.byte	0
+ 1011 00ae 00       		.byte	0
+ 1012 00af 0F       		.uleb128 0xf
+ 1013 00b0 34       		.uleb128 0x34
+ 1014 00b1 00       		.byte	0
+ 1015 00b2 03       		.uleb128 0x3
+ 1016 00b3 0E       		.uleb128 0xe
+ 1017 00b4 3A       		.uleb128 0x3a
+ 1018 00b5 0B       		.uleb128 0xb
+ 1019 00b6 3B       		.uleb128 0x3b
+ 1020 00b7 0B       		.uleb128 0xb
+ 1021 00b8 49       		.uleb128 0x49
+ 1022 00b9 13       		.uleb128 0x13
+ 1023 00ba 02       		.uleb128 0x2
+ 1024 00bb 18       		.uleb128 0x18
+ 1025 00bc 00       		.byte	0
+ 1026 00bd 00       		.byte	0
+ 1027 00be 10       		.uleb128 0x10
+ 1028 00bf 2E       		.uleb128 0x2e
+ 1029 00c0 01       		.byte	0x1
+ 1030 00c1 3F       		.uleb128 0x3f
+ 1031 00c2 19       		.uleb128 0x19
+ 1032 00c3 03       		.uleb128 0x3
+ 1033 00c4 0E       		.uleb128 0xe
+ 1034 00c5 3A       		.uleb128 0x3a
+ 1035 00c6 0B       		.uleb128 0xb
+ 1036 00c7 3B       		.uleb128 0x3b
+ 1037 00c8 0B       		.uleb128 0xb
+ 1038 00c9 27       		.uleb128 0x27
+ 1039 00ca 19       		.uleb128 0x19
+ 1040 00cb 49       		.uleb128 0x49
+ 1041 00cc 13       		.uleb128 0x13
+ 1042 00cd 11       		.uleb128 0x11
+ 1043 00ce 01       		.uleb128 0x1
+ 1044 00cf 12       		.uleb128 0x12
+ 1045 00d0 06       		.uleb128 0x6
+ 1046 00d1 40       		.uleb128 0x40
+ 1047 00d2 18       		.uleb128 0x18
+ 1048 00d3 9742     		.uleb128 0x2117
+ 1049 00d5 19       		.uleb128 0x19
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 27
+
+
+ 1050 00d6 01       		.uleb128 0x1
+ 1051 00d7 13       		.uleb128 0x13
+ 1052 00d8 00       		.byte	0
+ 1053 00d9 00       		.byte	0
+ 1054 00da 11       		.uleb128 0x11
+ 1055 00db 2E       		.uleb128 0x2e
+ 1056 00dc 01       		.byte	0x1
+ 1057 00dd 3F       		.uleb128 0x3f
+ 1058 00de 19       		.uleb128 0x19
+ 1059 00df 03       		.uleb128 0x3
+ 1060 00e0 0E       		.uleb128 0xe
+ 1061 00e1 3A       		.uleb128 0x3a
+ 1062 00e2 0B       		.uleb128 0xb
+ 1063 00e3 3B       		.uleb128 0x3b
+ 1064 00e4 05       		.uleb128 0x5
+ 1065 00e5 27       		.uleb128 0x27
+ 1066 00e6 19       		.uleb128 0x19
+ 1067 00e7 11       		.uleb128 0x11
+ 1068 00e8 01       		.uleb128 0x1
+ 1069 00e9 12       		.uleb128 0x12
+ 1070 00ea 06       		.uleb128 0x6
+ 1071 00eb 40       		.uleb128 0x40
+ 1072 00ec 18       		.uleb128 0x18
+ 1073 00ed 9742     		.uleb128 0x2117
+ 1074 00ef 19       		.uleb128 0x19
+ 1075 00f0 01       		.uleb128 0x1
+ 1076 00f1 13       		.uleb128 0x13
+ 1077 00f2 00       		.byte	0
+ 1078 00f3 00       		.byte	0
+ 1079 00f4 12       		.uleb128 0x12
+ 1080 00f5 05       		.uleb128 0x5
+ 1081 00f6 00       		.byte	0
+ 1082 00f7 03       		.uleb128 0x3
+ 1083 00f8 0E       		.uleb128 0xe
+ 1084 00f9 3A       		.uleb128 0x3a
+ 1085 00fa 0B       		.uleb128 0xb
+ 1086 00fb 3B       		.uleb128 0x3b
+ 1087 00fc 05       		.uleb128 0x5
+ 1088 00fd 49       		.uleb128 0x49
+ 1089 00fe 13       		.uleb128 0x13
+ 1090 00ff 02       		.uleb128 0x2
+ 1091 0100 17       		.uleb128 0x17
+ 1092 0101 00       		.byte	0
+ 1093 0102 00       		.byte	0
+ 1094 0103 13       		.uleb128 0x13
+ 1095 0104 2E       		.uleb128 0x2e
+ 1096 0105 01       		.byte	0x1
+ 1097 0106 3F       		.uleb128 0x3f
+ 1098 0107 19       		.uleb128 0x19
+ 1099 0108 03       		.uleb128 0x3
+ 1100 0109 0E       		.uleb128 0xe
+ 1101 010a 3A       		.uleb128 0x3a
+ 1102 010b 0B       		.uleb128 0xb
+ 1103 010c 3B       		.uleb128 0x3b
+ 1104 010d 05       		.uleb128 0x5
+ 1105 010e 27       		.uleb128 0x27
+ 1106 010f 19       		.uleb128 0x19
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 28
+
+
+ 1107 0110 49       		.uleb128 0x49
+ 1108 0111 13       		.uleb128 0x13
+ 1109 0112 11       		.uleb128 0x11
+ 1110 0113 01       		.uleb128 0x1
+ 1111 0114 12       		.uleb128 0x12
+ 1112 0115 06       		.uleb128 0x6
+ 1113 0116 40       		.uleb128 0x40
+ 1114 0117 18       		.uleb128 0x18
+ 1115 0118 9742     		.uleb128 0x2117
+ 1116 011a 19       		.uleb128 0x19
+ 1117 011b 01       		.uleb128 0x1
+ 1118 011c 13       		.uleb128 0x13
+ 1119 011d 00       		.byte	0
+ 1120 011e 00       		.byte	0
+ 1121 011f 14       		.uleb128 0x14
+ 1122 0120 34       		.uleb128 0x34
+ 1123 0121 00       		.byte	0
+ 1124 0122 03       		.uleb128 0x3
+ 1125 0123 0E       		.uleb128 0xe
+ 1126 0124 3A       		.uleb128 0x3a
+ 1127 0125 0B       		.uleb128 0xb
+ 1128 0126 3B       		.uleb128 0x3b
+ 1129 0127 05       		.uleb128 0x5
+ 1130 0128 49       		.uleb128 0x49
+ 1131 0129 13       		.uleb128 0x13
+ 1132 012a 02       		.uleb128 0x2
+ 1133 012b 17       		.uleb128 0x17
+ 1134 012c 00       		.byte	0
+ 1135 012d 00       		.byte	0
+ 1136 012e 15       		.uleb128 0x15
+ 1137 012f 2E       		.uleb128 0x2e
+ 1138 0130 00       		.byte	0
+ 1139 0131 3F       		.uleb128 0x3f
+ 1140 0132 19       		.uleb128 0x19
+ 1141 0133 03       		.uleb128 0x3
+ 1142 0134 0E       		.uleb128 0xe
+ 1143 0135 3A       		.uleb128 0x3a
+ 1144 0136 0B       		.uleb128 0xb
+ 1145 0137 3B       		.uleb128 0x3b
+ 1146 0138 05       		.uleb128 0x5
+ 1147 0139 27       		.uleb128 0x27
+ 1148 013a 19       		.uleb128 0x19
+ 1149 013b 11       		.uleb128 0x11
+ 1150 013c 01       		.uleb128 0x1
+ 1151 013d 12       		.uleb128 0x12
+ 1152 013e 06       		.uleb128 0x6
+ 1153 013f 40       		.uleb128 0x40
+ 1154 0140 18       		.uleb128 0x18
+ 1155 0141 9742     		.uleb128 0x2117
+ 1156 0143 19       		.uleb128 0x19
+ 1157 0144 00       		.byte	0
+ 1158 0145 00       		.byte	0
+ 1159 0146 16       		.uleb128 0x16
+ 1160 0147 2E       		.uleb128 0x2e
+ 1161 0148 00       		.byte	0
+ 1162 0149 3F       		.uleb128 0x3f
+ 1163 014a 19       		.uleb128 0x19
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 29
+
+
+ 1164 014b 03       		.uleb128 0x3
+ 1165 014c 0E       		.uleb128 0xe
+ 1166 014d 3A       		.uleb128 0x3a
+ 1167 014e 0B       		.uleb128 0xb
+ 1168 014f 3B       		.uleb128 0x3b
+ 1169 0150 05       		.uleb128 0x5
+ 1170 0151 27       		.uleb128 0x27
+ 1171 0152 19       		.uleb128 0x19
+ 1172 0153 49       		.uleb128 0x49
+ 1173 0154 13       		.uleb128 0x13
+ 1174 0155 11       		.uleb128 0x11
+ 1175 0156 01       		.uleb128 0x1
+ 1176 0157 12       		.uleb128 0x12
+ 1177 0158 06       		.uleb128 0x6
+ 1178 0159 40       		.uleb128 0x40
+ 1179 015a 18       		.uleb128 0x18
+ 1180 015b 9742     		.uleb128 0x2117
+ 1181 015d 19       		.uleb128 0x19
+ 1182 015e 00       		.byte	0
+ 1183 015f 00       		.byte	0
+ 1184 0160 17       		.uleb128 0x17
+ 1185 0161 898201   		.uleb128 0x4109
+ 1186 0164 01       		.byte	0x1
+ 1187 0165 11       		.uleb128 0x11
+ 1188 0166 01       		.uleb128 0x1
+ 1189 0167 31       		.uleb128 0x31
+ 1190 0168 13       		.uleb128 0x13
+ 1191 0169 01       		.uleb128 0x1
+ 1192 016a 13       		.uleb128 0x13
+ 1193 016b 00       		.byte	0
+ 1194 016c 00       		.byte	0
+ 1195 016d 18       		.uleb128 0x18
+ 1196 016e 8A8201   		.uleb128 0x410a
+ 1197 0171 00       		.byte	0
+ 1198 0172 02       		.uleb128 0x2
+ 1199 0173 18       		.uleb128 0x18
+ 1200 0174 9142     		.uleb128 0x2111
+ 1201 0176 18       		.uleb128 0x18
+ 1202 0177 00       		.byte	0
+ 1203 0178 00       		.byte	0
+ 1204 0179 19       		.uleb128 0x19
+ 1205 017a 05       		.uleb128 0x5
+ 1206 017b 00       		.byte	0
+ 1207 017c 03       		.uleb128 0x3
+ 1208 017d 0E       		.uleb128 0xe
+ 1209 017e 3A       		.uleb128 0x3a
+ 1210 017f 0B       		.uleb128 0xb
+ 1211 0180 3B       		.uleb128 0x3b
+ 1212 0181 0B       		.uleb128 0xb
+ 1213 0182 49       		.uleb128 0x49
+ 1214 0183 13       		.uleb128 0x13
+ 1215 0184 02       		.uleb128 0x2
+ 1216 0185 17       		.uleb128 0x17
+ 1217 0186 00       		.byte	0
+ 1218 0187 00       		.byte	0
+ 1219 0188 1A       		.uleb128 0x1a
+ 1220 0189 34       		.uleb128 0x34
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 30
+
+
+ 1221 018a 00       		.byte	0
+ 1222 018b 03       		.uleb128 0x3
+ 1223 018c 0E       		.uleb128 0xe
+ 1224 018d 3A       		.uleb128 0x3a
+ 1225 018e 0B       		.uleb128 0xb
+ 1226 018f 3B       		.uleb128 0x3b
+ 1227 0190 0B       		.uleb128 0xb
+ 1228 0191 49       		.uleb128 0x49
+ 1229 0192 13       		.uleb128 0x13
+ 1230 0193 3F       		.uleb128 0x3f
+ 1231 0194 19       		.uleb128 0x19
+ 1232 0195 02       		.uleb128 0x2
+ 1233 0196 18       		.uleb128 0x18
+ 1234 0197 00       		.byte	0
+ 1235 0198 00       		.byte	0
+ 1236 0199 1B       		.uleb128 0x1b
+ 1237 019a 2E       		.uleb128 0x2e
+ 1238 019b 01       		.byte	0x1
+ 1239 019c 3F       		.uleb128 0x3f
+ 1240 019d 19       		.uleb128 0x19
+ 1241 019e 03       		.uleb128 0x3
+ 1242 019f 0E       		.uleb128 0xe
+ 1243 01a0 3A       		.uleb128 0x3a
+ 1244 01a1 0B       		.uleb128 0xb
+ 1245 01a2 3B       		.uleb128 0x3b
+ 1246 01a3 0B       		.uleb128 0xb
+ 1247 01a4 49       		.uleb128 0x49
+ 1248 01a5 13       		.uleb128 0x13
+ 1249 01a6 3C       		.uleb128 0x3c
+ 1250 01a7 19       		.uleb128 0x19
+ 1251 01a8 00       		.byte	0
+ 1252 01a9 00       		.byte	0
+ 1253 01aa 00       		.byte	0
+ 1254              		.section	.debug_loc,"",%progbits
+ 1255              	.Ldebug_loc0:
+ 1256              	.LLST0:
+ 1257 0000 00000000 		.4byte	.LVL4
+ 1258 0004 02000000 		.4byte	.LVL5
+ 1259 0008 0100     		.2byte	0x1
+ 1260 000a 50       		.byte	0x50
+ 1261 000b 02000000 		.4byte	.LVL5
+ 1262 000f 10000000 		.4byte	.LFE6
+ 1263 0013 0400     		.2byte	0x4
+ 1264 0015 F3       		.byte	0xf3
+ 1265 0016 01       		.uleb128 0x1
+ 1266 0017 50       		.byte	0x50
+ 1267 0018 9F       		.byte	0x9f
+ 1268 0019 00000000 		.4byte	0
+ 1269 001d 00000000 		.4byte	0
+ 1270              	.LLST1:
+ 1271 0021 04000000 		.4byte	.LVL6
+ 1272 0025 06000000 		.4byte	.LVL7
+ 1273 0029 0500     		.2byte	0x5
+ 1274 002b 70       		.byte	0x70
+ 1275 002c 00       		.sleb128 0
+ 1276 002d 35       		.byte	0x35
+ 1277 002e 25       		.byte	0x25
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 31
+
+
+ 1278 002f 9F       		.byte	0x9f
+ 1279 0030 00000000 		.4byte	0
+ 1280 0034 00000000 		.4byte	0
+ 1281              	.LLST2:
+ 1282 0038 00000000 		.4byte	.LVL12
+ 1283 003c 07000000 		.4byte	.LVL13-1
+ 1284 0040 0100     		.2byte	0x1
+ 1285 0042 50       		.byte	0x50
+ 1286 0043 07000000 		.4byte	.LVL13-1
+ 1287 0047 1A000000 		.4byte	.LFE1
+ 1288 004b 0100     		.2byte	0x1
+ 1289 004d 54       		.byte	0x54
+ 1290 004e 00000000 		.4byte	0
+ 1291 0052 00000000 		.4byte	0
+ 1292              		.section	.debug_aranges,"",%progbits
+ 1293 0000 7C000000 		.4byte	0x7c
+ 1294 0004 0200     		.2byte	0x2
+ 1295 0006 00000000 		.4byte	.Ldebug_info0
+ 1296 000a 04       		.byte	0x4
+ 1297 000b 00       		.byte	0
+ 1298 000c 0000     		.2byte	0
+ 1299 000e 0000     		.2byte	0
+ 1300 0010 00000000 		.4byte	.LFB3
+ 1301 0014 50000000 		.4byte	.LFE3-.LFB3
+ 1302 0018 00000000 		.4byte	.LFB4
+ 1303 001c 0C000000 		.4byte	.LFE4-.LFB4
+ 1304 0020 00000000 		.4byte	.LFB5
+ 1305 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1306 0028 00000000 		.4byte	.LFB6
+ 1307 002c 10000000 		.4byte	.LFE6-.LFB6
+ 1308 0030 00000000 		.4byte	.LFB7
+ 1309 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1310 0038 00000000 		.4byte	.LFB8
+ 1311 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1312 0040 00000000 		.4byte	.LFB9
+ 1313 0044 18000000 		.4byte	.LFE9-.LFB9
+ 1314 0048 00000000 		.4byte	.LFB10
+ 1315 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1316 0050 00000000 		.4byte	.LFB0
+ 1317 0054 1C000000 		.4byte	.LFE0-.LFB0
+ 1318 0058 00000000 		.4byte	.LFB1
+ 1319 005c 1A000000 		.4byte	.LFE1-.LFB1
+ 1320 0060 00000000 		.4byte	.LFB2
+ 1321 0064 14000000 		.4byte	.LFE2-.LFB2
+ 1322 0068 00000000 		.4byte	.LFB11
+ 1323 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 1324 0070 00000000 		.4byte	.LFB12
+ 1325 0074 0C000000 		.4byte	.LFE12-.LFB12
+ 1326 0078 00000000 		.4byte	0
+ 1327 007c 00000000 		.4byte	0
+ 1328              		.section	.debug_ranges,"",%progbits
+ 1329              	.Ldebug_ranges0:
+ 1330 0000 00000000 		.4byte	.LFB3
+ 1331 0004 50000000 		.4byte	.LFE3
+ 1332 0008 00000000 		.4byte	.LFB4
+ 1333 000c 0C000000 		.4byte	.LFE4
+ 1334 0010 00000000 		.4byte	.LFB5
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 32
+
+
+ 1335 0014 0C000000 		.4byte	.LFE5
+ 1336 0018 00000000 		.4byte	.LFB6
+ 1337 001c 10000000 		.4byte	.LFE6
+ 1338 0020 00000000 		.4byte	.LFB7
+ 1339 0024 0C000000 		.4byte	.LFE7
+ 1340 0028 00000000 		.4byte	.LFB8
+ 1341 002c 0C000000 		.4byte	.LFE8
+ 1342 0030 00000000 		.4byte	.LFB9
+ 1343 0034 18000000 		.4byte	.LFE9
+ 1344 0038 00000000 		.4byte	.LFB10
+ 1345 003c 0C000000 		.4byte	.LFE10
+ 1346 0040 00000000 		.4byte	.LFB0
+ 1347 0044 1C000000 		.4byte	.LFE0
+ 1348 0048 00000000 		.4byte	.LFB1
+ 1349 004c 1A000000 		.4byte	.LFE1
+ 1350 0050 00000000 		.4byte	.LFB2
+ 1351 0054 14000000 		.4byte	.LFE2
+ 1352 0058 00000000 		.4byte	.LFB11
+ 1353 005c 0C000000 		.4byte	.LFE11
+ 1354 0060 00000000 		.4byte	.LFB12
+ 1355 0064 0C000000 		.4byte	.LFE12
+ 1356 0068 00000000 		.4byte	0
+ 1357 006c 00000000 		.4byte	0
+ 1358              		.section	.debug_line,"",%progbits
+ 1359              	.Ldebug_line0:
+ 1360 0000 55010000 		.section	.debug_str,"MS",%progbits,1
+ 1360      02005F00 
+ 1360      00000201 
+ 1360      FB0E0D00 
+ 1360      01010101 
+ 1361              	.LASF20:
+ 1362 0000 6973725F 		.ascii	"isr_timer_SetVector\000"
+ 1362      74696D65 
+ 1362      725F5365 
+ 1362      74566563 
+ 1362      746F7200 
+ 1363              	.LASF17:
+ 1364 0014 72656733 		.ascii	"reg32\000"
+ 1364      3200
+ 1365              	.LASF43:
+ 1366 001a 6973725F 		.ascii	"isr_timer_GetState\000"
+ 1366      74696D65 
+ 1366      725F4765 
+ 1366      74537461 
+ 1366      746500
+ 1367              	.LASF38:
+ 1368 002d 74696D65 		.ascii	"time_1s_state\000"
+ 1368      5F31735F 
+ 1368      73746174 
+ 1368      6500
+ 1369              	.LASF33:
+ 1370 003b 6973725F 		.ascii	"isr_timer_ClearPending\000"
+ 1370      74696D65 
+ 1370      725F436C 
+ 1370      65617250 
+ 1370      656E6469 
+ 1371              	.LASF4:
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 33
+
+
+ 1372 0052 73686F72 		.ascii	"short unsigned int\000"
+ 1372      7420756E 
+ 1372      7369676E 
+ 1372      65642069 
+ 1372      6E7400
+ 1373              	.LASF28:
+ 1374 0065 6973725F 		.ascii	"isr_timer_Disable\000"
+ 1374      74696D65 
+ 1374      725F4469 
+ 1374      7361626C 
+ 1374      6500
+ 1375              	.LASF36:
+ 1376 0077 74696D65 		.ascii	"time_5ms_state\000"
+ 1376      5F356D73 
+ 1376      5F737461 
+ 1376      746500
+ 1377              	.LASF25:
+ 1378 0086 6973725F 		.ascii	"isr_timer_GetVector\000"
+ 1378      74696D65 
+ 1378      725F4765 
+ 1378      74566563 
+ 1378      746F7200 
+ 1379              	.LASF30:
+ 1380 009a 6973725F 		.ascii	"isr_timer_StartEx\000"
+ 1380      74696D65 
+ 1380      725F5374 
+ 1380      61727445 
+ 1380      7800
+ 1381              	.LASF32:
+ 1382 00ac 6973725F 		.ascii	"isr_timer_SetPending\000"
+ 1382      74696D65 
+ 1382      725F5365 
+ 1382      7450656E 
+ 1382      64696E67 
+ 1383              	.LASF14:
+ 1384 00c1 666C6F61 		.ascii	"float\000"
+ 1384      7400
+ 1385              	.LASF2:
+ 1386 00c7 756E7369 		.ascii	"unsigned char\000"
+ 1386      676E6564 
+ 1386      20636861 
+ 1386      7200
+ 1387              	.LASF37:
+ 1388 00d5 74696D65 		.ascii	"time_1s\000"
+ 1388      5F317300 
+ 1389              	.LASF16:
+ 1390 00dd 72656738 		.ascii	"reg8\000"
+ 1390      00
+ 1391              	.LASF6:
+ 1392 00e2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1392      20756E73 
+ 1392      69676E65 
+ 1392      6420696E 
+ 1392      7400
+ 1393              	.LASF11:
+ 1394 00f4 75696E74 		.ascii	"uint8\000"
+ 1394      3800
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 34
+
+
+ 1395              	.LASF19:
+ 1396 00fa 6973725F 		.ascii	"isr_timer_Interrupt\000"
+ 1396      74696D65 
+ 1396      725F496E 
+ 1396      74657272 
+ 1396      75707400 
+ 1397              	.LASF24:
+ 1398 010e 7072696F 		.ascii	"priority\000"
+ 1398      72697479 
+ 1398      00
+ 1399              	.LASF26:
+ 1400 0117 6973725F 		.ascii	"isr_timer_GetPriority\000"
+ 1400      74696D65 
+ 1400      725F4765 
+ 1400      74507269 
+ 1400      6F726974 
+ 1401              	.LASF15:
+ 1402 012d 646F7562 		.ascii	"double\000"
+ 1402      6C6500
+ 1403              	.LASF3:
+ 1404 0134 73686F72 		.ascii	"short int\000"
+ 1404      7420696E 
+ 1404      7400
+ 1405              	.LASF12:
+ 1406 013e 75696E74 		.ascii	"uint16\000"
+ 1406      313600
+ 1407              	.LASF29:
+ 1408 0145 6973725F 		.ascii	"isr_timer_Start\000"
+ 1408      74696D65 
+ 1408      725F5374 
+ 1408      61727400 
+ 1409              	.LASF13:
+ 1410 0155 75696E74 		.ascii	"uint32\000"
+ 1410      333200
+ 1411              	.LASF39:
+ 1412 015c 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1412      4320342E 
+ 1412      392E3320 
+ 1412      32303135 
+ 1412      30333033 
+ 1413 018f 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1413      20726576 
+ 1413      6973696F 
+ 1413      6E203232 
+ 1413      31323230 
+ 1414 01c2 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1414      66756E63 
+ 1414      74696F6E 
+ 1414      2D736563 
+ 1414      74696F6E 
+ 1415              	.LASF0:
+ 1416 01ea 756E7369 		.ascii	"unsigned int\000"
+ 1416      676E6564 
+ 1416      20696E74 
+ 1416      00
+ 1417              	.LASF23:
+ 1418 01f7 61646472 		.ascii	"address\000"
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 35
+
+
+ 1418      65737300 
+ 1419              	.LASF8:
+ 1420 01ff 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1420      206C6F6E 
+ 1420      6720756E 
+ 1420      7369676E 
+ 1420      65642069 
+ 1421              	.LASF18:
+ 1422 0216 63796973 		.ascii	"cyisraddress\000"
+ 1422      72616464 
+ 1422      72657373 
+ 1422      00
+ 1423              	.LASF27:
+ 1424 0223 6973725F 		.ascii	"isr_timer_Enable\000"
+ 1424      74696D65 
+ 1424      725F456E 
+ 1424      61626C65 
+ 1424      00
+ 1425              	.LASF42:
+ 1426 0234 63625F62 		.ascii	"cb_bzr_Main\000"
+ 1426      7A725F4D 
+ 1426      61696E00 
+ 1427              	.LASF9:
+ 1428 0240 73697A65 		.ascii	"sizetype\000"
+ 1428      74797065 
+ 1428      00
+ 1429              	.LASF7:
+ 1430 0249 6C6F6E67 		.ascii	"long long int\000"
+ 1430      206C6F6E 
+ 1430      6720696E 
+ 1430      7400
+ 1431              	.LASF22:
+ 1432 0257 6973725F 		.ascii	"isr_timer_SetPriority\000"
+ 1432      74696D65 
+ 1432      725F5365 
+ 1432      74507269 
+ 1432      6F726974 
+ 1433              	.LASF10:
+ 1434 026d 63686172 		.ascii	"char\000"
+ 1434      00
+ 1435              	.LASF21:
+ 1436 0272 72616D56 		.ascii	"ramVectorTable\000"
+ 1436      6563746F 
+ 1436      72546162 
+ 1436      6C6500
+ 1437              	.LASF40:
+ 1438 0281 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_timer.c\000"
+ 1438      6E657261 
+ 1438      7465645F 
+ 1438      536F7572 
+ 1438      63655C50 
+ 1439              	.LASF31:
+ 1440 02a6 6973725F 		.ascii	"isr_timer_Stop\000"
+ 1440      74696D65 
+ 1440      725F5374 
+ 1440      6F7000
+ 1441              	.LASF5:
+ARM GAS  C:\Users\li\AppData\Local\Temp\ccqi5gf1.s 			page 36
+
+
+ 1442 02b5 6C6F6E67 		.ascii	"long int\000"
+ 1442      20696E74 
+ 1442      00
+ 1443              	.LASF34:
+ 1444 02be 74696D65 		.ascii	"time_1ms\000"
+ 1444      5F316D73 
+ 1444      00
+ 1445              	.LASF1:
+ 1446 02c7 7369676E 		.ascii	"signed char\000"
+ 1446      65642063 
+ 1446      68617200 
+ 1447              	.LASF35:
+ 1448 02d3 74696D65 		.ascii	"time_5ms\000"
+ 1448      5F356D73 
+ 1448      00
+ 1449              	.LASF41:
+ 1450 02dc 433A5C55 		.ascii	"C:\\Users\\li\\Desktop\\pxc\\robot-control\\car.cyd"
+ 1450      73657273 
+ 1450      5C6C695C 
+ 1450      4465736B 
+ 1450      746F705C 
+ 1451 0309 736E00   		.ascii	"sn\000"
+ 1452              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

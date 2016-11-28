@@ -1,0 +1,1418 @@
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"cymetadata.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.global	cy_meta_wonvl
+  21              		.global	cy_meta_custnvl
+  22              		.global	cy_meta_configecc
+  23              		.section	.cyconfigecc,"a",%progbits
+  24              		.align	2
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 880
+  27              	cy_meta_configecc:
+  28 0000 02       		.byte	2
+  29 0001 4F       		.byte	79
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 07       		.byte	7
+  33 0005 52       		.byte	82
+  34 0006 00       		.byte	0
+  35 0007 40       		.byte	64
+  36 0008 03       		.byte	3
+  37 0009 65       		.byte	101
+  38 000a 00       		.byte	0
+  39 000b 40       		.byte	64
+  40 000c 1D       		.byte	29
+  41 000d 14       		.byte	20
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 47       		.byte	71
+  45 0011 15       		.byte	21
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 5D       		.byte	93
+  49 0015 16       		.byte	22
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 3E       		.byte	62
+  53 0019 17       		.byte	23
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 04       		.byte	4
+  57 001d 18       		.byte	24
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 02       		.byte	2
+  61 0021 19       		.byte	25
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 04       		.byte	4
+  65 0025 40       		.byte	64
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 03       		.byte	3
+  69 0029 41       		.byte	65
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 05       		.byte	5
+  73 002d 42       		.byte	66
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 02       		.byte	2
+  77 0031 43       		.byte	67
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 08       		.byte	8
+  81 0035 48       		.byte	72
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 07       		.byte	7
+  85 0039 49       		.byte	73
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 02       		.byte	2
+  89 003d 50       		.byte	80
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 01       		.byte	1
+  93 0041 51       		.byte	81
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 01       		.byte	1
+  97 0045 80       		.byte	-128
+  98 0046 0A       		.byte	10
+  99 0047 36       		.byte	54
+ 100 0048 04       		.byte	4
+ 101 0049 F0       		.byte	-16
+ 102 004a 14       		.byte	20
+ 103 004b 1F       		.byte	31
+ 104 004c 18       		.byte	24
+ 105 004d 08       		.byte	8
+ 106 004e 1C       		.byte	28
+ 107 004f 04       		.byte	4
+ 108 0050 24       		.byte	36
+ 109 0051 3C       		.byte	60
+ 110 0052 34       		.byte	52
+ 111 0053 0F       		.byte	15
+ 112 0054 7C       		.byte	124
+ 113 0055 30       		.byte	48
+ 114 0056 85       		.byte	-123
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 3
+
+
+ 115 0057 72       		.byte	114
+ 116 0058 86       		.byte	-122
+ 117 0059 38       		.byte	56
+ 118 005a 87       		.byte	-121
+ 119 005b 0F       		.byte	15
+ 120 005c 0A       		.byte	10
+ 121 005d 01       		.byte	1
+ 122 005e 0B       		.byte	11
+ 123 005f 01       		.byte	1
+ 124 0060 0C       		.byte	12
+ 125 0061 01       		.byte	1
+ 126 0062 12       		.byte	18
+ 127 0063 01       		.byte	1
+ 128 0064 18       		.byte	24
+ 129 0065 01       		.byte	1
+ 130 0066 23       		.byte	35
+ 131 0067 01       		.byte	1
+ 132 0068 30       		.byte	48
+ 133 0069 01       		.byte	1
+ 134 006a 35       		.byte	53
+ 135 006b 01       		.byte	1
+ 136 006c 38       		.byte	56
+ 137 006d 02       		.byte	2
+ 138 006e 3A       		.byte	58
+ 139 006f 80       		.byte	-128
+ 140 0070 3F       		.byte	63
+ 141 0071 10       		.byte	16
+ 142 0072 40       		.byte	64
+ 143 0073 06       		.byte	6
+ 144 0074 45       		.byte	69
+ 145 0075 04       		.byte	4
+ 146 0076 49       		.byte	73
+ 147 0077 FF       		.byte	-1
+ 148 0078 4A       		.byte	74
+ 149 0079 07       		.byte	7
+ 150 007a 4B       		.byte	75
+ 151 007b FF       		.byte	-1
+ 152 007c 4C       		.byte	76
+ 153 007d 40       		.byte	64
+ 154 007e 4D       		.byte	77
+ 155 007f 20       		.byte	32
+ 156 0080 4E       		.byte	78
+ 157 0081 F0       		.byte	-16
+ 158 0082 4F       		.byte	79
+ 159 0083 05       		.byte	5
+ 160 0084 50       		.byte	80
+ 161 0085 08       		.byte	8
+ 162 0086 58       		.byte	88
+ 163 0087 04       		.byte	4
+ 164 0088 59       		.byte	89
+ 165 0089 04       		.byte	4
+ 166 008a 5A       		.byte	90
+ 167 008b 04       		.byte	4
+ 168 008c 5F       		.byte	95
+ 169 008d 01       		.byte	1
+ 170 008e 60       		.byte	96
+ 171 008f 40       		.byte	64
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 4
+
+
+ 172 0090 61       		.byte	97
+ 173 0091 A8       		.byte	-88
+ 174 0092 62       		.byte	98
+ 175 0093 40       		.byte	64
+ 176 0094 63       		.byte	99
+ 177 0095 20       		.byte	32
+ 178 0096 01       		.byte	1
+ 179 0097 80       		.byte	-128
+ 180 0098 03       		.byte	3
+ 181 0099 04       		.byte	4
+ 182 009a 04       		.byte	4
+ 183 009b 4A       		.byte	74
+ 184 009c 05       		.byte	5
+ 185 009d 40       		.byte	64
+ 186 009e 07       		.byte	7
+ 187 009f 04       		.byte	4
+ 188 00a0 09       		.byte	9
+ 189 00a1 22       		.byte	34
+ 190 00a2 0D       		.byte	13
+ 191 00a3 08       		.byte	8
+ 192 00a4 0E       		.byte	14
+ 193 00a5 05       		.byte	5
+ 194 00a6 0F       		.byte	15
+ 195 00a7 80       		.byte	-128
+ 196 00a8 17       		.byte	23
+ 197 00a9 19       		.byte	25
+ 198 00aa 19       		.byte	25
+ 199 00ab 82       		.byte	-126
+ 200 00ac 1A       		.byte	26
+ 201 00ad 01       		.byte	1
+ 202 00ae 1C       		.byte	28
+ 203 00af 50       		.byte	80
+ 204 00b0 1D       		.byte	29
+ 205 00b1 A2       		.byte	-94
+ 206 00b2 1E       		.byte	30
+ 207 00b3 04       		.byte	4
+ 208 00b4 23       		.byte	35
+ 209 00b5 04       		.byte	4
+ 210 00b6 24       		.byte	36
+ 211 00b7 81       		.byte	-127
+ 212 00b8 25       		.byte	37
+ 213 00b9 01       		.byte	1
+ 214 00ba 27       		.byte	39
+ 215 00bb 04       		.byte	4
+ 216 00bc 29       		.byte	41
+ 217 00bd 02       		.byte	2
+ 218 00be 2D       		.byte	45
+ 219 00bf 90       		.byte	-112
+ 220 00c0 2E       		.byte	46
+ 221 00c1 04       		.byte	4
+ 222 00c2 2F       		.byte	47
+ 223 00c3 40       		.byte	64
+ 224 00c4 34       		.byte	52
+ 225 00c5 20       		.byte	32
+ 226 00c6 35       		.byte	53
+ 227 00c7 40       		.byte	64
+ 228 00c8 36       		.byte	54
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 5
+
+
+ 229 00c9 01       		.byte	1
+ 230 00ca 37       		.byte	55
+ 231 00cb 04       		.byte	4
+ 232 00cc 3A       		.byte	58
+ 233 00cd 10       		.byte	16
+ 234 00ce 3D       		.byte	61
+ 235 00cf 08       		.byte	8
+ 236 00d0 3E       		.byte	62
+ 237 00d1 22       		.byte	34
+ 238 00d2 3F       		.byte	63
+ 239 00d3 80       		.byte	-128
+ 240 00d4 45       		.byte	69
+ 241 00d5 AD       		.byte	-83
+ 242 00d6 48       		.byte	72
+ 243 00d7 10       		.byte	16
+ 244 00d8 4A       		.byte	74
+ 245 00d9 08       		.byte	8
+ 246 00da 4C       		.byte	76
+ 247 00db 04       		.byte	4
+ 248 00dc 4D       		.byte	77
+ 249 00dd 90       		.byte	-112
+ 250 00de 50       		.byte	80
+ 251 00df 20       		.byte	32
+ 252 00e0 56       		.byte	86
+ 253 00e1 10       		.byte	16
+ 254 00e2 57       		.byte	87
+ 255 00e3 01       		.byte	1
+ 256 00e4 5C       		.byte	92
+ 257 00e5 10       		.byte	16
+ 258 00e6 6D       		.byte	109
+ 259 00e7 04       		.byte	4
+ 260 00e8 6F       		.byte	111
+ 261 00e9 0A       		.byte	10
+ 262 00ea 76       		.byte	118
+ 263 00eb 22       		.byte	34
+ 264 00ec 77       		.byte	119
+ 265 00ed 19       		.byte	25
+ 266 00ee 80       		.byte	-128
+ 267 00ef 21       		.byte	33
+ 268 00f0 83       		.byte	-125
+ 269 00f1 40       		.byte	64
+ 270 00f2 87       		.byte	-121
+ 271 00f3 48       		.byte	72
+ 272 00f4 8D       		.byte	-115
+ 273 00f5 01       		.byte	1
+ 274 00f6 90       		.byte	-112
+ 275 00f7 0A       		.byte	10
+ 276 00f8 94       		.byte	-108
+ 277 00f9 81       		.byte	-127
+ 278 00fa 95       		.byte	-107
+ 279 00fb 04       		.byte	4
+ 280 00fc 97       		.byte	-105
+ 281 00fd 04       		.byte	4
+ 282 00fe 99       		.byte	-103
+ 283 00ff 01       		.byte	1
+ 284 0100 A1       		.byte	-95
+ 285 0101 04       		.byte	4
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 6
+
+
+ 286 0102 A2       		.byte	-94
+ 287 0103 09       		.byte	9
+ 288 0104 A4       		.byte	-92
+ 289 0105 30       		.byte	48
+ 290 0106 A7       		.byte	-89
+ 291 0107 4B       		.byte	75
+ 292 0108 AC       		.byte	-84
+ 293 0109 84       		.byte	-124
+ 294 010a AE       		.byte	-82
+ 295 010b 84       		.byte	-124
+ 296 010c B0       		.byte	-80
+ 297 010d 02       		.byte	2
+ 298 010e B2       		.byte	-78
+ 299 010f 20       		.byte	32
+ 300 0110 C0       		.byte	-64
+ 301 0111 F3       		.byte	-13
+ 302 0112 C2       		.byte	-62
+ 303 0113 FA       		.byte	-6
+ 304 0114 C4       		.byte	-60
+ 305 0115 70       		.byte	112
+ 306 0116 CA       		.byte	-54
+ 307 0117 F1       		.byte	-15
+ 308 0118 CC       		.byte	-52
+ 309 0119 F0       		.byte	-16
+ 310 011a CE       		.byte	-50
+ 311 011b F4       		.byte	-12
+ 312 011c D0       		.byte	-48
+ 313 011d F0       		.byte	-16
+ 314 011e D2       		.byte	-46
+ 315 011f 14       		.byte	20
+ 316 0120 D6       		.byte	-42
+ 317 0121 20       		.byte	32
+ 318 0122 E6       		.byte	-26
+ 319 0123 40       		.byte	64
+ 320 0124 05       		.byte	5
+ 321 0125 77       		.byte	119
+ 322 0126 0D       		.byte	13
+ 323 0127 12       		.byte	18
+ 324 0128 0E       		.byte	14
+ 325 0129 40       		.byte	64
+ 326 012a 0F       		.byte	15
+ 327 012b 29       		.byte	41
+ 328 012c 10       		.byte	16
+ 329 012d 8C       		.byte	-116
+ 330 012e 11       		.byte	17
+ 331 012f 24       		.byte	36
+ 332 0130 12       		.byte	18
+ 333 0131 13       		.byte	19
+ 334 0132 13       		.byte	19
+ 335 0133 11       		.byte	17
+ 336 0134 14       		.byte	20
+ 337 0135 11       		.byte	17
+ 338 0136 15       		.byte	21
+ 339 0137 01       		.byte	1
+ 340 0138 16       		.byte	22
+ 341 0139 0E       		.byte	14
+ 342 013a 17       		.byte	23
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 7
+
+
+ 343 013b 06       		.byte	6
+ 344 013c 18       		.byte	24
+ 345 013d 20       		.byte	32
+ 346 013e 1A       		.byte	26
+ 347 013f 03       		.byte	3
+ 348 0140 1E       		.byte	30
+ 349 0141 40       		.byte	64
+ 350 0142 20       		.byte	32
+ 351 0143 11       		.byte	17
+ 352 0144 22       		.byte	34
+ 353 0145 86       		.byte	-122
+ 354 0146 29       		.byte	41
+ 355 0147 77       		.byte	119
+ 356 0148 2A       		.byte	42
+ 357 0149 08       		.byte	8
+ 358 014a 2D       		.byte	45
+ 359 014b 40       		.byte	64
+ 360 014c 2E       		.byte	46
+ 361 014d 8C       		.byte	-116
+ 362 014e 30       		.byte	48
+ 363 014f 0F       		.byte	15
+ 364 0150 31       		.byte	49
+ 365 0151 08       		.byte	8
+ 366 0152 32       		.byte	50
+ 367 0153 8A       		.byte	-118
+ 368 0154 33       		.byte	51
+ 369 0155 40       		.byte	64
+ 370 0156 34       		.byte	52
+ 371 0157 40       		.byte	64
+ 372 0158 35       		.byte	53
+ 373 0159 07       		.byte	7
+ 374 015a 36       		.byte	54
+ 375 015b 30       		.byte	48
+ 376 015c 37       		.byte	55
+ 377 015d 30       		.byte	48
+ 378 015e 38       		.byte	56
+ 379 015f 80       		.byte	-128
+ 380 0160 3A       		.byte	58
+ 381 0161 0A       		.byte	10
+ 382 0162 3E       		.byte	62
+ 383 0163 10       		.byte	16
+ 384 0164 54       		.byte	84
+ 385 0165 18       		.byte	24
+ 386 0166 56       		.byte	86
+ 387 0167 04       		.byte	4
+ 388 0168 58       		.byte	88
+ 389 0169 04       		.byte	4
+ 390 016a 59       		.byte	89
+ 391 016b 04       		.byte	4
+ 392 016c 5B       		.byte	91
+ 393 016d 04       		.byte	4
+ 394 016e 5F       		.byte	95
+ 395 016f 01       		.byte	1
+ 396 0170 81       		.byte	-127
+ 397 0171 2A       		.byte	42
+ 398 0172 83       		.byte	-125
+ 399 0173 44       		.byte	68
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 8
+
+
+ 400 0174 88       		.byte	-120
+ 401 0175 10       		.byte	16
+ 402 0176 89       		.byte	-119
+ 403 0177 03       		.byte	3
+ 404 0178 8B       		.byte	-117
+ 405 0179 44       		.byte	68
+ 406 017a 8C       		.byte	-116
+ 407 017b 10       		.byte	16
+ 408 017c 8D       		.byte	-115
+ 409 017d 73       		.byte	115
+ 410 017e 8E       		.byte	-114
+ 411 017f 0C       		.byte	12
+ 412 0180 8F       		.byte	-113
+ 413 0181 0C       		.byte	12
+ 414 0182 90       		.byte	-112
+ 415 0183 09       		.byte	9
+ 416 0184 92       		.byte	-110
+ 417 0185 10       		.byte	16
+ 418 0186 94       		.byte	-108
+ 419 0187 0C       		.byte	12
+ 420 0188 95       		.byte	-107
+ 421 0189 73       		.byte	115
+ 422 018a 96       		.byte	-106
+ 423 018b 11       		.byte	17
+ 424 018c 97       		.byte	-105
+ 425 018d 04       		.byte	4
+ 426 018e 98       		.byte	-104
+ 427 018f 20       		.byte	32
+ 428 0190 9A       		.byte	-102
+ 429 0191 03       		.byte	3
+ 430 0192 9B       		.byte	-101
+ 431 0193 55       		.byte	85
+ 432 0194 9C       		.byte	-100
+ 433 0195 1C       		.byte	28
+ 434 0196 9E       		.byte	-98
+ 435 0197 02       		.byte	2
+ 436 0198 A3       		.byte	-93
+ 437 0199 08       		.byte	8
+ 438 019a A4       		.byte	-92
+ 439 019b 40       		.byte	64
+ 440 019c A8       		.byte	-88
+ 441 019d 14       		.byte	20
+ 442 019e B0       		.byte	-80
+ 443 019f 20       		.byte	32
+ 444 01a0 B1       		.byte	-79
+ 445 01a1 0F       		.byte	15
+ 446 01a2 B2       		.byte	-78
+ 447 01a3 40       		.byte	64
+ 448 01a4 B3       		.byte	-77
+ 449 01a5 30       		.byte	48
+ 450 01a6 B4       		.byte	-76
+ 451 01a7 1F       		.byte	31
+ 452 01a8 B5       		.byte	-75
+ 453 01a9 40       		.byte	64
+ 454 01aa B9       		.byte	-71
+ 455 01ab 08       		.byte	8
+ 456 01ac BB       		.byte	-69
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 9
+
+
+ 457 01ad 02       		.byte	2
+ 458 01ae BE       		.byte	-66
+ 459 01af 05       		.byte	5
+ 460 01b0 BF       		.byte	-65
+ 461 01b1 14       		.byte	20
+ 462 01b2 C0       		.byte	-64
+ 463 01b3 46       		.byte	70
+ 464 01b4 C1       		.byte	-63
+ 465 01b5 03       		.byte	3
+ 466 01b6 C5       		.byte	-59
+ 467 01b7 0E       		.byte	14
+ 468 01b8 C6       		.byte	-58
+ 469 01b9 C0       		.byte	-64
+ 470 01ba C7       		.byte	-57
+ 471 01bb 0B       		.byte	11
+ 472 01bc C8       		.byte	-56
+ 473 01bd 19       		.byte	25
+ 474 01be C9       		.byte	-55
+ 475 01bf FF       		.byte	-1
+ 476 01c0 CA       		.byte	-54
+ 477 01c1 FF       		.byte	-1
+ 478 01c2 CB       		.byte	-53
+ 479 01c3 FF       		.byte	-1
+ 480 01c4 CE       		.byte	-50
+ 481 01c5 F0       		.byte	-16
+ 482 01c6 CF       		.byte	-49
+ 483 01c7 44       		.byte	68
+ 484 01c8 D0       		.byte	-48
+ 485 01c9 0C       		.byte	12
+ 486 01ca D4       		.byte	-44
+ 487 01cb 01       		.byte	1
+ 488 01cc D6       		.byte	-42
+ 489 01cd 04       		.byte	4
+ 490 01ce D8       		.byte	-40
+ 491 01cf 04       		.byte	4
+ 492 01d0 D9       		.byte	-39
+ 493 01d1 04       		.byte	4
+ 494 01d2 DA       		.byte	-38
+ 495 01d3 04       		.byte	4
+ 496 01d4 DB       		.byte	-37
+ 497 01d5 04       		.byte	4
+ 498 01d6 DF       		.byte	-33
+ 499 01d7 01       		.byte	1
+ 500 01d8 E6       		.byte	-26
+ 501 01d9 C0       		.byte	-64
+ 502 01da EA       		.byte	-22
+ 503 01db 40       		.byte	64
+ 504 01dc EB       		.byte	-21
+ 505 01dd 02       		.byte	2
+ 506 01de 00       		.byte	0
+ 507 01df 60       		.byte	96
+ 508 01e0 02       		.byte	2
+ 509 01e1 04       		.byte	4
+ 510 01e2 04       		.byte	4
+ 511 01e3 A0       		.byte	-96
+ 512 01e4 05       		.byte	5
+ 513 01e5 20       		.byte	32
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 10
+
+
+ 514 01e6 09       		.byte	9
+ 515 01e7 08       		.byte	8
+ 516 01e8 0A       		.byte	10
+ 517 01e9 08       		.byte	8
+ 518 01ea 0B       		.byte	11
+ 519 01eb 82       		.byte	-126
+ 520 01ec 0C       		.byte	12
+ 521 01ed 20       		.byte	32
+ 522 01ee 0D       		.byte	13
+ 523 01ef 08       		.byte	8
+ 524 01f0 0E       		.byte	14
+ 525 01f1 40       		.byte	64
+ 526 01f2 0F       		.byte	15
+ 527 01f3 02       		.byte	2
+ 528 01f4 10       		.byte	16
+ 529 01f5 08       		.byte	8
+ 530 01f6 12       		.byte	18
+ 531 01f7 20       		.byte	32
+ 532 01f8 15       		.byte	21
+ 533 01f9 02       		.byte	2
+ 534 01fa 16       		.byte	22
+ 535 01fb 05       		.byte	5
+ 536 01fc 19       		.byte	25
+ 537 01fd 05       		.byte	5
+ 538 01fe 1A       		.byte	26
+ 539 01ff 08       		.byte	8
+ 540 0200 1D       		.byte	29
+ 541 0201 08       		.byte	8
+ 542 0202 1E       		.byte	30
+ 543 0203 44       		.byte	68
+ 544 0204 1F       		.byte	31
+ 545 0205 C1       		.byte	-63
+ 546 0206 20       		.byte	32
+ 547 0207 48       		.byte	72
+ 548 0208 21       		.byte	33
+ 549 0209 01       		.byte	1
+ 550 020a 22       		.byte	34
+ 551 020b 08       		.byte	8
+ 552 020c 24       		.byte	36
+ 553 020d 0A       		.byte	10
+ 554 020e 25       		.byte	37
+ 555 020f 04       		.byte	4
+ 556 0210 26       		.byte	38
+ 557 0211 01       		.byte	1
+ 558 0212 27       		.byte	39
+ 559 0213 05       		.byte	5
+ 560 0214 2A       		.byte	42
+ 561 0215 01       		.byte	1
+ 562 0216 2B       		.byte	43
+ 563 0217 80       		.byte	-128
+ 564 0218 2F       		.byte	47
+ 565 0219 0A       		.byte	10
+ 566 021a 30       		.byte	48
+ 567 021b 20       		.byte	32
+ 568 021c 31       		.byte	49
+ 569 021d 18       		.byte	24
+ 570 021e 37       		.byte	55
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 11
+
+
+ 571 021f 05       		.byte	5
+ 572 0220 38       		.byte	56
+ 573 0221 60       		.byte	96
+ 574 0222 3B       		.byte	59
+ 575 0223 02       		.byte	2
+ 576 0224 3D       		.byte	61
+ 577 0225 04       		.byte	4
+ 578 0226 3F       		.byte	63
+ 579 0227 80       		.byte	-128
+ 580 0228 40       		.byte	64
+ 581 0229 40       		.byte	64
+ 582 022a 41       		.byte	65
+ 583 022b 08       		.byte	8
+ 584 022c 49       		.byte	73
+ 585 022d 10       		.byte	16
+ 586 022e 4A       		.byte	74
+ 587 022f 20       		.byte	32
+ 588 0230 50       		.byte	80
+ 589 0231 18       		.byte	24
+ 590 0232 58       		.byte	88
+ 591 0233 82       		.byte	-126
+ 592 0234 59       		.byte	89
+ 593 0235 24       		.byte	36
+ 594 0236 5C       		.byte	92
+ 595 0237 01       		.byte	1
+ 596 0238 62       		.byte	98
+ 597 0239 02       		.byte	2
+ 598 023a 64       		.byte	100
+ 599 023b 40       		.byte	64
+ 600 023c 66       		.byte	102
+ 601 023d 80       		.byte	-128
+ 602 023e 67       		.byte	103
+ 603 023f 04       		.byte	4
+ 604 0240 84       		.byte	-124
+ 605 0241 40       		.byte	64
+ 606 0242 86       		.byte	-122
+ 607 0243 02       		.byte	2
+ 608 0244 C0       		.byte	-64
+ 609 0245 83       		.byte	-125
+ 610 0246 C2       		.byte	-62
+ 611 0247 FF       		.byte	-1
+ 612 0248 C4       		.byte	-60
+ 613 0249 D6       		.byte	-42
+ 614 024a CA       		.byte	-54
+ 615 024b 31       		.byte	49
+ 616 024c CC       		.byte	-52
+ 617 024d C6       		.byte	-58
+ 618 024e CE       		.byte	-50
+ 619 024f 5D       		.byte	93
+ 620 0250 D0       		.byte	-48
+ 621 0251 03       		.byte	3
+ 622 0252 D2       		.byte	-46
+ 623 0253 04       		.byte	4
+ 624 0254 D6       		.byte	-42
+ 625 0255 8F       		.byte	-113
+ 626 0256 D8       		.byte	-40
+ 627 0257 B1       		.byte	-79
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 12
+
+
+ 628 0258 E2       		.byte	-30
+ 629 0259 08       		.byte	8
+ 630 025a B9       		.byte	-71
+ 631 025b 20       		.byte	32
+ 632 025c BF       		.byte	-65
+ 633 025d 10       		.byte	16
+ 634 025e D9       		.byte	-39
+ 635 025f 04       		.byte	4
+ 636 0260 DF       		.byte	-33
+ 637 0261 01       		.byte	1
+ 638 0262 23       		.byte	35
+ 639 0263 08       		.byte	8
+ 640 0264 87       		.byte	-121
+ 641 0265 08       		.byte	8
+ 642 0266 31       		.byte	49
+ 643 0267 40       		.byte	64
+ 644 0268 33       		.byte	51
+ 645 0269 01       		.byte	1
+ 646 026a 36       		.byte	54
+ 647 026b 80       		.byte	-128
+ 648 026c CC       		.byte	-52
+ 649 026d 70       		.byte	112
+ 650 026e 9D       		.byte	-99
+ 651 026f 40       		.byte	64
+ 652 0270 9F       		.byte	-97
+ 653 0271 01       		.byte	1
+ 654 0272 A6       		.byte	-90
+ 655 0273 80       		.byte	-128
+ 656 0274 12       		.byte	18
+ 657 0275 80       		.byte	-128
+ 658 0276 9D       		.byte	-99
+ 659 0277 40       		.byte	64
+ 660 0278 9F       		.byte	-97
+ 661 0279 01       		.byte	1
+ 662 027a A6       		.byte	-90
+ 663 027b 80       		.byte	-128
+ 664 027c C4       		.byte	-60
+ 665 027d 10       		.byte	16
+ 666 027e 9D       		.byte	-99
+ 667 027f 40       		.byte	64
+ 668 0280 9F       		.byte	-97
+ 669 0281 01       		.byte	1
+ 670 0282 67       		.byte	103
+ 671 0283 80       		.byte	-128
+ 672 0284 85       		.byte	-123
+ 673 0285 40       		.byte	64
+ 674 0286 87       		.byte	-121
+ 675 0287 41       		.byte	65
+ 676 0288 9D       		.byte	-99
+ 677 0289 40       		.byte	64
+ 678 028a 9F       		.byte	-97
+ 679 028b 01       		.byte	1
+ 680 028c D8       		.byte	-40
+ 681 028d 80       		.byte	-128
+ 682 028e E2       		.byte	-30
+ 683 028f 50       		.byte	80
+ 684 0290 E6       		.byte	-26
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 13
+
+
+ 685 0291 10       		.byte	16
+ 686 0292 03       		.byte	3
+ 687 0293 02       		.byte	2
+ 688 0294 56       		.byte	86
+ 689 0295 20       		.byte	32
+ 690 0296 83       		.byte	-125
+ 691 0297 02       		.byte	2
+ 692 0298 8E       		.byte	-114
+ 693 0299 20       		.byte	32
+ 694 029a C0       		.byte	-64
+ 695 029b 40       		.byte	64
+ 696 029c D4       		.byte	-44
+ 697 029d 40       		.byte	64
+ 698 029e E0       		.byte	-32
+ 699 029f 20       		.byte	32
+ 700 02a0 10       		.byte	16
+ 701 02a1 01       		.byte	1
+ 702 02a2 1A       		.byte	26
+ 703 02a3 01       		.byte	1
+ 704 02a4 00       		.byte	0
+ 705 02a5 3B       		.byte	59
+ 706 02a6 00       		.byte	0
+ 707 02a7 00       		.byte	0
+ 708 02a8 02       		.byte	2
+ 709 02a9 10       		.byte	16
+ 710 02aa 80       		.byte	-128
+ 711 02ab 00       		.byte	0
+ 712 02ac 03       		.byte	3
+ 713 02ad 00       		.byte	0
+ 714 02ae 40       		.byte	64
+ 715 02af E3       		.byte	-29
+ 716 02b0 1C       		.byte	28
+ 717 02b1 18       		.byte	24
+ 718 02b2 23       		.byte	35
+ 719 02b3 00       		.byte	0
+ 720 02b4 1F       		.byte	31
+ 721 02b5 44       		.byte	68
+ 722 02b6 20       		.byte	32
+ 723 02b7 00       		.byte	0
+ 724 02b8 01       		.byte	1
+ 725 02b9 00       		.byte	0
+ 726 02ba 80       		.byte	-128
+ 727 02bb 04       		.byte	4
+ 728 02bc 00       		.byte	0
+ 729 02bd 3C       		.byte	60
+ 730 02be 23       		.byte	35
+ 731 02bf C2       		.byte	-62
+ 732 02c0 33       		.byte	51
+ 733 02c1 80       		.byte	-128
+ 734 02c2 0C       		.byte	12
+ 735 02c3 00       		.byte	0
+ 736 02c4 3F       		.byte	63
+ 737 02c5 1C       		.byte	28
+ 738 02c6 00       		.byte	0
+ 739 02c7 E1       		.byte	-31
+ 740 02c8 08       		.byte	8
+ 741 02c9 08       		.byte	8
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 14
+
+
+ 742 02ca 00       		.byte	0
+ 743 02cb 00       		.byte	0
+ 744 02cc 04       		.byte	4
+ 745 02cd E7       		.byte	-25
+ 746 02ce 00       		.byte	0
+ 747 02cf 18       		.byte	24
+ 748 02d0 0C       		.byte	12
+ 749 02d1 C0       		.byte	-64
+ 750 02d2 00       		.byte	0
+ 751 02d3 00       		.byte	0
+ 752 02d4 00       		.byte	0
+ 753 02d5 FF       		.byte	-1
+ 754 02d6 00       		.byte	0
+ 755 02d7 00       		.byte	0
+ 756 02d8 2C       		.byte	44
+ 757 02d9 38       		.byte	56
+ 758 02da 10       		.byte	16
+ 759 02db 00       		.byte	0
+ 760 02dc 0F       		.byte	15
+ 761 02dd 1F       		.byte	31
+ 762 02de C0       		.byte	-64
+ 763 02df C0       		.byte	-64
+ 764 02e0 00       		.byte	0
+ 765 02e1 00       		.byte	0
+ 766 02e2 22       		.byte	34
+ 767 02e3 20       		.byte	32
+ 768 02e4 00       		.byte	0
+ 769 02e5 00       		.byte	0
+ 770 02e6 44       		.byte	68
+ 771 02e7 00       		.byte	0
+ 772 02e8 23       		.byte	35
+ 773 02e9 05       		.byte	5
+ 774 02ea 04       		.byte	4
+ 775 02eb 00       		.byte	0
+ 776 02ec 01       		.byte	1
+ 777 02ed 00       		.byte	0
+ 778 02ee E0       		.byte	-32
+ 779 02ef C0       		.byte	-64
+ 780 02f0 28       		.byte	40
+ 781 02f1 FF       		.byte	-1
+ 782 02f2 FF       		.byte	-1
+ 783 02f3 FF       		.byte	-1
+ 784 02f4 62       		.byte	98
+ 785 02f5 A0       		.byte	-96
+ 786 02f6 F0       		.byte	-16
+ 787 02f7 41       		.byte	65
+ 788 02f8 0C       		.byte	12
+ 789 02f9 00       		.byte	0
+ 790 02fa 00       		.byte	0
+ 791 02fb 00       		.byte	0
+ 792 02fc 00       		.byte	0
+ 793 02fd 00       		.byte	0
+ 794 02fe 02       		.byte	2
+ 795 02ff 11       		.byte	17
+ 796 0300 04       		.byte	4
+ 797 0301 04       		.byte	4
+ 798 0302 04       		.byte	4
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 15
+
+
+ 799 0303 04       		.byte	4
+ 800 0304 00       		.byte	0
+ 801 0305 00       		.byte	0
+ 802 0306 00       		.byte	0
+ 803 0307 01       		.byte	1
+ 804 0308 00       		.byte	0
+ 805 0309 00       		.byte	0
+ 806 030a 00       		.byte	0
+ 807 030b 00       		.byte	0
+ 808 030c 00       		.byte	0
+ 809 030d 00       		.byte	0
+ 810 030e 40       		.byte	64
+ 811 030f 02       		.byte	2
+ 812 0310 00       		.byte	0
+ 813 0311 10       		.byte	16
+ 814 0312 30       		.byte	48
+ 815 0313 10       		.byte	16
+ 816 0314 00       		.byte	0
+ 817 0315 10       		.byte	16
+ 818 0316 10       		.byte	16
+ 819 0317 12       		.byte	18
+ 820 0318 00       		.byte	0
+ 821 0319 00       		.byte	0
+ 822 031a 00       		.byte	0
+ 823 031b 00       		.byte	0
+ 824 031c 00       		.byte	0
+ 825 031d 00       		.byte	0
+ 826 031e 00       		.byte	0
+ 827 031f 00       		.byte	0
+ 828 0320 00       		.byte	0
+ 829 0321 00       		.byte	0
+ 830 0322 00       		.byte	0
+ 831 0323 00       		.byte	0
+ 832 0324 00       		.byte	0
+ 833 0325 00       		.byte	0
+ 834 0326 00       		.byte	0
+ 835 0327 00       		.byte	0
+ 836 0328 F0       		.byte	-16
+ 837 0329 00       		.byte	0
+ 838 032a 00       		.byte	0
+ 839 032b F1       		.byte	-15
+ 840 032c 01       		.byte	1
+ 841 032d 00       		.byte	0
+ 842 032e 00       		.byte	0
+ 843 032f 00       		.byte	0
+ 844 0330 00       		.byte	0
+ 845 0331 00       		.byte	0
+ 846 0332 00       		.byte	0
+ 847 0333 00       		.byte	0
+ 848 0334 30       		.byte	48
+ 849 0335 00       		.byte	0
+ 850 0336 00       		.byte	0
+ 851 0337 30       		.byte	48
+ 852 0338 00       		.byte	0
+ 853 0339 00       		.byte	0
+ 854 033a 00       		.byte	0
+ 855 033b 00       		.byte	0
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 16
+
+
+ 856 033c 00       		.byte	0
+ 857 033d 00       		.byte	0
+ 858 033e 00       		.byte	0
+ 859 033f 00       		.byte	0
+ 860 0340 1F       		.byte	31
+ 861 0341 00       		.byte	0
+ 862 0342 00       		.byte	0
+ 863 0343 1F       		.byte	31
+ 864 0344 00       		.byte	0
+ 865 0345 00       		.byte	0
+ 866 0346 00       		.byte	0
+ 867 0347 00       		.byte	0
+ 868 0348 00       		.byte	0
+ 869 0349 00       		.byte	0
+ 870 034a 00       		.byte	0
+ 871 034b 00       		.byte	0
+ 872 034c 08       		.byte	8
+ 873 034d 00       		.byte	0
+ 874 034e 04       		.byte	4
+ 875 034f 08       		.byte	8
+ 876 0350 08       		.byte	8
+ 877 0351 00       		.byte	0
+ 878 0352 08       		.byte	8
+ 879 0353 00       		.byte	0
+ 880 0354 00       		.byte	0
+ 881 0355 00       		.byte	0
+ 882 0356 00       		.byte	0
+ 883 0357 00       		.byte	0
+ 884 0358 3C       		.byte	60
+ 885 0359 00       		.byte	0
+ 886 035a 00       		.byte	0
+ 887 035b 3C       		.byte	60
+ 888 035c 00       		.byte	0
+ 889 035d 00       		.byte	0
+ 890 035e 00       		.byte	0
+ 891 035f 00       		.byte	0
+ 892 0360 00       		.byte	0
+ 893 0361 00       		.byte	0
+ 894 0362 00       		.byte	0
+ 895 0363 00       		.byte	0
+ 896 0364 0F       		.byte	15
+ 897 0365 00       		.byte	0
+ 898 0366 00       		.byte	0
+ 899 0367 0F       		.byte	15
+ 900 0368 00       		.byte	0
+ 901 0369 00       		.byte	0
+ 902 036a 00       		.byte	0
+ 903 036b 00       		.byte	0
+ 904 036c 00       		.byte	0
+ 905 036d 00       		.byte	0
+ 906 036e 00       		.byte	0
+ 907 036f 00       		.byte	0
+ 908              		.section	.cywolatch,"a",%progbits
+ 909              		.align	2
+ 910              		.type	cy_meta_wonvl, %object
+ 911              		.size	cy_meta_wonvl, 4
+ 912              	cy_meta_wonvl:
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 17
+
+
+ 913 0000 BC       		.byte	-68
+ 914 0001 90       		.byte	-112
+ 915 0002 AC       		.byte	-84
+ 916 0003 AF       		.byte	-81
+ 917              		.section	.cycustnvl,"a",%progbits
+ 918              		.align	2
+ 919              		.type	cy_meta_custnvl, %object
+ 920              		.size	cy_meta_custnvl, 4
+ 921              	cy_meta_custnvl:
+ 922 0000 00       		.byte	0
+ 923 0001 00       		.byte	0
+ 924 0002 40       		.byte	64
+ 925 0003 05       		.byte	5
+ 926              		.section	.cymeta,"a",%progbits
+ 927              		.align	2
+ 928              		.type	cy_metadata, %object
+ 929              		.size	cy_metadata, 12
+ 930              	cy_metadata:
+ 931 0000 00       		.byte	0
+ 932 0001 01       		.byte	1
+ 933 0002 2E       		.byte	46
+ 934 0003 13       		.byte	19
+ 935 0004 30       		.byte	48
+ 936 0005 69       		.byte	105
+ 937 0006 00       		.byte	0
+ 938 0007 01       		.byte	1
+ 939 0008 00       		.byte	0
+ 940 0009 00       		.byte	0
+ 941 000a 00       		.byte	0
+ 942 000b 00       		.byte	0
+ 943              		.section	.cyflashprotect,"a",%progbits
+ 944              		.align	2
+ 945              		.type	cy_meta_flashprotect, %object
+ 946              		.size	cy_meta_flashprotect, 128
+ 947              	cy_meta_flashprotect:
+ 948 0000 00000000 		.space	128
+ 948      00000000 
+ 948      00000000 
+ 948      00000000 
+ 948      00000000 
+ 949              		.text
+ 950              	.Letext0:
+ 951              		.file 1 ".\\Generated_Source\\PSoC5\\cymetadata.c"
+ 952              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 953              		.section	.debug_info,"",%progbits
+ 954              	.Ldebug_info0:
+ 955 0000 36010000 		.4byte	0x136
+ 956 0004 0400     		.2byte	0x4
+ 957 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 958 000a 04       		.byte	0x4
+ 959 000b 01       		.uleb128 0x1
+ 960 000c 94000000 		.4byte	.LASF18
+ 961 0010 01       		.byte	0x1
+ 962 0011 00000000 		.4byte	.LASF19
+ 963 0015 AA010000 		.4byte	.LASF20
+ 964 0019 00000000 		.4byte	.Ldebug_line0
+ 965 001d 02       		.uleb128 0x2
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 18
+
+
+ 966 001e 01       		.byte	0x1
+ 967 001f 06       		.byte	0x6
+ 968 0020 9E010000 		.4byte	.LASF0
+ 969 0024 02       		.uleb128 0x2
+ 970 0025 01       		.byte	0x1
+ 971 0026 08       		.byte	0x8
+ 972 0027 38000000 		.4byte	.LASF1
+ 973 002b 02       		.uleb128 0x2
+ 974 002c 02       		.byte	0x2
+ 975 002d 05       		.byte	0x5
+ 976 002e 85010000 		.4byte	.LASF2
+ 977 0032 02       		.uleb128 0x2
+ 978 0033 02       		.byte	0x2
+ 979 0034 07       		.byte	0x7
+ 980 0035 58000000 		.4byte	.LASF3
+ 981 0039 02       		.uleb128 0x2
+ 982 003a 04       		.byte	0x4
+ 983 003b 05       		.byte	0x5
+ 984 003c 95010000 		.4byte	.LASF4
+ 985 0040 02       		.uleb128 0x2
+ 986 0041 04       		.byte	0x4
+ 987 0042 07       		.byte	0x7
+ 988 0043 46000000 		.4byte	.LASF5
+ 989 0047 02       		.uleb128 0x2
+ 990 0048 08       		.byte	0x8
+ 991 0049 05       		.byte	0x5
+ 992 004a 72010000 		.4byte	.LASF6
+ 993 004e 02       		.uleb128 0x2
+ 994 004f 08       		.byte	0x8
+ 995 0050 07       		.byte	0x7
+ 996 0051 2F010000 		.4byte	.LASF7
+ 997 0055 03       		.uleb128 0x3
+ 998 0056 04       		.byte	0x4
+ 999 0057 05       		.byte	0x5
+ 1000 0058 696E7400 		.ascii	"int\000"
+ 1001 005c 02       		.uleb128 0x2
+ 1002 005d 04       		.byte	0x4
+ 1003 005e 07       		.byte	0x7
+ 1004 005f 22010000 		.4byte	.LASF8
+ 1005 0063 04       		.uleb128 0x4
+ 1006 0064 8F010000 		.4byte	.LASF21
+ 1007 0068 02       		.byte	0x2
+ 1008 0069 C2       		.byte	0xc2
+ 1009 006a 24000000 		.4byte	0x24
+ 1010 006e 02       		.uleb128 0x2
+ 1011 006f 04       		.byte	0x4
+ 1012 0070 04       		.byte	0x4
+ 1013 0071 32000000 		.4byte	.LASF9
+ 1014 0075 02       		.uleb128 0x2
+ 1015 0076 08       		.byte	0x8
+ 1016 0077 04       		.byte	0x4
+ 1017 0078 6B000000 		.4byte	.LASF10
+ 1018 007c 02       		.uleb128 0x2
+ 1019 007d 01       		.byte	0x1
+ 1020 007e 08       		.byte	0x8
+ 1021 007f 80010000 		.4byte	.LASF11
+ 1022 0083 05       		.uleb128 0x5
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 19
+
+
+ 1023 0084 63000000 		.4byte	0x63
+ 1024 0088 94000000 		.4byte	0x94
+ 1025 008c 06       		.uleb128 0x6
+ 1026 008d 94000000 		.4byte	0x94
+ 1027 0091 6F03     		.2byte	0x36f
+ 1028 0093 00       		.byte	0
+ 1029 0094 02       		.uleb128 0x2
+ 1030 0095 04       		.byte	0x4
+ 1031 0096 07       		.byte	0x7
+ 1032 0097 69010000 		.4byte	.LASF12
+ 1033 009b 07       		.uleb128 0x7
+ 1034 009c 82000000 		.4byte	.LASF13
+ 1035 00a0 01       		.byte	0x1
+ 1036 00a1 1C       		.byte	0x1c
+ 1037 00a2 AC000000 		.4byte	0xac
+ 1038 00a6 05       		.uleb128 0x5
+ 1039 00a7 03       		.byte	0x3
+ 1040 00a8 00000000 		.4byte	cy_meta_configecc
+ 1041 00ac 08       		.uleb128 0x8
+ 1042 00ad 83000000 		.4byte	0x83
+ 1043 00b1 05       		.uleb128 0x5
+ 1044 00b2 63000000 		.4byte	0x63
+ 1045 00b6 C1000000 		.4byte	0xc1
+ 1046 00ba 09       		.uleb128 0x9
+ 1047 00bb 94000000 		.4byte	0x94
+ 1048 00bf 03       		.byte	0x3
+ 1049 00c0 00       		.byte	0
+ 1050 00c1 07       		.uleb128 0x7
+ 1051 00c2 72000000 		.4byte	.LASF14
+ 1052 00c6 01       		.byte	0x1
+ 1053 00c7 94       		.byte	0x94
+ 1054 00c8 D2000000 		.4byte	0xd2
+ 1055 00cc 05       		.uleb128 0x5
+ 1056 00cd 03       		.byte	0x3
+ 1057 00ce 00000000 		.4byte	cy_meta_custnvl
+ 1058 00d2 08       		.uleb128 0x8
+ 1059 00d3 B1000000 		.4byte	0xb1
+ 1060 00d7 07       		.uleb128 0x7
+ 1061 00d8 5B010000 		.4byte	.LASF15
+ 1062 00dc 01       		.byte	0x1
+ 1063 00dd 9F       		.byte	0x9f
+ 1064 00de E8000000 		.4byte	0xe8
+ 1065 00e2 05       		.uleb128 0x5
+ 1066 00e3 03       		.byte	0x3
+ 1067 00e4 00000000 		.4byte	cy_meta_wonvl
+ 1068 00e8 08       		.uleb128 0x8
+ 1069 00e9 B1000000 		.4byte	0xb1
+ 1070 00ed 05       		.uleb128 0x5
+ 1071 00ee 63000000 		.4byte	0x63
+ 1072 00f2 FD000000 		.4byte	0xfd
+ 1073 00f6 09       		.uleb128 0x9
+ 1074 00f7 94000000 		.4byte	0x94
+ 1075 00fb 7F       		.byte	0x7f
+ 1076 00fc 00       		.byte	0
+ 1077 00fd 07       		.uleb128 0x7
+ 1078 00fe 46010000 		.4byte	.LASF16
+ 1079 0102 01       		.byte	0x1
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 20
+
+
+ 1080 0103 AA       		.byte	0xaa
+ 1081 0104 0E010000 		.4byte	0x10e
+ 1082 0108 05       		.uleb128 0x5
+ 1083 0109 03       		.byte	0x3
+ 1084 010a 00000000 		.4byte	cy_meta_flashprotect
+ 1085 010e 08       		.uleb128 0x8
+ 1086 010f ED000000 		.4byte	0xed
+ 1087 0113 05       		.uleb128 0x5
+ 1088 0114 63000000 		.4byte	0x63
+ 1089 0118 23010000 		.4byte	0x123
+ 1090 011c 09       		.uleb128 0x9
+ 1091 011d 94000000 		.4byte	0x94
+ 1092 0121 0B       		.byte	0xb
+ 1093 0122 00       		.byte	0
+ 1094 0123 07       		.uleb128 0x7
+ 1095 0124 26000000 		.4byte	.LASF17
+ 1096 0128 01       		.byte	0x1
+ 1097 0129 C4       		.byte	0xc4
+ 1098 012a 34010000 		.4byte	0x134
+ 1099 012e 05       		.uleb128 0x5
+ 1100 012f 03       		.byte	0x3
+ 1101 0130 00000000 		.4byte	cy_metadata
+ 1102 0134 08       		.uleb128 0x8
+ 1103 0135 13010000 		.4byte	0x113
+ 1104 0139 00       		.byte	0
+ 1105              		.section	.debug_abbrev,"",%progbits
+ 1106              	.Ldebug_abbrev0:
+ 1107 0000 01       		.uleb128 0x1
+ 1108 0001 11       		.uleb128 0x11
+ 1109 0002 01       		.byte	0x1
+ 1110 0003 25       		.uleb128 0x25
+ 1111 0004 0E       		.uleb128 0xe
+ 1112 0005 13       		.uleb128 0x13
+ 1113 0006 0B       		.uleb128 0xb
+ 1114 0007 03       		.uleb128 0x3
+ 1115 0008 0E       		.uleb128 0xe
+ 1116 0009 1B       		.uleb128 0x1b
+ 1117 000a 0E       		.uleb128 0xe
+ 1118 000b 10       		.uleb128 0x10
+ 1119 000c 17       		.uleb128 0x17
+ 1120 000d 00       		.byte	0
+ 1121 000e 00       		.byte	0
+ 1122 000f 02       		.uleb128 0x2
+ 1123 0010 24       		.uleb128 0x24
+ 1124 0011 00       		.byte	0
+ 1125 0012 0B       		.uleb128 0xb
+ 1126 0013 0B       		.uleb128 0xb
+ 1127 0014 3E       		.uleb128 0x3e
+ 1128 0015 0B       		.uleb128 0xb
+ 1129 0016 03       		.uleb128 0x3
+ 1130 0017 0E       		.uleb128 0xe
+ 1131 0018 00       		.byte	0
+ 1132 0019 00       		.byte	0
+ 1133 001a 03       		.uleb128 0x3
+ 1134 001b 24       		.uleb128 0x24
+ 1135 001c 00       		.byte	0
+ 1136 001d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 21
+
+
+ 1137 001e 0B       		.uleb128 0xb
+ 1138 001f 3E       		.uleb128 0x3e
+ 1139 0020 0B       		.uleb128 0xb
+ 1140 0021 03       		.uleb128 0x3
+ 1141 0022 08       		.uleb128 0x8
+ 1142 0023 00       		.byte	0
+ 1143 0024 00       		.byte	0
+ 1144 0025 04       		.uleb128 0x4
+ 1145 0026 16       		.uleb128 0x16
+ 1146 0027 00       		.byte	0
+ 1147 0028 03       		.uleb128 0x3
+ 1148 0029 0E       		.uleb128 0xe
+ 1149 002a 3A       		.uleb128 0x3a
+ 1150 002b 0B       		.uleb128 0xb
+ 1151 002c 3B       		.uleb128 0x3b
+ 1152 002d 0B       		.uleb128 0xb
+ 1153 002e 49       		.uleb128 0x49
+ 1154 002f 13       		.uleb128 0x13
+ 1155 0030 00       		.byte	0
+ 1156 0031 00       		.byte	0
+ 1157 0032 05       		.uleb128 0x5
+ 1158 0033 01       		.uleb128 0x1
+ 1159 0034 01       		.byte	0x1
+ 1160 0035 49       		.uleb128 0x49
+ 1161 0036 13       		.uleb128 0x13
+ 1162 0037 01       		.uleb128 0x1
+ 1163 0038 13       		.uleb128 0x13
+ 1164 0039 00       		.byte	0
+ 1165 003a 00       		.byte	0
+ 1166 003b 06       		.uleb128 0x6
+ 1167 003c 21       		.uleb128 0x21
+ 1168 003d 00       		.byte	0
+ 1169 003e 49       		.uleb128 0x49
+ 1170 003f 13       		.uleb128 0x13
+ 1171 0040 2F       		.uleb128 0x2f
+ 1172 0041 05       		.uleb128 0x5
+ 1173 0042 00       		.byte	0
+ 1174 0043 00       		.byte	0
+ 1175 0044 07       		.uleb128 0x7
+ 1176 0045 34       		.uleb128 0x34
+ 1177 0046 00       		.byte	0
+ 1178 0047 03       		.uleb128 0x3
+ 1179 0048 0E       		.uleb128 0xe
+ 1180 0049 3A       		.uleb128 0x3a
+ 1181 004a 0B       		.uleb128 0xb
+ 1182 004b 3B       		.uleb128 0x3b
+ 1183 004c 0B       		.uleb128 0xb
+ 1184 004d 49       		.uleb128 0x49
+ 1185 004e 13       		.uleb128 0x13
+ 1186 004f 3F       		.uleb128 0x3f
+ 1187 0050 19       		.uleb128 0x19
+ 1188 0051 02       		.uleb128 0x2
+ 1189 0052 18       		.uleb128 0x18
+ 1190 0053 00       		.byte	0
+ 1191 0054 00       		.byte	0
+ 1192 0055 08       		.uleb128 0x8
+ 1193 0056 26       		.uleb128 0x26
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 22
+
+
+ 1194 0057 00       		.byte	0
+ 1195 0058 49       		.uleb128 0x49
+ 1196 0059 13       		.uleb128 0x13
+ 1197 005a 00       		.byte	0
+ 1198 005b 00       		.byte	0
+ 1199 005c 09       		.uleb128 0x9
+ 1200 005d 21       		.uleb128 0x21
+ 1201 005e 00       		.byte	0
+ 1202 005f 49       		.uleb128 0x49
+ 1203 0060 13       		.uleb128 0x13
+ 1204 0061 2F       		.uleb128 0x2f
+ 1205 0062 0B       		.uleb128 0xb
+ 1206 0063 00       		.byte	0
+ 1207 0064 00       		.byte	0
+ 1208 0065 00       		.byte	0
+ 1209              		.section	.debug_aranges,"",%progbits
+ 1210 0000 14000000 		.4byte	0x14
+ 1211 0004 0200     		.2byte	0x2
+ 1212 0006 00000000 		.4byte	.Ldebug_info0
+ 1213 000a 04       		.byte	0x4
+ 1214 000b 00       		.byte	0
+ 1215 000c 0000     		.2byte	0
+ 1216 000e 0000     		.2byte	0
+ 1217 0010 00000000 		.4byte	0
+ 1218 0014 00000000 		.4byte	0
+ 1219              		.section	.debug_line,"",%progbits
+ 1220              	.Ldebug_line0:
+ 1221 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 1221      02004900 
+ 1221      00000201 
+ 1221      FB0E0D00 
+ 1221      01010101 
+ 1222              	.LASF19:
+ 1223 0000 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cymetadata.c\000"
+ 1223      6E657261 
+ 1223      7465645F 
+ 1223      536F7572 
+ 1223      63655C50 
+ 1224              	.LASF17:
+ 1225 0026 63795F6D 		.ascii	"cy_metadata\000"
+ 1225      65746164 
+ 1225      61746100 
+ 1226              	.LASF9:
+ 1227 0032 666C6F61 		.ascii	"float\000"
+ 1227      7400
+ 1228              	.LASF1:
+ 1229 0038 756E7369 		.ascii	"unsigned char\000"
+ 1229      676E6564 
+ 1229      20636861 
+ 1229      7200
+ 1230              	.LASF5:
+ 1231 0046 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1231      20756E73 
+ 1231      69676E65 
+ 1231      6420696E 
+ 1231      7400
+ 1232              	.LASF3:
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 23
+
+
+ 1233 0058 73686F72 		.ascii	"short unsigned int\000"
+ 1233      7420756E 
+ 1233      7369676E 
+ 1233      65642069 
+ 1233      6E7400
+ 1234              	.LASF10:
+ 1235 006b 646F7562 		.ascii	"double\000"
+ 1235      6C6500
+ 1236              	.LASF14:
+ 1237 0072 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 1237      6574615F 
+ 1237      63757374 
+ 1237      6E766C00 
+ 1238              	.LASF13:
+ 1239 0082 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 1239      6574615F 
+ 1239      636F6E66 
+ 1239      69676563 
+ 1239      6300
+ 1240              	.LASF18:
+ 1241 0094 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1241      4320342E 
+ 1241      392E3320 
+ 1241      32303135 
+ 1241      30333033 
+ 1242 00c7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1242      20726576 
+ 1242      6973696F 
+ 1242      6E203232 
+ 1242      31323230 
+ 1243 00fa 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1243      66756E63 
+ 1243      74696F6E 
+ 1243      2D736563 
+ 1243      74696F6E 
+ 1244              	.LASF8:
+ 1245 0122 756E7369 		.ascii	"unsigned int\000"
+ 1245      676E6564 
+ 1245      20696E74 
+ 1245      00
+ 1246              	.LASF7:
+ 1247 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1247      206C6F6E 
+ 1247      6720756E 
+ 1247      7369676E 
+ 1247      65642069 
+ 1248              	.LASF16:
+ 1249 0146 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 1249      6574615F 
+ 1249      666C6173 
+ 1249      6870726F 
+ 1249      74656374 
+ 1250              	.LASF15:
+ 1251 015b 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 1251      6574615F 
+ 1251      776F6E76 
+ 1251      6C00
+ARM GAS  C:\Users\li\AppData\Local\Temp\cclIDgNJ.s 			page 24
+
+
+ 1252              	.LASF12:
+ 1253 0169 73697A65 		.ascii	"sizetype\000"
+ 1253      74797065 
+ 1253      00
+ 1254              	.LASF6:
+ 1255 0172 6C6F6E67 		.ascii	"long long int\000"
+ 1255      206C6F6E 
+ 1255      6720696E 
+ 1255      7400
+ 1256              	.LASF11:
+ 1257 0180 63686172 		.ascii	"char\000"
+ 1257      00
+ 1258              	.LASF2:
+ 1259 0185 73686F72 		.ascii	"short int\000"
+ 1259      7420696E 
+ 1259      7400
+ 1260              	.LASF21:
+ 1261 018f 75696E74 		.ascii	"uint8\000"
+ 1261      3800
+ 1262              	.LASF4:
+ 1263 0195 6C6F6E67 		.ascii	"long int\000"
+ 1263      20696E74 
+ 1263      00
+ 1264              	.LASF0:
+ 1265 019e 7369676E 		.ascii	"signed char\000"
+ 1265      65642063 
+ 1265      68617200 
+ 1266              	.LASF20:
+ 1267 01aa 433A5C55 		.ascii	"C:\\Users\\li\\Desktop\\pxc\\robot-control\\car.cyd"
+ 1267      73657273 
+ 1267      5C6C695C 
+ 1267      4465736B 
+ 1267      746F705C 
+ 1268 01d7 736E00   		.ascii	"sn\000"
+ 1269              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
