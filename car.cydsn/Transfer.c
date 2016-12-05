@@ -308,6 +308,31 @@ void DT_Send_Command_Lock(uint8 car_lock)
 	
 	DT_Send_Data(data_to_send, _cnt);
 }
+void DT_Send_Command_Turn(uint8 dir)
+{
+	uint8 _cnt=0;
+    uint8 _temp;
+
+	
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=12;
+	data_to_send[_cnt++]=0;
+    
+	
+	data_to_send[_cnt++]=dir;
+
+	
+	data_to_send[3] = _cnt-4;
+	
+	uint8 sum = 0;
+    uint8 i=0;
+	for(i=0;i<_cnt;i++)
+		sum += data_to_send[i];
+	data_to_send[_cnt++]=sum;
+	
+	DT_Send_Data(data_to_send, _cnt);
+}
 void DT_Send_Command_Led(uint8 car_led[])
 {
 	uint8 _cnt=0;

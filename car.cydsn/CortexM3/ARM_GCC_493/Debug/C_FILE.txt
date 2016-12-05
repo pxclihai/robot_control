@@ -1,1 +1,1 @@
-'C:\Users\li\Desktop\pxc\robot-control\car.cydsn\key.c' -o .o -T C_FILE -I 'C:\Users\li\Desktop\pxc\robot-control\car.cydsn' -I 'C:\Users\li\Desktop\pxc\robot-control\car.cydsn\Generated_Source\PSoC5' -f 'C:\Users\li\Desktop\pxc\robot-control\car.cydsn\CortexM3\ARM_GCC_493\Debug\.deps\C_FILE.d'
+'D:\pxc\robot-control\car.cydsn\Transfer.c' -o .o -T C_FILE -I 'D:\pxc\robot-control\car.cydsn' -I 'D:\pxc\robot-control\car.cydsn\Generated_Source\PSoC5' -f 'D:\pxc\robot-control\car.cydsn\CortexM3\ARM_GCC_493\Debug\.deps\C_FILE.d'

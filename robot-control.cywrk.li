@@ -181,12 +181,6 @@
 <v>robot-control\car\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>robot-control</v>
-<v>robot-control\car</v>
-<v>robot-control\car\TopDesign</v>
-<v>robot-control\car\car.cydwr</v>
-<v>robot-control\car\Header Files</v>
-<v>robot-control\car\Header Files\buzzer.h</v>
 <v>robot-control\car\Header Files\car.h</v>
 <v>robot-control\car\Header Files\cyapicallbacks.h</v>
 <v>robot-control\car\Header Files\key.h</v>
@@ -211,6 +205,12 @@
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -370,6 +370,8 @@
 <name v=".\car.cydsn\key.c" />
 <name v=".\car.cydsn\Transfer.c" />
 <name v=".\car.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\car.cydsn\key.h" />
+<name v=".\car.cydsn\Transfer.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

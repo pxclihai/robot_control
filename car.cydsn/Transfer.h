@@ -40,6 +40,6 @@ void DT_Send_Status(enum CAR_DIR car_dir);
 void DT_Send_Command_Ptz(enum CAR_DIR car_dir);
 void DT_Send_Command_Speed(uint16 car_speed);
 void DT_Send_Command_Lock(uint8 car_lock);
-
+void DT_Send_Command_Turn(uint8 dir);
 #endif
 

@@ -138,11 +138,11 @@ void Callback_key_speed_high_press_down()
 
 void Callback_led_start_press_up()
 {
-  DT_Send_Command_Lock(0); 
+  DT_Send_Command_Turn(0); 
 }
 void Callback_led_start_press_down()
 {
-  DT_Send_Command_Lock(1); 
+  DT_Send_Command_Turn(2); 
 }
 ////------up
 void Callback_led_up_low_press_up()
