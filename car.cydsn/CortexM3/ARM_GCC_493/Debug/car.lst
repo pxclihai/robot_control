@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 1
 
 
    1              		.syntax unified
@@ -32,51 +32,51 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
   29 0006 00000000 		.4byte	.Ldebug_abbrev0
   30 000a 04       		.byte	0x4
   31 000b 01       		.uleb128 0x1
-  32 000c EF000000 		.4byte	.LASF41
+  32 000c 19010000 		.4byte	.LASF41
   33 0010 01       		.byte	0x1
-  34 0011 C5010000 		.4byte	.LASF42
-  35 0015 3D020000 		.4byte	.LASF43
+  34 0011 EF010000 		.4byte	.LASF42
+  35 0015 00000000 		.4byte	.LASF43
   36 0019 00000000 		.4byte	.Ldebug_line0
   37 001d 02       		.uleb128 0x2
   38 001e 01       		.byte	0x1
   39 001f 06       		.byte	0x6
-  40 0020 51000000 		.4byte	.LASF0
+  40 0020 7B000000 		.4byte	.LASF0
   41 0024 02       		.uleb128 0x2
   42 0025 01       		.byte	0x1
   43 0026 08       		.byte	0x8
-  44 0027 67000000 		.4byte	.LASF1
+  44 0027 91000000 		.4byte	.LASF1
   45 002b 02       		.uleb128 0x2
   46 002c 02       		.byte	0x2
   47 002d 05       		.byte	0x5
-  48 002e FF010000 		.4byte	.LASF2
+  48 002e 29020000 		.4byte	.LASF2
   49 0032 02       		.uleb128 0x2
   50 0033 02       		.byte	0x2
   51 0034 07       		.byte	0x7
-  52 0035 92000000 		.4byte	.LASF3
+  52 0035 BC000000 		.4byte	.LASF3
   53 0039 03       		.uleb128 0x3
-  54 003a 05000000 		.4byte	.LASF9
+  54 003a 2F000000 		.4byte	.LASF9
   55 003e 01       		.byte	0x1
   56 003f 3F       		.byte	0x3f
   57 0040 44000000 		.4byte	0x44
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 2
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 2
 
 
   58 0044 02       		.uleb128 0x2
   59 0045 04       		.byte	0x4
   60 0046 05       		.byte	0x5
-  61 0047 0F020000 		.4byte	.LASF4
+  61 0047 39020000 		.4byte	.LASF4
   62 004b 02       		.uleb128 0x2
   63 004c 04       		.byte	0x4
   64 004d 07       		.byte	0x7
-  65 004e B8000000 		.4byte	.LASF5
+  65 004e E2000000 		.4byte	.LASF5
   66 0052 02       		.uleb128 0x2
   67 0053 08       		.byte	0x8
   68 0054 05       		.byte	0x5
-  69 0055 DE010000 		.4byte	.LASF6
+  69 0055 08020000 		.4byte	.LASF6
   70 0059 02       		.uleb128 0x2
   71 005a 08       		.byte	0x8
   72 005b 07       		.byte	0x7
-  73 005c 8A010000 		.4byte	.LASF7
+  73 005c B4010000 		.4byte	.LASF7
   74 0060 04       		.uleb128 0x4
   75 0061 04       		.byte	0x4
   76 0062 05       		.byte	0x5
@@ -84,41 +84,41 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
   78 0067 02       		.uleb128 0x2
   79 0068 04       		.byte	0x4
   80 0069 07       		.byte	0x7
-  81 006a 7D010000 		.4byte	.LASF8
+  81 006a A7010000 		.4byte	.LASF8
   82 006e 03       		.uleb128 0x3
-  83 006f 31000000 		.4byte	.LASF10
+  83 006f 5B000000 		.4byte	.LASF10
   84 0073 02       		.byte	0x2
   85 0074 2C       		.byte	0x2c
   86 0075 39000000 		.4byte	0x39
   87 0079 03       		.uleb128 0x3
-  88 007a 09020000 		.4byte	.LASF11
+  88 007a 33020000 		.4byte	.LASF11
   89 007e 03       		.byte	0x3
   90 007f C2       		.byte	0xc2
   91 0080 24000000 		.4byte	0x24
   92 0084 03       		.uleb128 0x3
-  93 0085 DB000000 		.4byte	.LASF12
+  93 0085 05010000 		.4byte	.LASF12
   94 0089 03       		.byte	0x3
   95 008a C3       		.byte	0xc3
   96 008b 32000000 		.4byte	0x32
   97 008f 02       		.uleb128 0x2
   98 0090 04       		.byte	0x4
   99 0091 04       		.byte	0x4
- 100 0092 4B000000 		.4byte	.LASF13
+ 100 0092 75000000 		.4byte	.LASF13
  101 0096 02       		.uleb128 0x2
  102 0097 08       		.byte	0x8
  103 0098 04       		.byte	0x4
- 104 0099 22000000 		.4byte	.LASF14
+ 104 0099 4C000000 		.4byte	.LASF14
  105 009d 02       		.uleb128 0x2
  106 009e 01       		.byte	0x1
  107 009f 08       		.byte	0x8
- 108 00a0 EC010000 		.4byte	.LASF15
+ 108 00a0 16020000 		.4byte	.LASF15
  109 00a4 02       		.uleb128 0x2
  110 00a5 04       		.byte	0x4
  111 00a6 07       		.byte	0x7
- 112 00a7 CD010000 		.4byte	.LASF16
+ 112 00a7 F7010000 		.4byte	.LASF16
  113 00ab 05       		.uleb128 0x5
- 114 00ac D6010000 		.4byte	.LASF25
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 3
+ 114 00ac 00020000 		.4byte	.LASF25
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 3
 
 
  115 00b0 01       		.byte	0x1
@@ -129,44 +129,44 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  120 00b8 555000   		.ascii	"UP\000"
  121 00bb 00       		.sleb128 0
  122 00bc 07       		.uleb128 0x7
- 123 00bd FA010000 		.4byte	.LASF17
+ 123 00bd 24020000 		.4byte	.LASF17
  124 00c1 01       		.sleb128 1
  125 00c2 07       		.uleb128 0x7
- 126 00c3 00000000 		.4byte	.LASF18
+ 126 00c3 2A000000 		.4byte	.LASF18
  127 00c7 02       		.sleb128 2
  128 00c8 07       		.uleb128 0x7
- 129 00c9 7E000000 		.4byte	.LASF19
+ 129 00c9 A8000000 		.4byte	.LASF19
  130 00cd 03       		.sleb128 3
  131 00ce 07       		.uleb128 0x7
- 132 00cf 18020000 		.4byte	.LASF20
+ 132 00cf 42020000 		.4byte	.LASF20
  133 00d3 04       		.sleb128 4
  134 00d4 07       		.uleb128 0x7
- 135 00d5 A5000000 		.4byte	.LASF21
+ 135 00d5 CF000000 		.4byte	.LASF21
  136 00d9 05       		.sleb128 5
  137 00da 07       		.uleb128 0x7
- 138 00db AE000000 		.4byte	.LASF22
+ 138 00db D8000000 		.4byte	.LASF22
  139 00df 06       		.sleb128 6
  140 00e0 07       		.uleb128 0x7
- 141 00e1 32020000 		.4byte	.LASF23
+ 141 00e1 5C020000 		.4byte	.LASF23
  142 00e5 07       		.sleb128 7
  143 00e6 07       		.uleb128 0x7
- 144 00e7 D6000000 		.4byte	.LASF24
+ 144 00e7 00010000 		.4byte	.LASF24
  145 00eb 08       		.sleb128 8
  146 00ec 00       		.byte	0
  147 00ed 05       		.uleb128 0x5
- 148 00ee 5D000000 		.4byte	.LASF26
+ 148 00ee 87000000 		.4byte	.LASF26
  149 00f2 01       		.byte	0x1
  150 00f3 04       		.byte	0x4
  151 00f4 14       		.byte	0x14
  152 00f5 0C010000 		.4byte	0x10c
  153 00f9 07       		.uleb128 0x7
- 154 00fa 29000000 		.4byte	.LASF27
+ 154 00fa 53000000 		.4byte	.LASF27
  155 00fe 00       		.sleb128 0
  156 00ff 07       		.uleb128 0x7
- 157 0100 75000000 		.4byte	.LASF28
+ 157 0100 9F000000 		.4byte	.LASF28
  158 0104 01       		.sleb128 1
  159 0105 07       		.uleb128 0x7
- 160 0106 BA010000 		.4byte	.LASF29
+ 160 0106 E4010000 		.4byte	.LASF29
  161 010a 02       		.sleb128 2
  162 010b 00       		.byte	0
  163 010c 08       		.uleb128 0x8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  169 0115 70776D00 		.ascii	"pwm\000"
  170 0119 04       		.byte	0x4
  171 011a 18       		.byte	0x18
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 4
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 4
 
 
  172 011b 84000000 		.4byte	0x84
@@ -191,7 +191,7 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  179 012b 02       		.byte	0x2
  180 012c 00       		.byte	0
  181 012d 03       		.uleb128 0x3
- 182 012e 6D020000 		.4byte	.LASF30
+ 182 012e 67020000 		.4byte	.LASF30
  183 0132 04       		.byte	0x4
  184 0133 1A       		.byte	0x1a
  185 0134 0C010000 		.4byte	0x10c
@@ -201,44 +201,44 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  189 013b 1B       		.byte	0x1b
  190 013c 95010000 		.4byte	0x195
  191 0140 0A       		.uleb128 0xa
- 192 0141 F1010000 		.4byte	.LASF31
+ 192 0141 1B020000 		.4byte	.LASF31
  193 0145 04       		.byte	0x4
  194 0146 1D       		.byte	0x1d
  195 0147 79000000 		.4byte	0x79
  196 014b 00       		.byte	0
  197 014c 0A       		.uleb128 0xa
- 198 014d A1010000 		.4byte	.LASF32
+ 198 014d CB010000 		.4byte	.LASF32
  199 0151 04       		.byte	0x4
  200 0152 1E       		.byte	0x1e
  201 0153 AB000000 		.4byte	0xab
  202 0157 01       		.byte	0x1
  203 0158 0A       		.uleb128 0xa
- 204 0159 84000000 		.4byte	.LASF33
+ 204 0159 AE000000 		.4byte	.LASF33
  205 015d 04       		.byte	0x4
  206 015e 1F       		.byte	0x1f
  207 015f 84000000 		.4byte	0x84
  208 0163 02       		.byte	0x2
  209 0164 0A       		.uleb128 0xa
- 210 0165 A9010000 		.4byte	.LASF34
+ 210 0165 D3010000 		.4byte	.LASF34
  211 0169 04       		.byte	0x4
  212 016a 20       		.byte	0x20
  213 016b 2D010000 		.4byte	0x12d
  214 016f 04       		.byte	0x4
  215 0170 0A       		.uleb128 0xa
- 216 0171 39000000 		.4byte	.LASF35
+ 216 0171 63000000 		.4byte	.LASF35
  217 0175 04       		.byte	0x4
  218 0176 21       		.byte	0x21
  219 0177 2D010000 		.4byte	0x12d
  220 017b 08       		.byte	0x8
  221 017c 0A       		.uleb128 0xa
- 222 017d 20020000 		.4byte	.LASF36
+ 222 017d 4A020000 		.4byte	.LASF36
  223 0181 04       		.byte	0x4
  224 0182 22       		.byte	0x22
  225 0183 2D010000 		.4byte	0x12d
  226 0187 0C       		.byte	0xc
  227 0188 0A       		.uleb128 0xa
- 228 0189 0F000000 		.4byte	.LASF37
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 5
+ 228 0189 39000000 		.4byte	.LASF37
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 5
 
 
  229 018d 04       		.byte	0x4
@@ -247,19 +247,19 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  232 0193 10       		.byte	0x10
  233 0194 00       		.byte	0
  234 0195 03       		.uleb128 0x3
- 235 0196 CA000000 		.4byte	.LASF38
+ 235 0196 F4000000 		.4byte	.LASF38
  236 019a 04       		.byte	0x4
  237 019b 24       		.byte	0x24
  238 019c 38010000 		.4byte	0x138
  239 01a0 0B       		.uleb128 0xb
- 240 01a1 E2000000 		.4byte	.LASF39
+ 240 01a1 0C010000 		.4byte	.LASF39
  241 01a5 05       		.byte	0x5
  242 01a6 2A06     		.2byte	0x62a
  243 01a8 AC010000 		.4byte	0x1ac
  244 01ac 0C       		.uleb128 0xc
  245 01ad 6E000000 		.4byte	0x6e
  246 01b1 0D       		.uleb128 0xd
- 247 01b2 D0000000 		.4byte	.LASF40
+ 247 01b2 FA000000 		.4byte	.LASF40
  248 01b6 04       		.byte	0x4
  249 01b7 25       		.byte	0x25
  250 01b8 95010000 		.4byte	0x195
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  283 001a 03       		.uleb128 0x3
  284 001b 16       		.uleb128 0x16
  285 001c 00       		.byte	0
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 6
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 6
 
 
  286 001d 03       		.uleb128 0x3
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  340 0053 08       		.uleb128 0x8
  341 0054 13       		.uleb128 0x13
  342 0055 01       		.byte	0x1
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 7
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 7
 
 
  343 0056 0B       		.uleb128 0xb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  397 008c 19       		.uleb128 0x19
  398 008d 00       		.byte	0
  399 008e 00       		.byte	0
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 8
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 8
 
 
  400 008f 0C       		.uleb128 0xc
@@ -463,208 +463,207 @@ ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 1
  437      00000201 
  437      FB0E0D00 
  437      01010101 
- 438              	.LASF18:
- 439 0000 4C454654 		.ascii	"LEFT\000"
- 439      00
- 440              	.LASF9:
- 441 0005 5F5F696E 		.ascii	"__int32_t\000"
- 441      7433325F 
- 441      7400
- 442              	.LASF37:
- 443 000f 72696768 		.ascii	"right_behind_wheel\000"
- 443      745F6265 
- 443      68696E64 
- 443      5F776865 
- 443      656C00
- 444              	.LASF14:
- 445 0022 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 9
+ 438              	.LASF43:
+ 439 0000 443A5C72 		.ascii	"D:\\robot\\git_code\\robot_control\\car.cydsn\000"
+ 439      6F626F74 
+ 439      5C676974 
+ 439      5F636F64 
+ 439      655C726F 
+ 440              	.LASF18:
+ 441 002a 4C454654 		.ascii	"LEFT\000"
+ 441      00
+ 442              	.LASF9:
+ 443 002f 5F5F696E 		.ascii	"__int32_t\000"
+ 443      7433325F 
+ 443      7400
+ 444              	.LASF37:
+ 445 0039 72696768 		.ascii	"right_behind_wheel\000"
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 9
 
 
- 445      6C6500
- 446              	.LASF27:
- 447 0029 464F5257 		.ascii	"FORWARD\000"
- 447      41524400 
- 448              	.LASF10:
- 449 0031 696E7433 		.ascii	"int32_t\000"
- 449      325F7400 
- 450              	.LASF35:
- 451 0039 6C656674 		.ascii	"left_behind_wheel\000"
- 451      5F626568 
- 451      696E645F 
- 451      77686565 
- 451      6C00
- 452              	.LASF13:
- 453 004b 666C6F61 		.ascii	"float\000"
- 453      7400
- 454              	.LASF0:
- 455 0051 7369676E 		.ascii	"signed char\000"
- 455      65642063 
- 455      68617200 
- 456              	.LASF26:
- 457 005d 57484545 		.ascii	"WHEEL_DIR\000"
- 457      4C5F4449 
- 457      5200
- 458              	.LASF1:
- 459 0067 756E7369 		.ascii	"unsigned char\000"
- 459      676E6564 
- 459      20636861 
- 459      7200
- 460              	.LASF28:
- 461 0075 52455645 		.ascii	"REVERSAL\000"
- 461      5253414C 
- 461      00
- 462              	.LASF19:
- 463 007e 52494748 		.ascii	"RIGHT\000"
- 463      5400
- 464              	.LASF33:
- 465 0084 7365745F 		.ascii	"set_car_speed\000"
- 465      6361725F 
- 465      73706565 
- 465      6400
- 466              	.LASF3:
- 467 0092 73686F72 		.ascii	"short unsigned int\000"
- 467      7420756E 
- 467      7369676E 
- 467      65642069 
- 467      6E7400
- 468              	.LASF21:
- 469 00a5 55505F52 		.ascii	"UP_RIGHT\000"
- 469      49474854 
- 469      00
- 470              	.LASF22:
- 471 00ae 444F574E 		.ascii	"DOWN_LEFT\000"
- 471      5F4C4546 
- 471      5400
- 472              	.LASF5:
- 473 00b8 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 10
+ 445      745F6265 
+ 445      68696E64 
+ 445      5F776865 
+ 445      656C00
+ 446              	.LASF14:
+ 447 004c 646F7562 		.ascii	"double\000"
+ 447      6C6500
+ 448              	.LASF27:
+ 449 0053 464F5257 		.ascii	"FORWARD\000"
+ 449      41524400 
+ 450              	.LASF10:
+ 451 005b 696E7433 		.ascii	"int32_t\000"
+ 451      325F7400 
+ 452              	.LASF35:
+ 453 0063 6C656674 		.ascii	"left_behind_wheel\000"
+ 453      5F626568 
+ 453      696E645F 
+ 453      77686565 
+ 453      6C00
+ 454              	.LASF13:
+ 455 0075 666C6F61 		.ascii	"float\000"
+ 455      7400
+ 456              	.LASF0:
+ 457 007b 7369676E 		.ascii	"signed char\000"
+ 457      65642063 
+ 457      68617200 
+ 458              	.LASF26:
+ 459 0087 57484545 		.ascii	"WHEEL_DIR\000"
+ 459      4C5F4449 
+ 459      5200
+ 460              	.LASF1:
+ 461 0091 756E7369 		.ascii	"unsigned char\000"
+ 461      676E6564 
+ 461      20636861 
+ 461      7200
+ 462              	.LASF28:
+ 463 009f 52455645 		.ascii	"REVERSAL\000"
+ 463      5253414C 
+ 463      00
+ 464              	.LASF19:
+ 465 00a8 52494748 		.ascii	"RIGHT\000"
+ 465      5400
+ 466              	.LASF33:
+ 467 00ae 7365745F 		.ascii	"set_car_speed\000"
+ 467      6361725F 
+ 467      73706565 
+ 467      6400
+ 468              	.LASF3:
+ 469 00bc 73686F72 		.ascii	"short unsigned int\000"
+ 469      7420756E 
+ 469      7369676E 
+ 469      65642069 
+ 469      6E7400
+ 470              	.LASF21:
+ 471 00cf 55505F52 		.ascii	"UP_RIGHT\000"
+ 471      49474854 
+ 471      00
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 10
 
 
- 473      20756E73 
- 473      69676E65 
- 473      6420696E 
- 473      7400
- 474              	.LASF38:
- 475 00ca 535F4341 		.ascii	"S_CAR\000"
- 475      5200
- 476              	.LASF40:
- 477 00d0 675F4361 		.ascii	"g_Car\000"
- 477      7200
- 478              	.LASF24:
- 479 00d6 53544F50 		.ascii	"STOP\000"
- 479      00
- 480              	.LASF12:
- 481 00db 75696E74 		.ascii	"uint16\000"
- 481      313600
- 482              	.LASF39:
- 483 00e2 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 483      52784275 
- 483      66666572 
- 483      00
- 484              	.LASF41:
- 485 00ef 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 485      4320342E 
- 485      392E3320 
- 485      32303135 
- 485      30333033 
- 486 0122 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 486      20726576 
- 486      6973696F 
- 486      6E203232 
- 486      31323230 
- 487 0155 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 487      66756E63 
- 487      74696F6E 
- 487      2D736563 
- 487      74696F6E 
- 488              	.LASF8:
- 489 017d 756E7369 		.ascii	"unsigned int\000"
- 489      676E6564 
- 489      20696E74 
- 489      00
- 490              	.LASF7:
- 491 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 491      206C6F6E 
- 491      6720756E 
- 491      7369676E 
- 491      65642069 
- 492              	.LASF32:
- 493 01a1 7365745F 		.ascii	"set_dir\000"
- 493      64697200 
- 494              	.LASF34:
- 495 01a9 6C656674 		.ascii	"left_front_wheel\000"
- 495      5F66726F 
- 495      6E745F77 
- 495      6865656C 
- 495      00
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 11
+ 472              	.LASF22:
+ 473 00d8 444F574E 		.ascii	"DOWN_LEFT\000"
+ 473      5F4C4546 
+ 473      5400
+ 474              	.LASF5:
+ 475 00e2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 475      20756E73 
+ 475      69676E65 
+ 475      6420696E 
+ 475      7400
+ 476              	.LASF38:
+ 477 00f4 535F4341 		.ascii	"S_CAR\000"
+ 477      5200
+ 478              	.LASF40:
+ 479 00fa 675F4361 		.ascii	"g_Car\000"
+ 479      7200
+ 480              	.LASF24:
+ 481 0100 53544F50 		.ascii	"STOP\000"
+ 481      00
+ 482              	.LASF12:
+ 483 0105 75696E74 		.ascii	"uint16\000"
+ 483      313600
+ 484              	.LASF39:
+ 485 010c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 485      52784275 
+ 485      66666572 
+ 485      00
+ 486              	.LASF41:
+ 487 0119 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 487      4320342E 
+ 487      392E3320 
+ 487      32303135 
+ 487      30333033 
+ 488 014c 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 488      20726576 
+ 488      6973696F 
+ 488      6E203232 
+ 488      31323230 
+ 489 017f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 489      66756E63 
+ 489      74696F6E 
+ 489      2D736563 
+ 489      74696F6E 
+ 490              	.LASF8:
+ 491 01a7 756E7369 		.ascii	"unsigned int\000"
+ 491      676E6564 
+ 491      20696E74 
+ 491      00
+ 492              	.LASF7:
+ 493 01b4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 493      206C6F6E 
+ 493      6720756E 
+ 493      7369676E 
+ 493      65642069 
+ 494              	.LASF32:
+ 495 01cb 7365745F 		.ascii	"set_dir\000"
+ 495      64697200 
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 11
 
 
- 496              	.LASF29:
- 497 01ba 57484545 		.ascii	"WHEEL_STOP\000"
- 497      4C5F5354 
- 497      4F5000
- 498              	.LASF42:
- 499 01c5 2E5C6361 		.ascii	".\\car.c\000"
- 499      722E6300 
- 500              	.LASF16:
- 501 01cd 73697A65 		.ascii	"sizetype\000"
- 501      74797065 
- 501      00
- 502              	.LASF25:
- 503 01d6 4341525F 		.ascii	"CAR_DIR\000"
- 503      44495200 
- 504              	.LASF6:
- 505 01de 6C6F6E67 		.ascii	"long long int\000"
- 505      206C6F6E 
- 505      6720696E 
- 505      7400
- 506              	.LASF15:
- 507 01ec 63686172 		.ascii	"char\000"
- 507      00
- 508              	.LASF31:
- 509 01f1 4361725F 		.ascii	"Car_lock\000"
- 509      6C6F636B 
+ 496              	.LASF34:
+ 497 01d3 6C656674 		.ascii	"left_front_wheel\000"
+ 497      5F66726F 
+ 497      6E745F77 
+ 497      6865656C 
+ 497      00
+ 498              	.LASF29:
+ 499 01e4 57484545 		.ascii	"WHEEL_STOP\000"
+ 499      4C5F5354 
+ 499      4F5000
+ 500              	.LASF42:
+ 501 01ef 2E5C6361 		.ascii	".\\car.c\000"
+ 501      722E6300 
+ 502              	.LASF16:
+ 503 01f7 73697A65 		.ascii	"sizetype\000"
+ 503      74797065 
+ 503      00
+ 504              	.LASF25:
+ 505 0200 4341525F 		.ascii	"CAR_DIR\000"
+ 505      44495200 
+ 506              	.LASF6:
+ 507 0208 6C6F6E67 		.ascii	"long long int\000"
+ 507      206C6F6E 
+ 507      6720696E 
+ 507      7400
+ 508              	.LASF15:
+ 509 0216 63686172 		.ascii	"char\000"
  509      00
- 510              	.LASF17:
- 511 01fa 444F574E 		.ascii	"DOWN\000"
+ 510              	.LASF31:
+ 511 021b 4361725F 		.ascii	"Car_lock\000"
+ 511      6C6F636B 
  511      00
- 512              	.LASF2:
- 513 01ff 73686F72 		.ascii	"short int\000"
- 513      7420696E 
- 513      7400
- 514              	.LASF11:
- 515 0209 75696E74 		.ascii	"uint8\000"
- 515      3800
- 516              	.LASF4:
- 517 020f 6C6F6E67 		.ascii	"long int\000"
- 517      20696E74 
- 517      00
- 518              	.LASF20:
- 519 0218 55505F4C 		.ascii	"UP_LEFT\000"
- 519      45465400 
- 520              	.LASF36:
- 521 0220 72696768 		.ascii	"right_front_wheel\000"
- 521      745F6672 
- 521      6F6E745F 
- 521      77686565 
- 521      6C00
- 522              	.LASF23:
- 523 0232 444F574E 		.ascii	"DOWN_RIGHT\000"
- 523      5F524947 
- 523      485400
- 524              	.LASF43:
- 525 023d 433A5C55 		.ascii	"C:\\Users\\li\\Desktop\\pxc\\robot-control\\car.cyd"
- 525      73657273 
- 525      5C6C695C 
-ARM GAS  C:\Users\li\AppData\Local\Temp\cc0L2ICI.s 			page 12
+ 512              	.LASF17:
+ 513 0224 444F574E 		.ascii	"DOWN\000"
+ 513      00
+ 514              	.LASF2:
+ 515 0229 73686F72 		.ascii	"short int\000"
+ 515      7420696E 
+ 515      7400
+ 516              	.LASF11:
+ 517 0233 75696E74 		.ascii	"uint8\000"
+ 517      3800
+ 518              	.LASF4:
+ 519 0239 6C6F6E67 		.ascii	"long int\000"
+ 519      20696E74 
+ 519      00
+ 520              	.LASF20:
+ 521 0242 55505F4C 		.ascii	"UP_LEFT\000"
+ 521      45465400 
+ 522              	.LASF36:
+ 523 024a 72696768 		.ascii	"right_front_wheel\000"
+ 523      745F6672 
+ 523      6F6E745F 
+ 523      77686565 
+ 523      6C00
+ 524              	.LASF23:
+ 525 025c 444F574E 		.ascii	"DOWN_RIGHT\000"
+ARM GAS  C:\Users\pxc\AppData\Local\Temp\cccrTuq0.s 			page 12
 
 
- 525      4465736B 
- 525      746F705C 
- 526 026a 736E00   		.ascii	"sn\000"
- 527              	.LASF30:
- 528 026d 535F5748 		.ascii	"S_WHEEL\000"
- 528      45454C00 
- 529              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 525      5F524947 
+ 525      485400
+ 526              	.LASF30:
+ 527 0267 535F5748 		.ascii	"S_WHEEL\000"
+ 527      45454C00 
+ 528              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

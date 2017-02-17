@@ -20,23 +20,57 @@
 <v>robot-control\car\TopDesign</v>
 <v>robot-control\car\car.cydwr</v>
 <v>robot-control\car\Header Files</v>
-<v>robot-control\car\Header Files\buzzer.h</v>
+<v>robot-control\car\Header Files\ADC_V.h</v>
 <v>robot-control\car\Header Files\car.h</v>
 <v>robot-control\car\Header Files\cyapicallbacks.h</v>
 <v>robot-control\car\Header Files\key.h</v>
 <v>robot-control\car\Header Files\Transfer.h</v>
 <v>robot-control\car\Source Files</v>
-<v>robot-control\car\Source Files\buzzer.c</v>
+<v>robot-control\car\Source Files\ADC_V.c</v>
 <v>robot-control\car\Source Files\car.c</v>
 <v>robot-control\car\Source Files\key.c</v>
 <v>robot-control\car\Source Files\main.c</v>
 <v>robot-control\car\Source Files\Transfer.c</v>
 <v>robot-control\car\Generated_Source</v>
 <v>robot-control\car\Generated_Source\PSoC5</v>
-<v>robot-control\car\Generated_Source\PSoC5\Beep</v>
-<v>robot-control\car\Generated_Source\PSoC5\Beep\Beep.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\Beep\Beep.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\Beep\Beep_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC\ADC.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC\ADC.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC\ADC_INT.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC\ADC_PM.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_FinalBuf</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_FinalBuf\ADC_FinalBuf_dma.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_FinalBuf\ADC_FinalBuf_dma.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IntClock</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IntClock\ADC_IntClock.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IntClock\ADC_IntClock.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IRQ</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IRQ\ADC_IRQ.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_IRQ\ADC_IRQ.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_SAR</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_SAR\ADC_SAR.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_SAR\ADC_SAR.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_SAR\ADC_SAR_INT.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_SAR\ADC_SAR_PM.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_TempBuf</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_TempBuf\ADC_TempBuf_dma.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\ADC_TempBuf\ADC_TempBuf_dma.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\BATTERY</v>
+<v>robot-control\car\Generated_Source\PSoC5\BATTERY\BATTERY.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\BATTERY\BATTERY.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\BATTERY\BATTERY_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_SPEED</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_SPEED\CAR_SPEED.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_SPEED\CAR_SPEED.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_SPEED\CAR_SPEED_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_X</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_X\CAR_X.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_X\CAR_X.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_X\CAR_X_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_Y</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_Y\CAR_Y.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_Y\CAR_Y.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\CAR_Y\CAR_Y_aliases.h</v>
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
 <v>robot-control\car\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
@@ -70,82 +104,58 @@
 <v>robot-control\car\Generated_Source\PSoC5\isr_tx_net</v>
 <v>robot-control\car\Generated_Source\PSoC5\isr_tx_net\isr_tx_net.c</v>
 <v>robot-control\car\Generated_Source\PSoC5\isr_tx_net\isr_tx_net.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_DOWN</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_DOWN\KEY_DOWN.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_DOWN\KEY_DOWN.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_DOWN\KEY_DOWN_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_LEFT</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_LEFT\KEY_LEFT.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_LEFT\KEY_LEFT.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_LEFT\KEY_LEFT_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_RIGHT</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_RIGHT\KEY_RIGHT.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_RIGHT\KEY_RIGHT.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_RIGHT\KEY_RIGHT_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_HIGH</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_HIGH\KEY_SPEED_HIGH.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_HIGH\KEY_SPEED_HIGH.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_HIGH\KEY_SPEED_HIGH_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_LOW</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_LOW\KEY_SPEED_LOW.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_LOW\KEY_SPEED_LOW.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_SPEED_LOW\KEY_SPEED_LOW_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_UP</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_UP\KEY_UP.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_UP\KEY_UP.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\KEY_UP\KEY_UP_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_HIGH</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_HIGH\LED_DOWN_HIGH.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_HIGH\LED_DOWN_HIGH.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_HIGH\LED_DOWN_HIGH_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_LOW</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_LOW\LED_DOWN_LOW.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_LOW\LED_DOWN_LOW.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_DOWN_LOW\LED_DOWN_LOW_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_HIGH</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_HIGH\LED_LEFT_HIGH.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_HIGH\LED_LEFT_HIGH.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_HIGH\LED_LEFT_HIGH_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_LOW</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_LOW\LED_LEFT_LOW.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_LOW\LED_LEFT_LOW.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_LEFT_LOW\LED_LEFT_LOW_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_HIGH</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_HIGH\LED_RIGHT_HIGH.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_HIGH\LED_RIGHT_HIGH.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_HIGH\LED_RIGHT_HIGH_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_LOW</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_LOW\LED_RIGHT_LOW.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_LOW\LED_RIGHT_LOW.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_RIGHT_LOW\LED_RIGHT_LOW_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_START</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_START\LED_START.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_START\LED_START.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_START\LED_START_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_HIGH</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_HIGH\LED_UP_HIGH.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_HIGH\LED_UP_HIGH.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_HIGH\LED_UP_HIGH_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_LOW</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_LOW\LED_UP_LOW.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_LOW\LED_UP_LOW.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\LED_UP_LOW\LED_UP_LOW_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_DOWN</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_DOWN\PTZ_DOWN.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_DOWN\PTZ_DOWN.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_DOWN\PTZ_DOWN_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_LEFT</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_LEFT\PTZ_LEFT.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_LEFT\PTZ_LEFT.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_LEFT\PTZ_LEFT_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_RIGHT</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_RIGHT\PTZ_RIGHT.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_RIGHT\PTZ_RIGHT.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_RIGHT\PTZ_RIGHT_aliases.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_UP</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_UP\PTZ_UP.c</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_UP\PTZ_UP.h</v>
-<v>robot-control\car\Generated_Source\PSoC5\PTZ_UP\PTZ_UP_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_1</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_1\LED_1.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_1\LED_1.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_1\LED_1_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_2</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_2\LED_2.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_2\LED_2.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_2\LED_2_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_3</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_3\LED_3.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_3\LED_3.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\LED_3\LED_3_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_HIGH</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_HIGH\MSR_HIGH.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_HIGH\MSR_HIGH.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_HIGH\MSR_HIGH_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_LOW</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_LOW\MSR_LOW.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_LOW\MSR_LOW.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\MSR_LOW\MSR_LOW_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_X</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_X\PTZ_X.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_X\PTZ_X.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_X\PTZ_X_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_Y</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_Y\PTZ_Y.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_Y\PTZ_Y.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\PTZ_Y\PTZ_Y_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR1</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR1\STR1.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR1\STR1.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR1\STR1_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR2</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR2\STR2.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR2\STR2.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\STR2\STR2_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_HIGH</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_HIGH\SWITCH_1_HIGH.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_HIGH\SWITCH_1_HIGH.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_HIGH\SWITCH_1_HIGH_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_LOW</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_LOW\SWITCH_1_LOW.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_LOW\SWITCH_1_LOW.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_1_LOW\SWITCH_1_LOW_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_HIGH</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_HIGH\SWITCH_2_HIGH.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_HIGH\SWITCH_2_HIGH.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_HIGH\SWITCH_2_HIGH_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_LOW</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_LOW\SWITCH_2_LOW.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_LOW\SWITCH_2_LOW.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\SWITCH_2_LOW\SWITCH_2_LOW_aliases.h</v>
 <v>robot-control\car\Generated_Source\PSoC5\Timer_1</v>
 <v>robot-control\car\Generated_Source\PSoC5\Timer_1\Timer_1.c</v>
 <v>robot-control\car\Generated_Source\PSoC5\Timer_1\Timer_1.h</v>
@@ -159,6 +169,18 @@
 <v>robot-control\car\Generated_Source\PSoC5\UART_net_IntClock</v>
 <v>robot-control\car\Generated_Source\PSoC5\UART_net_IntClock\UART_net_IntClock.c</v>
 <v>robot-control\car\Generated_Source\PSoC5\UART_net_IntClock\UART_net_IntClock.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_BLUE</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_BLUE\WARNING_BLUE.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_BLUE\WARNING_BLUE.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_BLUE\WARNING_BLUE_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_GREEN</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_GREEN\WARNING_GREEN.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_GREEN\WARNING_GREEN.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_GREEN\WARNING_GREEN_aliases.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_RED</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_RED\WARNING_RED.c</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_RED\WARNING_RED.h</v>
+<v>robot-control\car\Generated_Source\PSoC5\WARNING_RED\WARNING_RED_aliases.h</v>
 <v>robot-control\car\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>robot-control\car\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>robot-control\car\Generated_Source\PSoC5\cydevice.h</v>
@@ -198,9 +220,22 @@
 <v>robot-control\car\CortexM3\ARM_GCC_493</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\Beep.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\buzzer.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_FinalBuf_dma.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_INT.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_IntClock.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_PM.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_INT.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_PM.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_TempBuf_dma.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_V.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\BATTERY.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\car.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\CAR_SPEED.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\CAR_X.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\CAR_Y.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
@@ -215,26 +250,20 @@
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_timer.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\isr_tx_net.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\key.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_DOWN.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_LEFT.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_RIGHT.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_SPEED_HIGH.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_SPEED_LOW.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\KEY_UP.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_DOWN_HIGH.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_DOWN_LOW.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_LEFT_HIGH.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_LEFT_LOW.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_RIGHT_HIGH.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_RIGHT_LOW.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_START.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_UP_HIGH.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_UP_LOW.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_1.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_2.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\LED_3.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_DOWN.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_LEFT.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_RIGHT.lst</v>
-<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_UP.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\MSR_HIGH.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\MSR_LOW.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_X.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\PTZ_Y.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\STR1.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\STR2.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\SWITCH_1_HIGH.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\SWITCH_1_LOW.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\SWITCH_2_HIGH.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\SWITCH_2_LOW.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_1.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\Timer_1_PM.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\Transfer.lst</v>
@@ -243,6 +272,9 @@
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_net_INT.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_net_IntClock.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_net_PM.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\WARNING_BLUE.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\WARNING_GREEN.lst</v>
+<v>robot-control\car\CortexM3\ARM_GCC_493\Debug\Listing Files\WARNING_RED.lst</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\car.elf</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\car.hex</v>
 <v>robot-control\car\CortexM3\ARM_GCC_493\Debug\car.map</v>
@@ -265,11 +297,14 @@
 <v>robot-control\car\CY8C52LP Family Datasheet</v>
 <v>robot-control\car\System Reference Guides</v>
 <v>robot-control\car\System Reference Guides\cy_boot_v5_20</v>
+<v>robot-control\car\ADC_SAR_SEQ_v2_0.pdf</v>
 <v>robot-control\car\cy_clock_v2_20.pdf</v>
 <v>robot-control\car\cy_isr_v1_70</v>
 <v>robot-control\car\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>robot-control\car\cy_pins_v2_10</v>
 <v>robot-control\car\cy_pins_v2_10\cy_pins_v2_10.pdf</v>
+<v>robot-control\car\cy_pins_v2_5</v>
+<v>robot-control\car\cy_pins_v2_5\cy_pins_v2_5.pdf</v>
 <v>robot-control\car\Timer_v2_70.pdf</v>
 <v>robot-control\car\UART_v2_50.pdf</v>
 <v>robot-control\car\ZeroTerminal.pdf</v>
@@ -304,19 +339,17 @@
 <name v=".\car.cydsn\Generated_Source\PSoC5\cydevice_trm.h" />
 <name v=".\car.cydsn\key.h" />
 <name v=".\car.cydsn\key.c" />
-<name v=".\car.cydsn\Generated_Source\PSoC5\KEY_DOWN.h" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\isr_timer.c" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\Timer_1.h" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\isr_timer.h" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\isr_tx_net.h" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\isr_rx_net.h" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\CyLib.c" />
-<name v=".\car.cydsn\buzzer.h" />
-<name v=".\car.cydsn\buzzer.c" />
-<name v=".\car.cydsn\Generated_Source\PSoC5\Beep.c" />
-<name v=".\car.cydsn\Generated_Source\PSoC5\Beep.h" />
-<name v=".\car.cydsn\Generated_Source\PSoC5\KEY_UP.c" />
 <name v=".\car.cydsn\Generated_Source\PSoC5\cymetadata.c" />
+<name v=".\car.cydsn\ADC_V.h" />
+<name v=".\car.cydsn\ADC_V.c" />
+<name v=".\car.cydsn\Generated_Source\PSoC5\ADC.c" />
+<name v=".\car.cydsn\Generated_Source\PSoC5\ADC.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

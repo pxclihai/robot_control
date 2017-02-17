@@ -1,5 +1,5 @@
 # car
-# 2016-11-28 06:29:18Z
+# 2017-02-15 07:34:18Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -23,22 +23,24 @@ dont_use_location abufcell -1 -1 1
 dont_use_location abufcell -1 -1 3
 set_io "Rx_net(0)" iocell 3 2
 set_io "Tx_net(0)" iocell 3 3
-set_io "KEY_UP(0)" iocell 2 0
-set_io "KEY_DOWN(0)" iocell 15 5
-set_io "KEY_LEFT(0)" iocell 6 3
-set_io "KEY_RIGHT(0)" iocell 15 4
-set_io "KEY_SPEED_LOW(0)" iocell 6 1
-set_io "PTZ_UP(0)" iocell 2 4
-set_io "PTZ_DOWN(0)" iocell 2 1
-set_io "PTZ_LEFT(0)" iocell 2 2
-set_io "PTZ_RIGHT(0)" iocell 2 3
-set_io "KEY_SPEED_HIGH(0)" iocell 6 0
-set_io "LED_START(0)" iocell 6 2
-set_io "LED_LEFT_LOW(0)" iocell 4 3
-set_io "LED_DOWN_LOW(0)" iocell 0 7
-set_io "LED_UP_LOW(0)" iocell 0 5
-set_io "LED_RIGHT_LOW(0)" iocell 4 5
-set_io "LED_UP_HIGH(0)" iocell 0 4
-set_io "LED_DOWN_HIGH(0)" iocell 0 6
-set_io "LED_LEFT_HIGH(0)" iocell 4 2
-set_io "LED_RIGHT_HIGH(0)" iocell 4 4
+set_io "PTZ_X(0)" iocell 0 1
+set_io "MSR_LOW(0)" iocell 4 3
+set_io "STR2(0)" iocell 0 7
+set_io "SWITCH_2_LOW(0)" iocell 4 7
+set_io "SWITCH_1_LOW(0)" iocell 4 5
+set_io "SWITCH_2_HIGH(0)" iocell 4 6
+set_io "STR1(0)" iocell 0 6
+set_io "MSR_HIGH(0)" iocell 4 2
+set_io "SWITCH_1_HIGH(0)" iocell 4 4
+set_io "PTZ_Y(0)" iocell 0 2
+set_io "CAR_Y(0)" iocell 0 0
+set_io "LED_1(0)" iocell 4 0
+set_io "CAR_X(0)" iocell 4 1
+set_io "BATTERY(0)" iocell 1 5
+set_io "LED_2(0)" iocell 0 4
+set_io "LED_3(0)" iocell 0 5
+set_io "CAR_SPEED(0)" iocell 6 5
+set_io "WARNING_GREEN(0)" iocell 2 3
+set_io "WARNING_BLUE(0)" iocell 2 2
+set_io "WARNING_RED(0)" iocell 2 4
+set_location "\ADC:SAR:ADC_SAR\" sarcell -1 -1 0

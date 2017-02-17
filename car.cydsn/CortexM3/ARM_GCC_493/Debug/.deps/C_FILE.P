@@ -1,134 +1,154 @@
-D:/pxc/robot-control/car.cydsn/CortexM3/ARM_GCC_493/Debug/Transfer.o : D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Beep.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Beep_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyDmac.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyFlash.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyLib.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CySpc.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_DOWN.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_DOWN_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_LEFT.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_LEFT_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_RIGHT.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_RIGHT_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_HIGH.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_HIGH_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_LOW.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_LOW_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_UP.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_UP_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_HIGH.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_HIGH_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_LOW.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_LOW_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_HIGH.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_HIGH_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_LOW.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_LOW_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_HIGH.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_HIGH_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_LOW.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_LOW_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_START.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_START_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_HIGH.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_HIGH_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_LOW.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_LOW_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_DOWN.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_DOWN_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_LEFT.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_LEFT_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_RIGHT.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_RIGHT_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_UP.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_UP_aliases.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Timer_1.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/UART_net.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/UART_net_IntClock.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cm3.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cmFunc.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cmInstr.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyPm.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydevice.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyfitter.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cypins.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cytypes.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_rx_net.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_timer.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_tx_net.h D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/project.h D:/pxc/robot-control/car.cydsn/Transfer.c D:/pxc/robot-control/car.cydsn/Transfer.h D:/pxc/robot-control/car.cydsn/car.h 
+D:/robot/git_code/robot_control_C/car.cydsn/CortexM3/ARM_GCC_493/Debug/main.o : D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_FinalBuf_dma.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_IRQ.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_IntClock.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_SAR.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_TempBuf_dma.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/BATTERY.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/BATTERY_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/Buzzer_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_SPEED.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_SPEED_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_X.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_X_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_Y.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_Y_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CYDMAC.H D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CYFITTER.H D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CyDmac.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CyFlash.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CyLib.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CySpc.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_1.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_1_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_2.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_2_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_3.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_3_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_HIGH.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_HIGH_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_LOW.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_LOW_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_X.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_X_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_Y.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_Y_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR1.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR1_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR2.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR2_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_HIGH.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_HIGH_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_LOW.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_LOW_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_HIGH.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_HIGH_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_LOW.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_LOW_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/Timer_1.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/UART_net.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/UART_net_IntClock.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_BLUE.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_BLUE_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_GREEN.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_GREEN_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_RED.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_RED_aliases.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/buzzer.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cm3.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cmFunc.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cmInstr.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cyPm.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydevice.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cyfitter.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cypins.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cytypes.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_rx_net.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_timer.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_tx_net.h D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/project.h D:/robot/git_code/robot_control_C/car.cydsn/ADC_V.h D:/robot/git_code/robot_control_C/car.cydsn/Transfer.h D:/robot/git_code/robot_control_C/car.cydsn/car.h D:/robot/git_code/robot_control_C/car.cydsn/key.h D:/robot/git_code/robot_control_C/car.cydsn/main.c 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Beep.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Beep_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_FinalBuf_dma.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_IRQ.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_IntClock.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CyLib.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_SAR.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/CySpc.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/ADC_TempBuf_dma.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_DOWN.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/BATTERY.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_DOWN_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/BATTERY_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_LEFT.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/Buzzer_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_LEFT_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_SPEED.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_RIGHT.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_SPEED_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_RIGHT_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_X.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_HIGH.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_X_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_HIGH_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_Y.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_LOW.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CAR_Y_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_SPEED_LOW_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CYDMAC.H : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_UP.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CYFITTER.H : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/KEY_UP_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CyFlash.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_HIGH.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CyLib.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_HIGH_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_LOW.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_1.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_DOWN_LOW_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_1_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_HIGH.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_2.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_HIGH_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_2_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_LOW.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_3.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_LEFT_LOW_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/LED_3_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_HIGH.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_HIGH.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_HIGH_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_HIGH_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_LOW.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_LOW.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_RIGHT_LOW_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/MSR_LOW_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_START.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_X.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_START_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_X_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_HIGH.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_Y.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_HIGH_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/PTZ_Y_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_LOW.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR1.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/LED_UP_LOW_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR1_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_DOWN.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR2.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_DOWN_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/STR2_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_LEFT.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_HIGH.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_LEFT_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_HIGH_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_RIGHT.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_LOW.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_RIGHT_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_1_LOW_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_UP.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_HIGH.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/PTZ_UP_aliases.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_HIGH_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/Timer_1.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_LOW.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/UART_net.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/SWITCH_2_LOW_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/UART_net_IntClock.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/Timer_1.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/UART_net.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/UART_net_IntClock.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_BLUE.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_BLUE_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyPm.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_GREEN.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydevice.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_GREEN_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_RED.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/WARNING_RED_aliases.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/buzzer.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cm3.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cypins.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/cytypes.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_rx_net.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_timer.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/isr_tx_net.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
-D:/pxc/robot-control/car.cydsn/Generated_Source/PSoC5/project.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
 
-D:/pxc/robot-control/car.cydsn/Transfer.c : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
-D:/pxc/robot-control/car.cydsn/Transfer.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
-D:/pxc/robot-control/car.cydsn/car.h : 
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_rx_net.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_timer.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/isr_tx_net.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Generated_Source/PSoC5/project.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/ADC_V.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/Transfer.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/car.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/key.h : 
+
+D:/robot/git_code/robot_control_C/car.cydsn/main.c : 
 

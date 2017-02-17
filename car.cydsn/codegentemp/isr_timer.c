@@ -179,7 +179,7 @@ CY_ISR(isr_timer_Interrupt)
     }
       if(time_5ms > 5)
       {
-        cb_bzr_Main();
+       
         time_5ms_state = 1;
         time_5ms = 0;
       }

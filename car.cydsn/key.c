@@ -3,9 +3,11 @@
 #include <project.h>
 #include "Transfer.h"
 #include "car.h"
+
+
 #define EVENT_CB(ev)   if(handle->cb[ev])handle->cb[ev]((Button*)handle)
 
-
+#define debug(x) {UART_net_PutString(x);UART_net_PutString("\r\n");}
 #define led_high 100
 #define led_medium 40
 #define led_low   0
@@ -28,14 +30,15 @@ struct Button key_speed_high;
 
 
 struct Button led_start; 
-struct Button led_up_low; 
-struct Button led_down_low; 
-struct Button led_left_low;  
-struct Button led_right_low;
-struct Button led_up_high; 
-struct Button led_down_high; 
-struct Button led_left_high;  
-struct Button led_right_high;
+
+struct Button STR1; 
+struct Button STR2; 
+struct Button MSR_high; 
+struct Button MSR_low; 
+struct Button SWITCH_1_high;
+struct Button SWITCH_1_low;
+struct Button SWITCH_2_high; 
+struct Button SWITCH_2_low; 
 
 uint8 temp;
 uint8 temp1;
@@ -144,300 +147,218 @@ void Callback_led_start_press_down()
 {
   DT_Send_Command_Turn(2); 
 }
-////------up
-void Callback_led_up_low_press_up()
+
+////2个预留开关
+void Callback_STR1_press_up()
 {
-    led_send[0] = led_medium;
-    DT_Send_Command_Led(led_send); 
+   debug("str1_up");
 }
-void Callback_led_up_low_press_down()
+void Callback_STR1_down()
 {
-    led_send[0] = led_low;
-    DT_Send_Command_Led(led_send);
+debug("str1_down");
 }
-void Callback_led_up_high_press_up()
+void Callback_STR2_press_up()
 {
-    led_send[0] = led_medium;
-    DT_Send_Command_Led(led_send);
+    debug("str2_up");
 }
-void Callback_led_up_high_press_down()
+void Callback_STR2_press_down()
 {
-    led_send[0] = led_high;
-    DT_Send_Command_Led(led_send);
-}
-////down
-void Callback_led_down_low_press_up()
-{
-    led_send[2] = led_medium;
-    DT_Send_Command_Led(led_send); 
-}
-void Callback_led_down_low_press_down()
-{
-    led_send[2] = led_high;
-    DT_Send_Command_Led(led_send);
-}
-void Callback_led_down_high_press_up()
-{
-    led_send[2] = led_medium;
-    DT_Send_Command_Led(led_send);
-}
-void Callback_led_down_high_press_down()
-{
-    led_send[2] = led_low;
-    DT_Send_Command_Led(led_send);
+   debug("str2_down");
 }    
 ////////////left
-void Callback_led_left_low_press_up()
+void Callback_MSR_low_press_up()
 {
-    led_send[3] = led_medium;
-    DT_Send_Command_Led(led_send); 
+  debug("MSR_low_up");
 }
-void Callback_led_left_low_press_down()
+void Callback_MSR_low_press_down()
 {
-    led_send[3] = led_high;
-    DT_Send_Command_Led(led_send);
+     debug("MSR_low_down");
 }
-void Callback_led_left_high_press_up()
+void Callback_MSR_high_press_up()
 {
-    led_send[3] = led_medium;
-    DT_Send_Command_Led(led_send);
+    debug("MSR_high_up");
 }
-void Callback_led_left_high_press_down()
+void Callback_MSR_high_press_down()
 {
-    led_send[3] = led_low;
-    DT_Send_Command_Led(led_send);
+    debug("MSR_high_down");
 }    
-/////
-void Callback_led_right_low_press_up()
+//SWITCH_1
+void Callback_SWITCH_1_low_press_up()
 {
-    led_send[1] = led_medium;
-    DT_Send_Command_Led(led_send); 
+      debug("Callback_SWITCH_1_low_press_up");
 }
-void Callback_led_right_low_press_down()
+void Callback_SWITCH_1_low_press_down()
 {
-    led_send[1] = led_low;
-    DT_Send_Command_Led(led_send);
+       debug("Callback_SWITCH_1_low_press_down");
 }
-void Callback_led_right_high_press_up()
+void Callback_SWITCH_1_high_press_up()
 {
-    led_send[1] = led_medium;
-    DT_Send_Command_Led(led_send);
+    debug("Callback_SWITCH_1_high_press_up");
 }
-void Callback_led_right_high_press_down()
+void Callback_SWITCH_1_high_press_down()
 {
-    led_send[1] = led_high;
-     DT_Send_Command_Led(led_send);
+    debug("Callback_SWITCH_1_high_press_down");
 }    
-///
+//SWITCH_2
+void Callback_SWITCH_2_low_press_up()
+{
+   debug("Callback_SWITCH_2_low_press_up");
+}
+void Callback_SWITCH_2_low_press_down()
+{
+    debug("Callback_SWITCH_2_low_press_down");
+}
+void Callback_SWITCH_2_high_press_up()
+{
+    debug("Callback_SWITCH_2_high_press_up");
+}
+void Callback_SWITCH_2_high_press_down()
+{
+   debug("Callback_SWITCH_2_high_press_down");
+}
 void init_button(void)
 {
-    button_init(&key_up, KEY_UP_Read, 0);
-    button_attach(&key_up, PRESS_UP, Callback_key_up_press_up);
-    button_attach(&key_up, PRESS_DOWN, Callback_key_up_press_down);
-    button_start(&key_up);
-    
-    button_init(&key_down, KEY_DOWN_Read, 0);
-    button_attach(&key_down, PRESS_UP, Callback_key_down_press_up);
-    button_attach(&key_down, PRESS_DOWN, Callback_key_down_press_down);
-    button_start(&key_down);
-    
-    button_init(&key_left, KEY_LEFT_Read, 0);
-    button_attach(&key_left, PRESS_UP,   Callback_key_left_press_up);
-    button_attach(&key_left, PRESS_DOWN, Callback_key_left_press_down);
-    button_start(&key_left);
-    
-    button_init(&key_right, KEY_RIGHT_Read, 0);
-    button_attach(&key_right, PRESS_UP,   Callback_key_right_press_up);
-    button_attach(&key_right, PRESS_DOWN, Callback_key_right_press_down);
-    button_start(&key_right);
-    
-    
-    button_init(&PTZ_up, PTZ_UP_Read, 0);
-    button_attach(&PTZ_up, PRESS_UP,   Callback_PTZ_up_press_up);
-    button_attach(&PTZ_up, PRESS_DOWN, Callback_PTZ_up_press_down);
-    button_start(&PTZ_up);
-    
-    button_init(&PTZ_down, PTZ_DOWN_Read, 0);
-    button_attach(&PTZ_down, PRESS_UP, Callback_PTZ_down_press_up);
-    button_attach(&PTZ_down, PRESS_DOWN, Callback_PTZ_down_press_down);
-    button_start(&PTZ_down);
-    
-    button_init(&PTZ_left, PTZ_LEFT_Read, 0);
-    button_attach(&PTZ_left, PRESS_UP,   Callback_PTZ_left_press_up);
-    button_attach(&PTZ_left, PRESS_DOWN, Callback_PTZ_left_press_down);
-    button_start(&PTZ_left);
-    
-    button_init(&PTZ_right, PTZ_RIGHT_Read, 0);
-    button_attach(&PTZ_right, PRESS_UP,   Callback_PTZ_right_press_up);
-    button_attach(&PTZ_right, PRESS_DOWN, Callback_PTZ_right_press_down);
-    button_start(&PTZ_right);
-    /////speed
-    button_init  (&key_speed_low, KEY_SPEED_LOW_Read, 0);
-    button_attach(&key_speed_low, PRESS_UP, Callback_key_speed_low_press_up);
-    button_start (&key_speed_low);
-    button_init  (&key_speed_low, KEY_SPEED_LOW_Read, 0);
-    button_attach(&key_speed_low, PRESS_DOWN, Callback_key_speed_low_press_down);
-    button_start (&key_speed_low);
-    
-    button_init  (&key_speed_high, KEY_SPEED_HIGH_Read, 0);
-    button_attach(&key_speed_high, PRESS_UP, Callback_key_speed_high_press_up);
-    button_start (&key_speed_high);
-    
-    button_init  (&key_speed_high, KEY_SPEED_HIGH_Read, 0);
-    button_attach(&key_speed_high, PRESS_DOWN, Callback_key_speed_high_press_down);
-    button_start (&key_speed_high);
-    ////
-    
-    
 
-    button_init(&led_start, LED_START_Read, 0);
-    button_attach(&led_start, PRESS_UP,   Callback_led_start_press_up);
-    button_start(&led_start);
-    button_init(&led_start, LED_START_Read, 0);
-    button_attach(&led_start, PRESS_DOWN,   Callback_led_start_press_down);
-    button_start(&led_start);
+  //2个预留开关
+    button_init   (&STR1, STR1_Read, 0);
+    button_attach (&STR1, PRESS_UP, Callback_STR1_press_up);
+    button_start  (&STR1);
+    button_init   (&STR1, STR1_Read, 0);
+    button_attach (&STR1, PRESS_DOWN, Callback_STR1_down);
+    button_start  (&STR1);
+    button_init   (&STR2, STR2_Read, 0);
+    button_attach (&STR2, PRESS_UP, Callback_STR2_press_up);
+    button_start  (&STR2);
+    button_init  (&STR2, STR2_Read, 0);
+    button_attach (&STR2, PRESS_DOWN, Callback_STR2_press_down);
+    button_start  (&STR2);
+ ///测厚仪3段式开关MSR
     
-    //led --button -1
-    button_init  (&led_up_low, LED_UP_LOW_Read, 0);
-    button_attach(&led_up_low, PRESS_UP, Callback_led_up_low_press_up);
-    button_start (&led_up_low);
-    button_init  (&led_up_low, LED_UP_LOW_Read, 0);
-    button_attach(&led_up_low, PRESS_DOWN, Callback_led_up_low_press_down);
-    button_start (&led_up_low);
-    
-    button_init  (&led_up_high, LED_UP_HIGH_Read, 0);
-    button_attach(&led_up_high, PRESS_UP, Callback_led_up_high_press_up);
-    button_start (&led_up_high);
-    button_init  (&led_up_high, LED_UP_HIGH_Read, 0);
-    button_attach(&led_up_high, PRESS_DOWN, Callback_led_up_high_press_down);
-    button_start (&led_up_high);
-    
-    
-    //led button 2
-     button_init  (&led_down_low, LED_DOWN_LOW_Read, 0);
-    button_attach(&led_down_low, PRESS_UP, Callback_led_down_low_press_up);
-    button_start (&led_down_low);
-      button_init  (&led_down_low, LED_DOWN_LOW_Read, 0);
-    button_attach(&led_down_low, PRESS_DOWN, Callback_led_down_low_press_down);
-    button_start (&led_down_low);
-    button_init  (&led_down_high, LED_DOWN_HIGH_Read, 0);
-    button_attach(&led_down_high, PRESS_UP, Callback_led_down_high_press_up);
-    button_start (&led_down_high);
-     button_init  (&led_down_high, LED_DOWN_HIGH_Read, 0);
-    button_attach(&led_down_high, PRESS_DOWN, Callback_led_down_high_press_down);
-    button_start (&led_down_high);
- ////////   
-    
-        button_init  (&led_left_low, LED_LEFT_LOW_Read, 0);
-    button_attach(&led_left_low, PRESS_UP, Callback_led_left_low_press_up);
-    button_start (&led_left_low);
-         button_init  (&led_left_low, LED_LEFT_LOW_Read, 0);
-    button_attach(&led_left_low, PRESS_DOWN, Callback_led_left_low_press_down);
-    button_start (&led_left_low);
-    button_init  (&led_left_high, LED_LEFT_HIGH_Read, 0);
-    button_attach(&led_left_high, PRESS_UP, Callback_led_left_high_press_up);
-    button_start (&led_left_high);
-      button_init  (&led_left_high, LED_LEFT_HIGH_Read, 0);
-    button_attach(&led_left_high, PRESS_DOWN, Callback_led_left_high_press_down);
-    button_start (&led_left_high);
-    
-        button_init  (&led_right_low, LED_RIGHT_LOW_Read, 0);
-    button_attach(&led_right_low, PRESS_UP, Callback_led_right_low_press_up);
-    button_start (&led_right_low);
-        button_init  (&led_right_low, LED_RIGHT_LOW_Read, 0);
-    button_attach(&led_right_low, PRESS_DOWN, Callback_led_right_low_press_down);
-    button_start (&led_right_low);
-    
-    button_init  (&led_right_high, LED_RIGHT_HIGH_Read, 0);
-    button_attach(&led_right_high, PRESS_UP, Callback_led_right_high_press_up);
-    button_start (&led_right_high);
-        button_init  (&led_right_high, LED_RIGHT_HIGH_Read, 0);
-    button_attach(&led_right_high, PRESS_DOWN, Callback_led_right_high_press_down);
-    button_start (&led_right_high);
+    button_init  (&MSR_low, MSR_LOW_Read, 0);
+    button_attach(&MSR_low, PRESS_UP, Callback_MSR_low_press_up);
+    button_start (&MSR_low);
+    button_init  (&MSR_low, MSR_LOW_Read, 0);
+    button_attach(&MSR_low, PRESS_DOWN, Callback_MSR_low_press_down);
+    button_start (&MSR_low);
+    button_init  (&MSR_high, MSR_HIGH_Read, 0);
+    button_attach(&MSR_high, PRESS_UP, Callback_MSR_high_press_up);
+    button_start (&MSR_high);
+     button_init  (&MSR_high, MSR_HIGH_Read, 0);
+    button_attach(&MSR_high, PRESS_DOWN, Callback_MSR_high_press_down);
+    button_start (&MSR_high);
     
     
+    
+//SWITCH_1
+    button_init  (&SWITCH_1_low, SWITCH_1_LOW_Read, 0);
+    button_attach(&SWITCH_1_low, PRESS_UP, Callback_SWITCH_1_low_press_up);
+    button_start (&SWITCH_1_low);
+    button_init  (&SWITCH_1_low, SWITCH_1_LOW_Read, 0);
+    button_attach(&SWITCH_1_low, PRESS_DOWN, Callback_SWITCH_1_low_press_down);
+    button_start (&SWITCH_1_low);
+    
+    button_init  (&SWITCH_1_high, SWITCH_1_HIGH_Read, 0);
+    button_attach(&SWITCH_1_high, PRESS_UP, Callback_SWITCH_1_high_press_up);
+    button_start (&SWITCH_1_high);
+    button_init  (&SWITCH_1_high, SWITCH_1_HIGH_Read, 0);
+    button_attach(&SWITCH_1_high, PRESS_DOWN, Callback_SWITCH_1_high_press_down);
+    button_start (&SWITCH_1_high);
+//SWITCH_2
+    button_init  (&SWITCH_2_low, SWITCH_2_LOW_Read, 0);
+    button_attach(&SWITCH_2_low, PRESS_UP, Callback_SWITCH_2_low_press_up);
+    button_start (&SWITCH_2_low);
+    button_init  (&SWITCH_2_low, SWITCH_2_LOW_Read, 0);
+    button_attach(&SWITCH_2_low, PRESS_DOWN, Callback_SWITCH_2_low_press_down);
+    button_start (&SWITCH_2_low);
+    
+    button_init  (&SWITCH_2_high, SWITCH_2_HIGH_Read, 0);
+    button_attach(&SWITCH_2_high, PRESS_UP, Callback_SWITCH_2_high_press_up);
+    button_start (&SWITCH_2_high);
+    button_init  (&SWITCH_2_high, SWITCH_2_HIGH_Read, 0);
+    button_attach(&SWITCH_2_high, PRESS_DOWN, Callback_SWITCH_2_high_press_down);
+    button_start (&SWITCH_2_high);    
     ////1
-    if(LED_UP_LOW_Read() == 0)
-    {
-     led_send[0] = led_low;
- 
-    }
-    else if(LED_UP_HIGH_Read() == 0)
-    {
-     led_send[0] = led_high;
-   
-    }
-   
-    else 
-    {
-     led_send[0] = led_medium;
-    
-    } 
-    
-    CyDelay(2);
+//    if(LED_UP_LOW_Read() == 0)
+//    {
+//     led_send[0] = led_low;
+// 
+//    }
+//    else if(LED_UP_HIGH_Read() == 0)
+//    {
+//     led_send[0] = led_high;
+//   
+//    }
+//   
+//    else 
+//    {
+//     led_send[0] = led_medium;
+//    
+//    } 
+//    
+//    CyDelay(2);
     
     ///2
-        if(LED_DOWN_LOW_Read() == 0)
-    {
-     led_send[1] = led_low;
-  
-    }
-    else if(LED_DOWN_HIGH_Read() == 0)
-    {
-     led_send[1] = led_high;
-  
-    }
-    else 
-    {
-     led_send[1] = led_medium;
-
-    }
-        CyDelay(2);
-   if(LED_LEFT_LOW_Read() == 0)
-    {
-     led_send[2] = led_low;
- 
-    }
-    else if(LED_LEFT_HIGH_Read() == 0)
-    {
-     led_send[2] = led_high;
-  
-    }
-    else 
-    {
-     led_send[2] = led_medium;
-   
-    }
-        CyDelay(2);
-        if(LED_RIGHT_LOW_Read() == 0)
-    {
-     led_send[3] = led_low;
-
-    }
-    else if(LED_RIGHT_HIGH_Read() == 0)
-    {
-     led_send[3] = led_high;
-   
-    }
-    else 
-    {
-     led_send[3] = led_medium;
-     
-    }
-    DT_Send_Command_Led(led_send);
-        CyDelay(2);
-    if(KEY_SPEED_LOW_Read() == 0)
-    {
-        DT_Send_Command_Speed(20000);
-    }
-    else if(KEY_SPEED_HIGH_Read() == 0)
-    {
-         DT_Send_Command_Speed(10000);
-    }
-    else
-    {
-         DT_Send_Command_Speed(15000);
-    }
+//    if(LED_DOWN_LOW_Read() == 0)
+//    {
+//     led_send[1] = led_low;
+//  
+//    }
+//    else if(LED_DOWN_HIGH_Read() == 0)
+//    {
+//     led_send[1] = led_high;
+//  
+//    }
+//    else 
+//    {
+//     led_send[1] = led_medium;
+//
+//    }
+//        CyDelay(2);
+//   if(LED_LEFT_LOW_Read() == 0)
+//    {
+//     led_send[2] = led_low;
+// 
+//    }
+//    else if(LED_LEFT_HIGH_Read() == 0)
+//    {
+//     led_send[2] = led_high;
+//  
+//    }
+//    else 
+//    {
+//     led_send[2] = led_medium;
+//   
+//    }
+//        CyDelay(2);
+//        if(LED_RIGHT_LOW_Read() == 0)
+//    {
+//     led_send[3] = led_low;
+//
+//    }
+//    else if(LED_RIGHT_HIGH_Read() == 0)
+//    {
+//     led_send[3] = led_high;
+//   
+//    }
+//    else 
+//    {
+//     led_send[3] = led_medium;
+//     
+//    }
+//    DT_Send_Command_Led(led_send);
+//        CyDelay(2);
+//    if(KEY_SPEED_LOW_Read() == 0)
+//    {
+//        DT_Send_Command_Speed(20000);
+//    }
+//    else if(KEY_SPEED_HIGH_Read() == 0)
+//    {
+//         DT_Send_Command_Speed(10000);
+//    }
+//    else
+//    {
+//         DT_Send_Command_Speed(15000);
+//    }
    
 }
 
