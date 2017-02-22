@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|97c2d5fd-1e75-4d5f-ac4d-f7761f20e6bf
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|307f526d-4e86-42f1-aa97-989f00543240
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f1dbc65d-68ed-49a0-bf43-bd8f376b7017
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|bc7e78ab-2f6b-4f75-833b-2b823360057c
+D:\robot\git_code\robot_control_C\robot_control.cydsn\robot_control.cyprj|a4c6a9c8-9274-4e6c-8746-19ae6ffffef3
