@@ -17,7 +17,7 @@ void DT_Data_Exchange(void)
 {
 	static uint8 cnt = 0;
 	static uint8 senser_cnt 	=   10;
-	static uint8 status_cnt 	=   15;
+	static uint8 status_cnt 	=   8;
 	static uint8 rcdata_cnt 	=   20;
 	static uint8 motopwm_cnt	=   20;
 	static uint8 power_cnt		=	50;
@@ -42,13 +42,13 @@ void DT_Data_Exchange(void)
 	if(f.send_version)
 	{
 		f.send_version = 0;
-		DT_Send_Version(4,300,100,400,0);
+		//DT_Send_Version(4,300,100,400,0);
 	}
 /////////////////////////////////////////////////////////////////////////////////////
 	else if(f.send_status)
 	{
-		//f.send_status = 0;
-	//	DT_Send_Status(0,g_Car.set_dir,g_Car.set_car_speed);
+		f.send_status = 0;
+		DT_Send_Status(g_Control.bianbei,g_Control.jiaoju,g_Control.Battery);
 	}	
 
 }
@@ -205,7 +205,39 @@ void DT_Send_Version(uint8 hardware_type, uint16 hardware_ver,uint16 software_ve
 	
 	DT_Send_Data(data_to_send, _cnt);
 }
-void DT_Send_Status(enum CAR_DIR car_dir)
+void DT_Send_Status(uint8 bianjiao,uint8 jiaoju,uint16 battery)
+{
+	uint8 _cnt=0;
+    uint8 _temp;
+	uint16 _temp1;
+
+	
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0x09;
+	data_to_send[_cnt++]=0;
+    
+	_temp = bianjiao;
+	data_to_send[_cnt++]=_temp;
+    _temp = jiaoju;
+	data_to_send[_cnt++]=_temp;
+    
+    _temp1 =  battery;
+    data_to_send[_cnt++]=BYTE1(_temp1);
+	data_to_send[_cnt++]=BYTE0(_temp1);
+
+	
+	data_to_send[3] = _cnt-4;
+	
+	uint8 sum = 0;
+    uint8 i=0;
+	for(i=0;i<_cnt;i++)
+		sum += data_to_send[i];
+	data_to_send[_cnt++]=sum;
+	
+	DT_Send_Data(data_to_send, _cnt);
+}
+void DT_Send_Command_Car(enum CAR_DIR car_dir)
 {
 	uint8 _cnt=0;
     uint8 _temp;
@@ -214,7 +246,7 @@ void DT_Send_Status(enum CAR_DIR car_dir)
 	
 	data_to_send[_cnt++]=0xAA;
 	data_to_send[_cnt++]=0xAF;
-	data_to_send[_cnt++]=0x02;
+	data_to_send[_cnt++]=0x02; 
 	data_to_send[_cnt++]=0;
     
 	_temp = car_dir;
@@ -296,6 +328,81 @@ void DT_Send_Command_Lock(uint8 car_lock)
     
 	
 	data_to_send[_cnt++]=car_lock;
+    
+	
+	data_to_send[3] = _cnt-4;
+	
+	uint8 sum = 0;
+    uint8 i=0;
+	for(i=0;i<_cnt;i++)
+		sum += data_to_send[i];
+	data_to_send[_cnt++]=sum;
+	
+	DT_Send_Data(data_to_send, _cnt);
+}
+void DT_Send_Command_MSR(uint8 dir)
+{
+	uint8 _cnt=0;
+    uint8 _temp;
+
+	
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0xAF;
+	data_to_send[_cnt++]=8;
+	data_to_send[_cnt++]=0;
+    
+	
+	data_to_send[_cnt++]=dir;
+
+	
+	data_to_send[3] = _cnt-4;
+	
+	uint8 sum = 0;
+    uint8 i=0;
+	for(i=0;i<_cnt;i++)
+		sum += data_to_send[i];
+	data_to_send[_cnt++]=sum;
+	
+	DT_Send_Data(data_to_send, _cnt);
+}
+void DT_Send_Command_mode(uint8 mode)
+{
+	uint8 _cnt=0;
+    uint8 _temp;
+
+	
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0xAF;
+	data_to_send[_cnt++]=10;
+	data_to_send[_cnt++]=0;
+    
+	
+	data_to_send[_cnt++]=mode;
+
+	
+	data_to_send[3] = _cnt-4;
+	
+	uint8 sum = 0;
+    uint8 i=0;
+	for(i=0;i<_cnt;i++)
+		sum += data_to_send[i];
+	data_to_send[_cnt++]=sum;
+	
+	DT_Send_Data(data_to_send, _cnt);
+}
+void DT_Send_Command_WireWheel(uint8 mode)
+{
+	uint8 _cnt=0;
+    uint8 _temp;
+
+	
+	data_to_send[_cnt++]=0xAA;
+	data_to_send[_cnt++]=0xAF;
+	data_to_send[_cnt++]=16;
+	data_to_send[_cnt++]=0;
+    
+	
+	data_to_send[_cnt++]=mode;
 
 	
 	data_to_send[3] = _cnt-4;

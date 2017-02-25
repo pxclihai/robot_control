@@ -14,8 +14,9 @@
 
 #include "stdint.h"
 #include "string.h"
-#define debug(x) {UART_net_PutString(x);UART_net_PutString("\r\n");}
- // #define debug(x)
+//#define debug(x) {UART_net_PutString(x);UART_net_PutString("\r\n");}
+
+#define debug(x)
 //According to your need to modify the constants.
 #define TICKS_INTERVAL    5	//ms
 #define DEBOUNCE_TICKS    3	//MAX 8

@@ -19,6 +19,7 @@
 
 extern uint8 time_5ms_state;
 extern uint8 time_1s_state;
+extern uint8 time_100ms_state;
 uint16 adc_b;
 void put_num(uint16 n);
 int main()
@@ -41,12 +42,11 @@ int main()
     Monitor_Battery_Init();
 
     CyDelay(3000);
-    UART_net_PutString("Init_ok \r\n");
-    UART_net_PutString("Hardware--V5.0\r\n");
-    UART_net_PutString("Software--V.C.1.0\r\n");
-    WARNING_BLUE_Write(0);                      
-    WARNING_GREEN_Write(0);
-    WARNING_RED_Write(0);
+
+    WARNING_BLUE_Write(1);                      
+    WARNING_GREEN_Write(1);
+    WARNING_RED_Write(1);
+  
     for(;;)
     {
       /* Place your application code here. */
@@ -54,20 +54,26 @@ int main()
     
         if( time_1s_state == 1)
         {
-            Cal_Battery_loop();
-            Cal_car_dir();
-            Cal_ptz_dir();
-            Cal_LED_1_value();
+          
             adc_b = g_Control.Battery*3300/4096;
-           // printf("|CAR_X:%d | CAR_Y:%d | PTZ_X:%d | PTZ_Y:%d | LED1:%d | LED2:%d | LED3:%d | SPEED:%d \r\n",CAR_X_V,CAR_Y_V,PTZ_X_V,PTZ_Y_V,LED_1_V,LED_2_V,LED_3_V,CAR_SPEED_V);
+           printf("|CAR_X:%d | CAR_Y:%d | PTZ_X:%d | PTZ_Y:%d | LED1:%d | LED2:%d | LED3:%d | SPEED:%d \r\n",CAR_X_V,CAR_Y_V,PTZ_X_V,PTZ_Y_V,LED_1_V,LED_2_V,LED_3_V,CAR_SPEED_V);
             
             time_1s_state = 0;
             
         }
-       if(time_5ms_state == 1)
+        if(time_100ms_state == 1)
+        {
+            Cal_Battery_loop();
+            Cal_car_dir();
+            Cal_ptz_dir();
+            Cal_LED_value();
+            time_100ms_state = 0;
+        }
+        if(time_5ms_state == 1)
         {
             button_ticks();
             time_5ms_state = 0;
+           // DT_Data_Exchange();
         }
     }
 }

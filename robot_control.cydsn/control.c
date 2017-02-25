@@ -17,145 +17,135 @@ void Cal_car_dir()
 {
     static uint8 send_dir = STOP;
     static uint8 pre_dir  = 0;
-    if(CAR_X_V < 500 || CAR_Y_V <500)
-    {
-        if(CAR_X_V < 500 && CAR_Y_V <500)
+   
+     
+        if(CAR_X_V < 500 &&CAR_Y_V <500)
         {
             send_dir = DOWN_LEFT;
-          //DT_Send_Status(DOWN_LEFT);
-          debug("CAR_DOWN_LEFT");
+            
+            debug("CAR_DOWN_LEFT");
+            
+        }
+        else if(CAR_X_V < 500 && CAR_Y_V >3500)
+        {
+            send_dir = UP_LEFT;
+     
+            debug("CAR_UP_LEFT");
+        }
+        else if(CAR_X_V > 3500 && CAR_Y_V >3500)
+        {
+            send_dir = UP_RIGHT;
+        
+            debug("CAR_UP_RIGHT");
+        }
+        else if(CAR_X_V > 3500 && CAR_Y_V < 500)
+        {
+            send_dir = DOWN_RIGHT;
+         
+            debug("CAR_DOWN_RIGHT");
         }
         else if(CAR_X_V < 500)
         {
-          send_dir = LEFT;
-          // DT_Send_Status(LEFT);
-          debug("CAR_LEFT");
+            send_dir = LEFT;
+   
+            debug("CAR_LEFT");
         }
         else if (CAR_Y_V <500)
         {
-            send_dir = RIGHT;
-         // DT_Send_Status(RIGHT);
-          debug("CAR_DOWN");
-        }
-    }
-    else if(CAR_X_V < 500 || CAR_Y_V >3500)
-    {
-        if(CAR_X_V < 500 && CAR_Y_V >3500)
-        {
-            send_dir = UP_LEFT;
-       //   DT_Send_Status(UP_LEFT);
-          debug("CAR_UP_LEFT");
+            send_dir = DOWN;
+    
+            debug("CAR_DOWN");
         }
         else if(CAR_Y_V >3500)
         {
             send_dir = UP;
-        //  DT_Send_Status(UP);
-          debug("CAR_UP");
-        }
-    }
-    else if(CAR_X_V > 3500 || CAR_Y_V >3500)
-    {
-        if(CAR_X_V > 3500 && CAR_Y_V >3500)
-        {
-            send_dir = UP_RIGHT;
-         // DT_Send_Status(UP_RIGHT);
-          debug("CAR_UP_RIGHT");
+     
+            debug("CAR_UP");
         }
         else if(CAR_X_V > 3500)
         {
             send_dir = RIGHT;
-        //  DT_Send_Status(RIGHT);
-          debug("CAR_RIGHT");
+   
+            debug("CAR_RIGHT");
         }
-    }
-    else if(CAR_X_V > 3500 && CAR_Y_V < 500)
-    {
-        send_dir = DOWN_RIGHT;
-        // DT_Send_Status(DOWN_RIGHT);
-         debug("CAR_DOWN_RIGHT");
-    }
-    else
-    {
-        send_dir = STOP;
-       //  DT_Send_Status(STOP);
-    }
+        else
+        {
+            send_dir = STOP;
+            
+        }
     if(pre_dir != send_dir)
-    {
-       DT_Send_Status(send_dir);
+    { 
+        
+       DT_Send_Command_Car(send_dir);
        pre_dir = send_dir;
     }
-   
 }
 
 void Cal_ptz_dir()
 {
-     static uint8 send_dir = STOP;
+    static uint8 send_dir = STOP;
     static uint8 pre_dir  = 0;
-    if(PTZ_X_V < 500 || PTZ_Y_V <500)
+   
+     
+    if(PTZ_X_V < 500 && PTZ_Y_V <500)
     {
-        if(PTZ_X_V < 500 && PTZ_Y_V <500)
-        {
-            send_dir = DOWN_LEFT;
-          //DT_Send_Status(DOWN_LEFT);
-          debug("CAR_DOWN_LEFT");
-        }
-        else if(PTZ_X_V < 500)
-        {
-          send_dir = LEFT;
-          // DT_Send_Status(LEFT);
-          debug("CAR_LEFT");
-        }
-        else if (PTZ_Y_V <500)
-        {
-            send_dir = RIGHT;
-         // DT_Send_Status(RIGHT);
-          debug("CAR_DOWN");
-        }
+        send_dir = DOWN_LEFT;
+
+        debug("PTZ_DOWN_LEFT");
+        
     }
-    else if(PTZ_X_V < 500 || PTZ_Y_V >3500)
+    else if(PTZ_X_V < 500 && PTZ_Y_V >3500)
     {
-        if(PTZ_X_V < 500 && PTZ_Y_V >3500)
-        {
-            send_dir = UP_LEFT;
-       //   DT_Send_Status(UP_LEFT);
-          debug("CAR_UP_LEFT");
-        }
-        else if(PTZ_Y_V >3500)
-        {
-            send_dir = UP;
-        //  DT_Send_Status(UP);
-          debug("CAR_UP");
-        }
+        send_dir = UP_LEFT;
+ 
+      debug("PTZ_UP_LEFT");
     }
-    else if(PTZ_X_V > 3500 || PTZ_Y_V >3500)
+    else if(PTZ_X_V > 3500 && PTZ_Y_V >3500)
     {
-        if(PTZ_X_V > 3500 && PTZ_Y_V >3500)
-        {
-            send_dir = UP_RIGHT;
-         // DT_Send_Status(UP_RIGHT);
-          debug("CAR_UP_RIGHT");
-        }
-        else if(PTZ_X_V > 3500)
-        {
-            send_dir = RIGHT;
-        //  DT_Send_Status(RIGHT);
-          debug("CAR_RIGHT");
-        }
+        send_dir = UP_RIGHT;
+    
+      debug("PTZ_UP_RIGHT");
     }
     else if(PTZ_X_V > 3500 && PTZ_Y_V < 500)
     {
         send_dir = DOWN_RIGHT;
-        // DT_Send_Status(DOWN_RIGHT);
-         debug("CAR_DOWN_RIGHT");
+     
+         debug("PTZ_DOWN_RIGHT");
+    }
+    else if(PTZ_X_V < 500)
+    {
+      send_dir = LEFT;
+
+      debug("PTZ_LEFT");
+    }
+    else if (PTZ_Y_V <500)
+    {
+        send_dir = DOWN;
+
+      debug("PTZ_DOWN");
+    }
+    else if(PTZ_Y_V >3500)
+    {
+        send_dir = UP;
+ 
+      debug("PTZ_UP");
+    }
+    else if(PTZ_X_V > 3500)
+    {
+        send_dir = RIGHT;
+
+      debug("PTZ_RIGHT");
     }
     else
     {
         send_dir = STOP;
-       //  DT_Send_Status(STOP);
+        
     }
     if(pre_dir != send_dir)
-    {
+    { 
+       //  printf("--------------dir:%d-----------------",send_dir);
        DT_Send_Command_Ptz(send_dir);
+       
        pre_dir = send_dir;
     }
 }
@@ -206,7 +196,7 @@ uint8 Get_LED_Value(uint16 LED_VALUE)
         return 0;
     
 }
-void Cal_LED_1_value()
+void Cal_LED_value()
 {
     static uint8 cur_value[4];
     static uint8 pre_value[4];
@@ -222,9 +212,68 @@ void Cal_LED_1_value()
            DT_Send_Command_Led(cur_value); 
            
            pre_value[i] = cur_value[i];
-           printf("led%d : %d",i,cur_value);
+         
         }
     }
     
 }
+
+uint16 Get_Speed_Value(uint16 speed_value)
+{
+    if(0<= speed_value && speed_value<= 100)
+    {
+        return 6000;
+    }
+    else if(100< speed_value && speed_value<= 500 )
+    {
+        return 8000;
+    }
+    else if (500< speed_value && speed_value <= 1000)
+    {
+        return 10000; 
+    }
+    else if (1000< speed_value && speed_value<= 1500)
+    {
+        return 13000; 
+    }
+    else if (1500< speed_value && speed_value<= 2000)
+    {
+         return 15000; 
+    }
+    else if (2000< speed_value && speed_value<= 2500)
+    {
+        return 16000; 
+    }
+    else if (2500< speed_value && speed_value<= 3000)
+    {
+        return 17000;
+    }
+    else if (3000< speed_value && speed_value<= 3500)
+    {
+        return 18000;
+    }
+    else if (3500< speed_value && speed_value<= 4000)
+    {
+        return 19000;
+    }
+    else if (4000< speed_value && speed_value<= 4500)
+    {
+        return 20000;
+    }
+    else
+        return 14000;
+}
+void Cal_Speed_value()
+{
+     static uint8 cur_value;
+     static uint8 pre_value;
+     cur_value = Get_Speed_Value(CAR_SPEED_V);
+     if(pre_value != cur_value )
+    {
+        DT_Send_Command_Speed(cur_value);
+        cur_value = cur_value;
+    }
+}
+
+
 /* [] END OF FILE */

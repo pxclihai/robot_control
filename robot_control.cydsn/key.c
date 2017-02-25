@@ -45,42 +45,7 @@ uint8 temp1;
 
 uint16 Car_speed_base = 1000;
 
-void Callback_key_up_press_up()
-{
-   DT_Send_Status(STOP);
-}
-void Callback_key_up_press_down()
-{
-   DT_Send_Status(DOWN);
-}
 
-void Callback_key_down_press_up()
-{
-  DT_Send_Status(STOP);
-}
-void Callback_key_down_press_down()
-{
-    DT_Send_Status(UP);
-}
-
-
-void Callback_key_left_press_up()
-{
-   DT_Send_Status(STOP);
-}
-void Callback_key_left_press_down()
-{
-    DT_Send_Status(LEFT); 
-}
-
-void Callback_key_right_press_up()
-{
-   DT_Send_Status(STOP);
-}
-void Callback_key_right_press_down()
-{
-    DT_Send_Status(RIGHT); 
-}
 
 //PTZ
 void Callback_PTZ_up_press_up()
@@ -137,83 +102,90 @@ void Callback_key_speed_high_press_down()
 {
      DT_Send_Command_Speed(10000);
 }
-///led
 
-void Callback_led_start_press_up()
-{
-  DT_Send_Command_Turn(0); 
-}
-void Callback_led_start_press_down()
-{
-  DT_Send_Command_Turn(2); 
-}
 
 ////2个预留开关
 void Callback_STR1_press_up()
 {
-   debug("str1_up");
+    DT_Send_Command_mode(0);
+    debug("str1_up");
 }
 void Callback_STR1_down()
 {
-debug("str1_down");
+    DT_Send_Command_mode(1);
+    debug("str1_down");
 }
 void Callback_STR2_press_up()
 {
+    DT_Send_Command_WireWheel(0);
     debug("str2_up");
 }
 void Callback_STR2_press_down()
 {
+   DT_Send_Command_WireWheel(1);
    debug("str2_down");
 }    
-////////////left
+
 void Callback_MSR_low_press_up()
 {
-  debug("MSR_low_up");
+     DT_Send_Command_MSR(WHEEL_STOP);
+     debug("MSR_low_up");
 }
 void Callback_MSR_low_press_down()
 {
+     DT_Send_Command_MSR(FORWARD);
      debug("MSR_low_down");
 }
 void Callback_MSR_high_press_up()
 {
+     DT_Send_Command_MSR(WHEEL_STOP);
     debug("MSR_high_up");
 }
 void Callback_MSR_high_press_down()
 {
+    DT_Send_Command_MSR(WHEEL_STOP);
     debug("MSR_high_down");
 }    
 //SWITCH_1
 void Callback_SWITCH_1_low_press_up()
 {
+      g_Control.bianbei = 0;
       debug("Callback_SWITCH_1_low_press_up");
 }
 void Callback_SWITCH_1_low_press_down()
 {
+       g_Control.bianbei = 1;
        debug("Callback_SWITCH_1_low_press_down");
 }
 void Callback_SWITCH_1_high_press_up()
 {
+      g_Control.bianbei = 0;
     debug("Callback_SWITCH_1_high_press_up");
 }
 void Callback_SWITCH_1_high_press_down()
 {
+       g_Control.bianbei = 2;
     debug("Callback_SWITCH_1_high_press_down");
 }    
 //SWITCH_2
 void Callback_SWITCH_2_low_press_up()
 {
+    g_Control.jiaoju = 0;
    debug("Callback_SWITCH_2_low_press_up");
 }
 void Callback_SWITCH_2_low_press_down()
 {
+    g_Control.jiaoju  = 1;
     debug("Callback_SWITCH_2_low_press_down");
 }
 void Callback_SWITCH_2_high_press_up()
 {
+    g_Control.jiaoju = 0;
     debug("Callback_SWITCH_2_high_press_up");
 }
 void Callback_SWITCH_2_high_press_down()
 {
+    g_Control.jiaoju = 2;
    debug("Callback_SWITCH_2_high_press_down");
 }
 void init_button(void)

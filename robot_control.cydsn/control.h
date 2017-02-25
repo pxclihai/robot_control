@@ -28,7 +28,7 @@ typedef struct
 {
     uint8 Car_lock;
     enum CAR_DIR set_dir;
-    uint16 set_car_speed;
+    uint16   set_car_speed;
     S_WHEEL  left_front_wheel;
     S_WHEEL  left_behind_wheel;
     S_WHEEL  right_front_wheel;
@@ -38,11 +38,14 @@ S_CAR g_Car;
 typedef struct 
 {
     uint16 Battery;
+    uint8  bianbei;
+    uint8  jiaoju;
    
 }S_CONTROL;
 S_CONTROL g_Control;
 void Cal_car_dir();
 void Cal_ptz_dir();
-void Cal_LED_1_value();
+void Cal_LED_value();
+void Cal_Speed_value();
 #endif
 /* [] END OF FILE */
