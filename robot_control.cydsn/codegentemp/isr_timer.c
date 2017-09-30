@@ -30,6 +30,8 @@
 #include "buzzer.h"
 uint16 time_1ms;
 uint16 time_5ms;   
+uint16 time_100ms;
+uint8  time_100ms_state;
 uint8  time_5ms_state;
 uint16 time_1s;  
  uint16 time_1s_state;    
@@ -172,10 +174,16 @@ CY_ISR(isr_timer_Interrupt)
     /* `#START isr_timer_Interrupt` */
          time_5ms++;
          time_1s++;
+    time_100ms++;
     if(time_1s >1000)
     {
         time_1s_state = 1;
         time_1s = 0;
+    }
+    if(time_100ms >100)
+    {
+        time_100ms_state = 1;
+        time_100ms = 0;
     }
       if(time_5ms > 5)
       {

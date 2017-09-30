@@ -37,8 +37,8 @@ void DT_Send_Command_Led(uint8 car_led[]);
 
 void DT_Send_Status(uint8 bianjiao,uint8 jiaoju,uint16 battery);
 void DT_Send_Command_MSR(uint8 dir);
-void DT_Send_Command_Car(enum CAR_DIR car_dir);
-void DT_Send_Command_Ptz(enum CAR_DIR car_dir);
+void DT_Send_Command_Car(uint8 car_dir);
+void DT_Send_Command_Ptz(uint8 ptz_dir);
 void DT_Send_Command_Speed(uint16 car_speed);
 void DT_Send_Command_Lock(uint8 car_lock);
 void DT_Send_Command_Turn(uint8 dir);

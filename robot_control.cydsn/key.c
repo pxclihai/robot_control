@@ -50,39 +50,39 @@ uint16 Car_speed_base = 1000;
 //PTZ
 void Callback_PTZ_up_press_up()
 {
-   DT_Send_Command_Ptz(STOP);
+   DT_Send_Command_Ptz(g_Car.Ptz_dir[STOP]);
 }
 void Callback_PTZ_up_press_down()
 {
-   DT_Send_Command_Ptz(RIGHT);
+   DT_Send_Command_Ptz(g_Car.Ptz_dir[RIGHT]);
 }
 
 void Callback_PTZ_down_press_up()
 {
-  DT_Send_Command_Ptz(STOP);
+  DT_Send_Command_Ptz(g_Car.Ptz_dir[STOP]);
 }
 void Callback_PTZ_down_press_down()
 {
-    DT_Send_Command_Ptz(DOWN);
+    DT_Send_Command_Ptz(g_Car.Ptz_dir[DOWN]);
 }
 
 
 void Callback_PTZ_left_press_up()
 {
-   DT_Send_Command_Ptz(STOP);
+   DT_Send_Command_Ptz(g_Car.Ptz_dir[STOP]);
 }
 void Callback_PTZ_left_press_down()
 {
-    DT_Send_Command_Ptz(LEFT); 
+    DT_Send_Command_Ptz(g_Car.Ptz_dir[LEFT]); 
 }
 
 void Callback_PTZ_right_press_up()
 {
-   DT_Send_Command_Ptz(STOP);
+   DT_Send_Command_Ptz(g_Car.Ptz_dir[STOP]);
 }
 void Callback_PTZ_right_press_down()
 {
-    DT_Send_Command_Ptz(UP); 
+    DT_Send_Command_Ptz(g_Car.Ptz_dir[UP]); 
 }
 ///speed
 
@@ -107,22 +107,22 @@ void Callback_key_speed_high_press_down()
 ////2个预留开关
 void Callback_STR1_press_up()
 {
-    DT_Send_Command_mode(0);
+    DT_Send_Command_WireWheel(0);
     debug("str1_up");
 }
 void Callback_STR1_down()
 {
-    DT_Send_Command_mode(1);
+    DT_Send_Command_WireWheel(1);
     debug("str1_down");
 }
 void Callback_STR2_press_up()
 {
-    DT_Send_Command_WireWheel(0);
+    DT_Send_Command_mode(0);
     debug("str2_up");
 }
 void Callback_STR2_press_down()
 {
-   DT_Send_Command_WireWheel(1);
+   DT_Send_Command_mode(1);
    debug("str2_down");
 }    
 
@@ -133,7 +133,7 @@ void Callback_MSR_low_press_up()
 }
 void Callback_MSR_low_press_down()
 {
-     DT_Send_Command_MSR(FORWARD);
+     DT_Send_Command_MSR(REVERSAL);
      debug("MSR_low_down");
 }
 void Callback_MSR_high_press_up()
@@ -143,7 +143,7 @@ void Callback_MSR_high_press_up()
 }
 void Callback_MSR_high_press_down()
 {
-    DT_Send_Command_MSR(WHEEL_STOP);
+    DT_Send_Command_MSR(FORWARD);
     debug("MSR_high_down");
 }    
 //SWITCH_1
@@ -186,7 +186,7 @@ void Callback_SWITCH_2_high_press_up()
 void Callback_SWITCH_2_high_press_down()
 {
     g_Control.jiaoju = 2;
-   debug("Callback_SWITCH_2_high_press_down");
+    debug("Callback_SWITCH_2_high_press_down");
 }
 void init_button(void)
 {

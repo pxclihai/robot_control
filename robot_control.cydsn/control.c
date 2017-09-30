@@ -13,6 +13,17 @@
 #include "ADC_V.h"
 #include "Transfer.h"
 #include "key.h"
+void Control_init()
+{
+    g_Car.Car_dir[UP] = UP;
+    g_Car.Car_dir[DOWN] = DOWN;
+    g_Car.Car_dir[LEFT] = UP;
+    g_Car.Car_dir[RIGHT] = RIGHT;
+    g_Car.Ptz_dir[UP] = UP;
+    g_Car.Ptz_dir[DOWN] = DOWN;
+    g_Car.Ptz_dir[LEFT] = LEFT;
+    g_Car.Ptz_dir[RIGHT] = RIGHT;
+}
 void Cal_car_dir()
 {
     static uint8 send_dir = STOP;
@@ -46,27 +57,27 @@ void Cal_car_dir()
         }
         else if(CAR_X_V < 500)
         {
-            send_dir = LEFT;
-   
-            debug("CAR_LEFT");
-        }
-        else if (CAR_Y_V <500)
-        {
-            send_dir = DOWN;
-    
-            debug("CAR_DOWN");
-        }
-        else if(CAR_Y_V >3500)
-        {
-            send_dir = UP;
-     
-            debug("CAR_UP");
-        }
-        else if(CAR_X_V > 3500)
-        {
             send_dir = RIGHT;
    
             debug("CAR_RIGHT");
+        }
+        else if (CAR_Y_V <500)
+        {
+            send_dir = UP;
+    
+            debug("CAR_UP");
+        }
+        else if(CAR_Y_V >3500)
+        {
+            send_dir = DOWN;
+     
+            debug("CAR_DOWN");
+        }
+        else if(CAR_X_V > 3500)
+        {
+            send_dir = LEFT;
+   
+            debug("CAR_ LEFT");
         }
         else
         {
@@ -76,7 +87,7 @@ void Cal_car_dir()
     if(pre_dir != send_dir)
     { 
         
-       DT_Send_Command_Car(send_dir);
+       DT_Send_Command_Car(g_Car.Car_dir[send_dir]);
        pre_dir = send_dir;
     }
 }
@@ -120,15 +131,15 @@ void Cal_ptz_dir()
     }
     else if (PTZ_Y_V <500)
     {
-        send_dir = DOWN;
+        send_dir = UP;
 
-      debug("PTZ_DOWN");
+      debug("PTZ_UP");
     }
     else if(PTZ_Y_V >3500)
     {
-        send_dir = UP;
+        send_dir = DOWN;
  
-      debug("PTZ_UP");
+      debug("PTZ_DOWN");
     }
     else if(PTZ_X_V > 3500)
     {
@@ -144,7 +155,7 @@ void Cal_ptz_dir()
     if(pre_dir != send_dir)
     { 
        //  printf("--------------dir:%d-----------------",send_dir);
-       DT_Send_Command_Ptz(send_dir);
+       DT_Send_Command_Ptz(g_Car.Ptz_dir[send_dir]);
        
        pre_dir = send_dir;
     }
@@ -210,6 +221,7 @@ void Cal_LED_value()
         if(pre_value[i] != cur_value [i])
         {
            DT_Send_Command_Led(cur_value); 
+          // printf("LED-[%d]:%d\r\n", i,cur_value[i]);
            
            pre_value[i] = cur_value[i];
          
@@ -265,13 +277,14 @@ uint16 Get_Speed_Value(uint16 speed_value)
 }
 void Cal_Speed_value()
 {
-     static uint8 cur_value;
-     static uint8 pre_value;
+     static uint16 cur_value;
+     static uint16 pre_value;
      cur_value = Get_Speed_Value(CAR_SPEED_V);
      if(pre_value != cur_value )
     {
         DT_Send_Command_Speed(cur_value);
-        cur_value = cur_value;
+        printf("Speed:%d \r\n",cur_value);
+        pre_value = cur_value;
     }
 }
 

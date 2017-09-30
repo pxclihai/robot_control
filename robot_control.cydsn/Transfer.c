@@ -91,7 +91,7 @@ void DT_Data_Receive_Prepare(uint8 data)
 		state=1;
 		RxBuffer[0]=data;
 	}
-	else if(state==1&&data==0xAF)
+	else if(state==1&&data==0xAB)
 	{
 		state=2;
 		RxBuffer[1]=data;
@@ -132,7 +132,7 @@ void DT_Data_Receive_Anl(uint8 *data_buf,uint8 num)
 	for( i=0;i<(num-1);i++)
 		sum += *(data_buf+i);
 	if(!(sum==*(data_buf+num-1)))		return;		//ÅÐ¶Ïsum
-	if(!(*(data_buf)==0xAA && *(data_buf+1)==0xAF))		return;		//ÅÐ¶ÏÖ¡Í·
+	if(!(*(data_buf)==0xAA && *(data_buf+1)==0xAB))		return;		//ÅÐ¶ÏÖ¡Í·
 	
 	if(*(data_buf+2)==0X01)
 	{
@@ -141,7 +141,7 @@ void DT_Data_Receive_Anl(uint8 *data_buf,uint8 num)
 	
 	if(*(data_buf+2)==0X02)
 	{
-        g_Car.set_dir = *(data_buf+4);
+        //g_Car.set_dir = *(data_buf+4);
         g_Car.set_car_speed = (uint16)(*(data_buf+5)<<8)|*(data_buf+6);
 
 	}
@@ -168,13 +168,24 @@ void DT_Data_Receive_Anl(uint8 *data_buf,uint8 num)
 	{
 		DT_Send_Check(*(data_buf+2),sum);
 	}
-	if(*(data_buf+2)==0X14)							
+	if(*(data_buf+2)==50)	//½ÓÊÜÉèÖÃ°´¼üÃüÁî						
 	{
-		DT_Send_Check(*(data_buf+2),sum);
+        uint8 key_channel;
+        uint8 key_function;
+        key_function = *(data_buf+4);
+		key_channel = *(data_buf+5);
+        
+        if(key_function<4)
+        {
+          g_Car.Car_dir[key_function] = key_channel;
+        }
+        else if(key_function<8)
+        {
+          g_Car.Ptz_dir[key_function-4] = key_channel;
+        }
+        EEPROM_WriteByte(key_channel,key_function); 
 	}
-	{
-		DT_Send_Check(*(data_buf+2),sum);
-	}
+	
 }
 
 void DT_Send_Version(uint8 hardware_type, uint16 hardware_ver,uint16 software_ver,uint16 protocol_ver,uint16 bootloader_ver)
@@ -237,7 +248,7 @@ void DT_Send_Status(uint8 bianjiao,uint8 jiaoju,uint16 battery)
 	
 	DT_Send_Data(data_to_send, _cnt);
 }
-void DT_Send_Command_Car(enum CAR_DIR car_dir)
+void DT_Send_Command_Car(uint8 car_dir)
 {
 	uint8 _cnt=0;
     uint8 _temp;
@@ -263,7 +274,7 @@ void DT_Send_Command_Car(enum CAR_DIR car_dir)
 	
 	DT_Send_Data(data_to_send, _cnt);
 }
-void DT_Send_Command_Ptz(enum CAR_DIR car_dir)
+void DT_Send_Command_Ptz(uint8 car_dir)
 {
 	uint8 _cnt=0;
     uint8 _temp;

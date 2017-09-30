@@ -1,5 +1,5 @@
 -- Project:   robot_control
--- Generated: 02/22/2017 09:23:02
+-- Generated: 09/28/2017 18:54:47
 -- PSoC Creator  3.3
 
 ENTITY robot_control IS
@@ -241,7 +241,7 @@ ARCHITECTURE __DEFAULT__ OF robot_control IS
     ATTRIBUTE lib_model OF Tx_net(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF Tx_net(0) : LABEL IS "P3[3]";
     ATTRIBUTE lib_model OF PTZ_X(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF PTZ_X(0) : LABEL IS "P0[1]";
+    ATTRIBUTE Location OF PTZ_X(0) : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF MSR_LOW(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF MSR_LOW(0) : LABEL IS "P4[3]";
     ATTRIBUTE lib_model OF STR2(0) : LABEL IS "iocell5";
@@ -259,21 +259,21 @@ ARCHITECTURE __DEFAULT__ OF robot_control IS
     ATTRIBUTE lib_model OF SWITCH_1_HIGH(0) : LABEL IS "iocell11";
     ATTRIBUTE Location OF SWITCH_1_HIGH(0) : LABEL IS "P4[4]";
     ATTRIBUTE lib_model OF PTZ_Y(0) : LABEL IS "iocell12";
-    ATTRIBUTE Location OF PTZ_Y(0) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF PTZ_Y(0) : LABEL IS "P0[1]";
     ATTRIBUTE lib_model OF CAR_Y(0) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF CAR_Y(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF CAR_Y(0) : LABEL IS "P4[1]";
     ATTRIBUTE lib_model OF LED_1(0) : LABEL IS "iocell14";
     ATTRIBUTE Location OF LED_1(0) : LABEL IS "P4[0]";
     ATTRIBUTE lib_model OF CAR_X(0) : LABEL IS "iocell15";
-    ATTRIBUTE Location OF CAR_X(0) : LABEL IS "P4[1]";
+    ATTRIBUTE Location OF CAR_X(0) : LABEL IS "P0[0]";
     ATTRIBUTE lib_model OF BATTERY(0) : LABEL IS "iocell16";
     ATTRIBUTE Location OF BATTERY(0) : LABEL IS "P1[4]";
     ATTRIBUTE lib_model OF LED_2(0) : LABEL IS "iocell17";
-    ATTRIBUTE Location OF LED_2(0) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF LED_2(0) : LABEL IS "P15[3]";
     ATTRIBUTE lib_model OF LED_3(0) : LABEL IS "iocell18";
     ATTRIBUTE Location OF LED_3(0) : LABEL IS "P0[5]";
     ATTRIBUTE lib_model OF CAR_SPEED(0) : LABEL IS "iocell19";
-    ATTRIBUTE Location OF CAR_SPEED(0) : LABEL IS "P6[0]";
+    ATTRIBUTE Location OF CAR_SPEED(0) : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF WARNING_GREEN(0) : LABEL IS "iocell20";
     ATTRIBUTE Location OF WARNING_GREEN(0) : LABEL IS "P2[3]";
     ATTRIBUTE lib_model OF WARNING_BLUE(0) : LABEL IS "iocell21";

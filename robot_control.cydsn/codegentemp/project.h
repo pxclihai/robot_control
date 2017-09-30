@@ -65,6 +65,7 @@
 #include "WARNING_BLUE.h"
 #include "WARNING_RED_aliases.h"
 #include "WARNING_RED.h"
+#include "EEPROM.h"
 #include "UART_net_IntClock.h"
 #include "ADC_SAR.h"
 #include "ADC_IntClock.h"

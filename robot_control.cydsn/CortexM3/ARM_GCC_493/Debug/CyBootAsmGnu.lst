@@ -11300,65 +11300,65 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  5357              	.set CYCLK_SRC_SEL_DSI_A, 7
    5              	
    6              	/* ADC_bSAR_SEQ */
-   7              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB03_04_ACTL
-   8              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB03_04_CTL
-   9              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB03_04_CTL
-  10              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB03_04_CTL
-  11              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB03_04_CTL
-  12              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_MASK_MASK_REG, CYREG_B0_UDB03_04_MSK
-  13              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB03_04_MSK
-  14              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB03_04_MSK
-  15              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB03_04_MSK
-  16              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_AUX_CTL_REG, CYREG_B0_UDB03_ACTL
-  17              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_REG, CYREG_B0_UDB03_CTL
-  18              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_ST_REG, CYREG_B0_UDB03_ST_CTL
-  19              	.set ADC_bSAR_SEQ_ChannelCounter__COUNT_REG, CYREG_B0_UDB03_CTL
-  20              	.set ADC_bSAR_SEQ_ChannelCounter__COUNT_ST_REG, CYREG_B0_UDB03_ST_CTL
-  21              	.set ADC_bSAR_SEQ_ChannelCounter__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB03_MSK_ACTL
-  22              	.set ADC_bSAR_SEQ_ChannelCounter__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB03_MSK_ACTL
-  23              	.set ADC_bSAR_SEQ_ChannelCounter__PERIOD_REG, CYREG_B0_UDB03_MSK
-  24              	.set ADC_bSAR_SEQ_ChannelCounter_ST__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB03_04_ACTL
-  25              	.set ADC_bSAR_SEQ_ChannelCounter_ST__16BIT_STATUS_REG, CYREG_B0_UDB03_04_ST
-  26              	.set ADC_bSAR_SEQ_ChannelCounter_ST__MASK_REG, CYREG_B0_UDB03_MSK
-  27              	.set ADC_bSAR_SEQ_ChannelCounter_ST__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB03_MSK_ACTL
-  28              	.set ADC_bSAR_SEQ_ChannelCounter_ST__PER_ST_AUX_CTL_REG, CYREG_B0_UDB03_MSK_ACTL
-  29              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_AUX_CTL_REG, CYREG_B0_UDB03_ACTL
-  30              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_CNT_REG, CYREG_B0_UDB03_ST_CTL
-  31              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_CONTROL_REG, CYREG_B0_UDB03_ST_CTL
-  32              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_REG, CYREG_B0_UDB03_ST
+   7              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB04_05_ACTL
+   8              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB04_05_CTL
+   9              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB04_05_CTL
+  10              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB04_05_CTL
+  11              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB04_05_CTL
+  12              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_MASK_MASK_REG, CYREG_B0_UDB04_05_MSK
+  13              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB04_05_MSK
+  14              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB04_05_MSK
+  15              	.set ADC_bSAR_SEQ_ChannelCounter__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB04_05_MSK
+  16              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_AUX_CTL_REG, CYREG_B0_UDB04_ACTL
+  17              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_REG, CYREG_B0_UDB04_CTL
+  18              	.set ADC_bSAR_SEQ_ChannelCounter__CONTROL_ST_REG, CYREG_B0_UDB04_ST_CTL
+  19              	.set ADC_bSAR_SEQ_ChannelCounter__COUNT_REG, CYREG_B0_UDB04_CTL
+  20              	.set ADC_bSAR_SEQ_ChannelCounter__COUNT_ST_REG, CYREG_B0_UDB04_ST_CTL
+  21              	.set ADC_bSAR_SEQ_ChannelCounter__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB04_MSK_ACTL
+  22              	.set ADC_bSAR_SEQ_ChannelCounter__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB04_MSK_ACTL
+  23              	.set ADC_bSAR_SEQ_ChannelCounter__PERIOD_REG, CYREG_B0_UDB04_MSK
+  24              	.set ADC_bSAR_SEQ_ChannelCounter_ST__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB04_05_ACTL
+  25              	.set ADC_bSAR_SEQ_ChannelCounter_ST__16BIT_STATUS_REG, CYREG_B0_UDB04_05_ST
+  26              	.set ADC_bSAR_SEQ_ChannelCounter_ST__MASK_REG, CYREG_B0_UDB04_MSK
+  27              	.set ADC_bSAR_SEQ_ChannelCounter_ST__MASK_ST_AUX_CTL_REG, CYREG_B0_UDB04_MSK_ACTL
+  28              	.set ADC_bSAR_SEQ_ChannelCounter_ST__PER_ST_AUX_CTL_REG, CYREG_B0_UDB04_MSK_ACTL
+  29              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_AUX_CTL_REG, CYREG_B0_UDB04_ACTL
+  30              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_CNT_REG, CYREG_B0_UDB04_ST_CTL
+  31              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_CONTROL_REG, CYREG_B0_UDB04_ST_CTL
+  32              	.set ADC_bSAR_SEQ_ChannelCounter_ST__STATUS_REG, CYREG_B0_UDB04_ST
   33              	.set ADC_bSAR_SEQ_CtrlReg__0__MASK, 0x01
   34              	.set ADC_bSAR_SEQ_CtrlReg__0__POS, 0
   35              	.set ADC_bSAR_SEQ_CtrlReg__1__MASK, 0x02
   36              	.set ADC_bSAR_SEQ_CtrlReg__1__POS, 1
-  37              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
-  38              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB07_08_CTL
-  39              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB07_08_CTL
-  40              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB07_08_CTL
-  41              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB07_08_CTL
-  42              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_MASK_MASK_REG, CYREG_B0_UDB07_08_MSK
-  43              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB07_08_MSK
-  44              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB07_08_MSK
+  37              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_AUX_CTL_REG, CYREG_B0_UDB05_06_ACTL
+  38              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_CONTROL_REG, CYREG_B0_UDB05_06_CTL
+  39              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_CONTROL_COUNT_REG, CYREG_B0_UDB05_06_CTL
+  40              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_COUNT_CONTROL_REG, CYREG_B0_UDB05_06_CTL
+  41              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_COUNT_COUNT_REG, CYREG_B0_UDB05_06_CTL
+  42              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_MASK_MASK_REG, CYREG_B0_UDB05_06_MSK
+  43              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_MASK_PERIOD_REG, CYREG_B0_UDB05_06_MSK
+  44              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_PERIOD_MASK_REG, CYREG_B0_UDB05_06_MSK
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 190
 
 
-  45              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB07_08_MSK
-  46              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
-  47              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_REG, CYREG_B0_UDB07_CTL
-  48              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_ST_REG, CYREG_B0_UDB07_ST_CTL
-  49              	.set ADC_bSAR_SEQ_CtrlReg__COUNT_REG, CYREG_B0_UDB07_CTL
-  50              	.set ADC_bSAR_SEQ_CtrlReg__COUNT_ST_REG, CYREG_B0_UDB07_ST_CTL
+  45              	.set ADC_bSAR_SEQ_CtrlReg__16BIT_PERIOD_PERIOD_REG, CYREG_B0_UDB05_06_MSK
+  46              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_AUX_CTL_REG, CYREG_B0_UDB05_ACTL
+  47              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_REG, CYREG_B0_UDB05_CTL
+  48              	.set ADC_bSAR_SEQ_CtrlReg__CONTROL_ST_REG, CYREG_B0_UDB05_ST_CTL
+  49              	.set ADC_bSAR_SEQ_CtrlReg__COUNT_REG, CYREG_B0_UDB05_CTL
+  50              	.set ADC_bSAR_SEQ_CtrlReg__COUNT_ST_REG, CYREG_B0_UDB05_ST_CTL
   51              	.set ADC_bSAR_SEQ_CtrlReg__MASK, 0x03
-  52              	.set ADC_bSAR_SEQ_CtrlReg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
-  53              	.set ADC_bSAR_SEQ_CtrlReg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
-  54              	.set ADC_bSAR_SEQ_CtrlReg__PERIOD_REG, CYREG_B0_UDB07_MSK
+  52              	.set ADC_bSAR_SEQ_CtrlReg__MASK_CTL_AUX_CTL_REG, CYREG_B0_UDB05_MSK_ACTL
+  53              	.set ADC_bSAR_SEQ_CtrlReg__PER_CTL_AUX_CTL_REG, CYREG_B0_UDB05_MSK_ACTL
+  54              	.set ADC_bSAR_SEQ_CtrlReg__PERIOD_REG, CYREG_B0_UDB05_MSK
   55              	.set ADC_bSAR_SEQ_EOCSts__0__MASK, 0x01
   56              	.set ADC_bSAR_SEQ_EOCSts__0__POS, 0
-  57              	.set ADC_bSAR_SEQ_EOCSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB04_05_ACTL
-  58              	.set ADC_bSAR_SEQ_EOCSts__16BIT_STATUS_REG, CYREG_B0_UDB04_05_ST
+  57              	.set ADC_bSAR_SEQ_EOCSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
+  58              	.set ADC_bSAR_SEQ_EOCSts__16BIT_STATUS_REG, CYREG_B0_UDB06_07_ST
   59              	.set ADC_bSAR_SEQ_EOCSts__MASK, 0x01
-  60              	.set ADC_bSAR_SEQ_EOCSts__MASK_REG, CYREG_B0_UDB04_MSK
-  61              	.set ADC_bSAR_SEQ_EOCSts__STATUS_AUX_CTL_REG, CYREG_B0_UDB04_ACTL
-  62              	.set ADC_bSAR_SEQ_EOCSts__STATUS_REG, CYREG_B0_UDB04_ST
+  60              	.set ADC_bSAR_SEQ_EOCSts__MASK_REG, CYREG_B0_UDB06_MSK
+  61              	.set ADC_bSAR_SEQ_EOCSts__STATUS_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
+  62              	.set ADC_bSAR_SEQ_EOCSts__STATUS_REG, CYREG_B0_UDB06_ST
   63              	
   64              	/* ADC_FinalBuf */
   65              	.set ADC_FinalBuf__DRQ_CTL, CYREG_IDMUX_DRQ_CTL0
@@ -11502,75 +11502,75 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  197              	.set STR2__SLW, CYREG_PRT0_SLW
  198              	
  199              	/* CAR_X */
- 200              	.set CAR_X__0__INTTYPE, CYREG_PICU4_INTTYPE1
- 201              	.set CAR_X__0__MASK, 0x02
- 202              	.set CAR_X__0__PC, CYREG_PRT4_PC1
- 203              	.set CAR_X__0__PORT, 4
- 204              	.set CAR_X__0__SHIFT, 1
- 205              	.set CAR_X__AG, CYREG_PRT4_AG
- 206              	.set CAR_X__AMUX, CYREG_PRT4_AMUX
- 207              	.set CAR_X__BIE, CYREG_PRT4_BIE
- 208              	.set CAR_X__BIT_MASK, CYREG_PRT4_BIT_MASK
- 209              	.set CAR_X__BYP, CYREG_PRT4_BYP
- 210              	.set CAR_X__CTL, CYREG_PRT4_CTL
- 211              	.set CAR_X__DM0, CYREG_PRT4_DM0
- 212              	.set CAR_X__DM1, CYREG_PRT4_DM1
- 213              	.set CAR_X__DM2, CYREG_PRT4_DM2
- 214              	.set CAR_X__DR, CYREG_PRT4_DR
- 215              	.set CAR_X__INP_DIS, CYREG_PRT4_INP_DIS
+ 200              	.set CAR_X__0__INTTYPE, CYREG_PICU0_INTTYPE0
+ 201              	.set CAR_X__0__MASK, 0x01
+ 202              	.set CAR_X__0__PC, CYREG_PRT0_PC0
+ 203              	.set CAR_X__0__PORT, 0
+ 204              	.set CAR_X__0__SHIFT, 0
+ 205              	.set CAR_X__AG, CYREG_PRT0_AG
+ 206              	.set CAR_X__AMUX, CYREG_PRT0_AMUX
+ 207              	.set CAR_X__BIE, CYREG_PRT0_BIE
+ 208              	.set CAR_X__BIT_MASK, CYREG_PRT0_BIT_MASK
+ 209              	.set CAR_X__BYP, CYREG_PRT0_BYP
+ 210              	.set CAR_X__CTL, CYREG_PRT0_CTL
+ 211              	.set CAR_X__DM0, CYREG_PRT0_DM0
+ 212              	.set CAR_X__DM1, CYREG_PRT0_DM1
+ 213              	.set CAR_X__DM2, CYREG_PRT0_DM2
+ 214              	.set CAR_X__DR, CYREG_PRT0_DR
+ 215              	.set CAR_X__INP_DIS, CYREG_PRT0_INP_DIS
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 193
 
 
- 216              	.set CAR_X__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
- 217              	.set CAR_X__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
- 218              	.set CAR_X__LCD_EN, CYREG_PRT4_LCD_EN
- 219              	.set CAR_X__MASK, 0x02
- 220              	.set CAR_X__PORT, 4
- 221              	.set CAR_X__PRT, CYREG_PRT4_PRT
- 222              	.set CAR_X__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
- 223              	.set CAR_X__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
- 224              	.set CAR_X__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
- 225              	.set CAR_X__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
- 226              	.set CAR_X__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
- 227              	.set CAR_X__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
- 228              	.set CAR_X__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
- 229              	.set CAR_X__PS, CYREG_PRT4_PS
- 230              	.set CAR_X__SHIFT, 1
- 231              	.set CAR_X__SLW, CYREG_PRT4_SLW
+ 216              	.set CAR_X__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
+ 217              	.set CAR_X__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
+ 218              	.set CAR_X__LCD_EN, CYREG_PRT0_LCD_EN
+ 219              	.set CAR_X__MASK, 0x01
+ 220              	.set CAR_X__PORT, 0
+ 221              	.set CAR_X__PRT, CYREG_PRT0_PRT
+ 222              	.set CAR_X__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
+ 223              	.set CAR_X__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
+ 224              	.set CAR_X__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
+ 225              	.set CAR_X__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
+ 226              	.set CAR_X__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
+ 227              	.set CAR_X__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
+ 228              	.set CAR_X__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
+ 229              	.set CAR_X__PS, CYREG_PRT0_PS
+ 230              	.set CAR_X__SHIFT, 0
+ 231              	.set CAR_X__SLW, CYREG_PRT0_SLW
  232              	
  233              	/* CAR_Y */
- 234              	.set CAR_Y__0__INTTYPE, CYREG_PICU0_INTTYPE0
- 235              	.set CAR_Y__0__MASK, 0x01
- 236              	.set CAR_Y__0__PC, CYREG_PRT0_PC0
- 237              	.set CAR_Y__0__PORT, 0
- 238              	.set CAR_Y__0__SHIFT, 0
- 239              	.set CAR_Y__AG, CYREG_PRT0_AG
- 240              	.set CAR_Y__AMUX, CYREG_PRT0_AMUX
- 241              	.set CAR_Y__BIE, CYREG_PRT0_BIE
- 242              	.set CAR_Y__BIT_MASK, CYREG_PRT0_BIT_MASK
- 243              	.set CAR_Y__BYP, CYREG_PRT0_BYP
- 244              	.set CAR_Y__CTL, CYREG_PRT0_CTL
- 245              	.set CAR_Y__DM0, CYREG_PRT0_DM0
- 246              	.set CAR_Y__DM1, CYREG_PRT0_DM1
- 247              	.set CAR_Y__DM2, CYREG_PRT0_DM2
- 248              	.set CAR_Y__DR, CYREG_PRT0_DR
- 249              	.set CAR_Y__INP_DIS, CYREG_PRT0_INP_DIS
- 250              	.set CAR_Y__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
- 251              	.set CAR_Y__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
- 252              	.set CAR_Y__LCD_EN, CYREG_PRT0_LCD_EN
- 253              	.set CAR_Y__MASK, 0x01
- 254              	.set CAR_Y__PORT, 0
- 255              	.set CAR_Y__PRT, CYREG_PRT0_PRT
- 256              	.set CAR_Y__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
- 257              	.set CAR_Y__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
- 258              	.set CAR_Y__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
- 259              	.set CAR_Y__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
- 260              	.set CAR_Y__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
- 261              	.set CAR_Y__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
- 262              	.set CAR_Y__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
- 263              	.set CAR_Y__PS, CYREG_PRT0_PS
- 264              	.set CAR_Y__SHIFT, 0
- 265              	.set CAR_Y__SLW, CYREG_PRT0_SLW
+ 234              	.set CAR_Y__0__INTTYPE, CYREG_PICU4_INTTYPE1
+ 235              	.set CAR_Y__0__MASK, 0x02
+ 236              	.set CAR_Y__0__PC, CYREG_PRT4_PC1
+ 237              	.set CAR_Y__0__PORT, 4
+ 238              	.set CAR_Y__0__SHIFT, 1
+ 239              	.set CAR_Y__AG, CYREG_PRT4_AG
+ 240              	.set CAR_Y__AMUX, CYREG_PRT4_AMUX
+ 241              	.set CAR_Y__BIE, CYREG_PRT4_BIE
+ 242              	.set CAR_Y__BIT_MASK, CYREG_PRT4_BIT_MASK
+ 243              	.set CAR_Y__BYP, CYREG_PRT4_BYP
+ 244              	.set CAR_Y__CTL, CYREG_PRT4_CTL
+ 245              	.set CAR_Y__DM0, CYREG_PRT4_DM0
+ 246              	.set CAR_Y__DM1, CYREG_PRT4_DM1
+ 247              	.set CAR_Y__DM2, CYREG_PRT4_DM2
+ 248              	.set CAR_Y__DR, CYREG_PRT4_DR
+ 249              	.set CAR_Y__INP_DIS, CYREG_PRT4_INP_DIS
+ 250              	.set CAR_Y__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
+ 251              	.set CAR_Y__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
+ 252              	.set CAR_Y__LCD_EN, CYREG_PRT4_LCD_EN
+ 253              	.set CAR_Y__MASK, 0x02
+ 254              	.set CAR_Y__PORT, 4
+ 255              	.set CAR_Y__PRT, CYREG_PRT4_PRT
+ 256              	.set CAR_Y__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
+ 257              	.set CAR_Y__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 258              	.set CAR_Y__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
+ 259              	.set CAR_Y__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
+ 260              	.set CAR_Y__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
+ 261              	.set CAR_Y__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
+ 262              	.set CAR_Y__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
+ 263              	.set CAR_Y__PS, CYREG_PRT4_PS
+ 264              	.set CAR_Y__SHIFT, 1
+ 265              	.set CAR_Y__SLW, CYREG_PRT4_SLW
  266              	
  267              	/* LED_1 */
  268              	.set LED_1__0__INTTYPE, CYREG_PICU4_INTTYPE0
@@ -11610,41 +11610,41 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  299              	.set LED_1__SLW, CYREG_PRT4_SLW
  300              	
  301              	/* LED_2 */
- 302              	.set LED_2__0__INTTYPE, CYREG_PICU0_INTTYPE4
- 303              	.set LED_2__0__MASK, 0x10
- 304              	.set LED_2__0__PC, CYREG_PRT0_PC4
- 305              	.set LED_2__0__PORT, 0
- 306              	.set LED_2__0__SHIFT, 4
- 307              	.set LED_2__AG, CYREG_PRT0_AG
- 308              	.set LED_2__AMUX, CYREG_PRT0_AMUX
- 309              	.set LED_2__BIE, CYREG_PRT0_BIE
- 310              	.set LED_2__BIT_MASK, CYREG_PRT0_BIT_MASK
- 311              	.set LED_2__BYP, CYREG_PRT0_BYP
- 312              	.set LED_2__CTL, CYREG_PRT0_CTL
- 313              	.set LED_2__DM0, CYREG_PRT0_DM0
- 314              	.set LED_2__DM1, CYREG_PRT0_DM1
- 315              	.set LED_2__DM2, CYREG_PRT0_DM2
- 316              	.set LED_2__DR, CYREG_PRT0_DR
- 317              	.set LED_2__INP_DIS, CYREG_PRT0_INP_DIS
- 318              	.set LED_2__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
- 319              	.set LED_2__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
- 320              	.set LED_2__LCD_EN, CYREG_PRT0_LCD_EN
- 321              	.set LED_2__MASK, 0x10
- 322              	.set LED_2__PORT, 0
- 323              	.set LED_2__PRT, CYREG_PRT0_PRT
- 324              	.set LED_2__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
- 325              	.set LED_2__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
- 326              	.set LED_2__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
- 327              	.set LED_2__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
- 328              	.set LED_2__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
- 329              	.set LED_2__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
+ 302              	.set LED_2__0__INTTYPE, CYREG_PICU15_INTTYPE3
+ 303              	.set LED_2__0__MASK, 0x08
+ 304              	.set LED_2__0__PC, CYREG_IO_PC_PRT15_PC3
+ 305              	.set LED_2__0__PORT, 15
+ 306              	.set LED_2__0__SHIFT, 3
+ 307              	.set LED_2__AG, CYREG_PRT15_AG
+ 308              	.set LED_2__AMUX, CYREG_PRT15_AMUX
+ 309              	.set LED_2__BIE, CYREG_PRT15_BIE
+ 310              	.set LED_2__BIT_MASK, CYREG_PRT15_BIT_MASK
+ 311              	.set LED_2__BYP, CYREG_PRT15_BYP
+ 312              	.set LED_2__CTL, CYREG_PRT15_CTL
+ 313              	.set LED_2__DM0, CYREG_PRT15_DM0
+ 314              	.set LED_2__DM1, CYREG_PRT15_DM1
+ 315              	.set LED_2__DM2, CYREG_PRT15_DM2
+ 316              	.set LED_2__DR, CYREG_PRT15_DR
+ 317              	.set LED_2__INP_DIS, CYREG_PRT15_INP_DIS
+ 318              	.set LED_2__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU15_BASE
+ 319              	.set LED_2__LCD_COM_SEG, CYREG_PRT15_LCD_COM_SEG
+ 320              	.set LED_2__LCD_EN, CYREG_PRT15_LCD_EN
+ 321              	.set LED_2__MASK, 0x08
+ 322              	.set LED_2__PORT, 15
+ 323              	.set LED_2__PRT, CYREG_PRT15_PRT
+ 324              	.set LED_2__PRTDSI__CAPS_SEL, CYREG_PRT15_CAPS_SEL
+ 325              	.set LED_2__PRTDSI__DBL_SYNC_IN, CYREG_PRT15_DBL_SYNC_IN
+ 326              	.set LED_2__PRTDSI__OE_SEL0, CYREG_PRT15_OE_SEL0
+ 327              	.set LED_2__PRTDSI__OE_SEL1, CYREG_PRT15_OE_SEL1
+ 328              	.set LED_2__PRTDSI__OUT_SEL0, CYREG_PRT15_OUT_SEL0
+ 329              	.set LED_2__PRTDSI__OUT_SEL1, CYREG_PRT15_OUT_SEL1
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 195
 
 
- 330              	.set LED_2__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
- 331              	.set LED_2__PS, CYREG_PRT0_PS
- 332              	.set LED_2__SHIFT, 4
- 333              	.set LED_2__SLW, CYREG_PRT0_SLW
+ 330              	.set LED_2__PRTDSI__SYNC_OUT, CYREG_PRT15_SYNC_OUT
+ 331              	.set LED_2__PS, CYREG_PRT15_PS
+ 332              	.set LED_2__SHIFT, 3
+ 333              	.set LED_2__SLW, CYREG_PRT15_SLW
  334              	
  335              	/* LED_3 */
  336              	.set LED_3__0__INTTYPE, CYREG_PICU0_INTTYPE5
@@ -11681,11 +11681,11 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  367              	.set LED_3__SLW, CYREG_PRT0_SLW
  368              	
  369              	/* PTZ_X */
- 370              	.set PTZ_X__0__INTTYPE, CYREG_PICU0_INTTYPE1
- 371              	.set PTZ_X__0__MASK, 0x02
- 372              	.set PTZ_X__0__PC, CYREG_PRT0_PC1
+ 370              	.set PTZ_X__0__INTTYPE, CYREG_PICU0_INTTYPE2
+ 371              	.set PTZ_X__0__MASK, 0x04
+ 372              	.set PTZ_X__0__PC, CYREG_PRT0_PC2
  373              	.set PTZ_X__0__PORT, 0
- 374              	.set PTZ_X__0__SHIFT, 1
+ 374              	.set PTZ_X__0__SHIFT, 2
  375              	.set PTZ_X__AG, CYREG_PRT0_AG
  376              	.set PTZ_X__AMUX, CYREG_PRT0_AMUX
  377              	.set PTZ_X__BIE, CYREG_PRT0_BIE
@@ -11703,7 +11703,7 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
 
  387              	.set PTZ_X__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
  388              	.set PTZ_X__LCD_EN, CYREG_PRT0_LCD_EN
- 389              	.set PTZ_X__MASK, 0x02
+ 389              	.set PTZ_X__MASK, 0x04
  390              	.set PTZ_X__PORT, 0
  391              	.set PTZ_X__PRT, CYREG_PRT0_PRT
  392              	.set PTZ_X__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -11714,15 +11714,15 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  397              	.set PTZ_X__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
  398              	.set PTZ_X__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
  399              	.set PTZ_X__PS, CYREG_PRT0_PS
- 400              	.set PTZ_X__SHIFT, 1
+ 400              	.set PTZ_X__SHIFT, 2
  401              	.set PTZ_X__SLW, CYREG_PRT0_SLW
  402              	
  403              	/* PTZ_Y */
- 404              	.set PTZ_Y__0__INTTYPE, CYREG_PICU0_INTTYPE2
- 405              	.set PTZ_Y__0__MASK, 0x04
- 406              	.set PTZ_Y__0__PC, CYREG_PRT0_PC2
+ 404              	.set PTZ_Y__0__INTTYPE, CYREG_PICU0_INTTYPE1
+ 405              	.set PTZ_Y__0__MASK, 0x02
+ 406              	.set PTZ_Y__0__PC, CYREG_PRT0_PC1
  407              	.set PTZ_Y__0__PORT, 0
- 408              	.set PTZ_Y__0__SHIFT, 2
+ 408              	.set PTZ_Y__0__SHIFT, 1
  409              	.set PTZ_Y__AG, CYREG_PRT0_AG
  410              	.set PTZ_Y__AMUX, CYREG_PRT0_AMUX
  411              	.set PTZ_Y__BIE, CYREG_PRT0_BIE
@@ -11737,7 +11737,7 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  420              	.set PTZ_Y__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
  421              	.set PTZ_Y__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
  422              	.set PTZ_Y__LCD_EN, CYREG_PRT0_LCD_EN
- 423              	.set PTZ_Y__MASK, 0x04
+ 423              	.set PTZ_Y__MASK, 0x02
  424              	.set PTZ_Y__PORT, 0
  425              	.set PTZ_Y__PRT, CYREG_PRT0_PRT
  426              	.set PTZ_Y__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -11748,7 +11748,7 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  431              	.set PTZ_Y__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
  432              	.set PTZ_Y__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
  433              	.set PTZ_Y__PS, CYREG_PRT0_PS
- 434              	.set PTZ_Y__SHIFT, 2
+ 434              	.set PTZ_Y__SHIFT, 1
  435              	.set PTZ_Y__SLW, CYREG_PRT0_SLW
  436              	
  437              	/* Rx_net */
@@ -11952,51 +11952,51 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  623              	.set MSR_HIGH__SLW, CYREG_PRT4_SLW
  624              	
  625              	/* UART_net_BUART */
- 626              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_AUX_CTL_REG, CYREG_B1_UDB04_05_ACTL
- 627              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_CONTROL_REG, CYREG_B1_UDB04_05_CTL
- 628              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_COUNT_REG, CYREG_B1_UDB04_05_CTL
- 629              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_COUNT_CONTROL_REG, CYREG_B1_UDB04_05_CTL
- 630              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_COUNT_COUNT_REG, CYREG_B1_UDB04_05_CTL
- 631              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_MASK_MASK_REG, CYREG_B1_UDB04_05_MSK
- 632              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_MASK_PERIOD_REG, CYREG_B1_UDB04_05_MSK
- 633              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_PERIOD_MASK_REG, CYREG_B1_UDB04_05_MSK
- 634              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_PERIOD_PERIOD_REG, CYREG_B1_UDB04_05_MSK
- 635              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_AUX_CTL_REG, CYREG_B1_UDB04_ACTL
- 636              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_REG, CYREG_B1_UDB04_CTL
- 637              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_ST_REG, CYREG_B1_UDB04_ST_CTL
- 638              	.set UART_net_BUART_sRX_RxBitCounter__COUNT_REG, CYREG_B1_UDB04_CTL
- 639              	.set UART_net_BUART_sRX_RxBitCounter__COUNT_ST_REG, CYREG_B1_UDB04_ST_CTL
- 640              	.set UART_net_BUART_sRX_RxBitCounter__MASK_CTL_AUX_CTL_REG, CYREG_B1_UDB04_MSK_ACTL
- 641              	.set UART_net_BUART_sRX_RxBitCounter__PER_CTL_AUX_CTL_REG, CYREG_B1_UDB04_MSK_ACTL
- 642              	.set UART_net_BUART_sRX_RxBitCounter__PERIOD_REG, CYREG_B1_UDB04_MSK
- 643              	.set UART_net_BUART_sRX_RxBitCounter_ST__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB04_05_ACTL
- 644              	.set UART_net_BUART_sRX_RxBitCounter_ST__16BIT_STATUS_REG, CYREG_B1_UDB04_05_ST
- 645              	.set UART_net_BUART_sRX_RxBitCounter_ST__MASK_REG, CYREG_B1_UDB04_MSK
- 646              	.set UART_net_BUART_sRX_RxBitCounter_ST__MASK_ST_AUX_CTL_REG, CYREG_B1_UDB04_MSK_ACTL
- 647              	.set UART_net_BUART_sRX_RxBitCounter_ST__PER_ST_AUX_CTL_REG, CYREG_B1_UDB04_MSK_ACTL
- 648              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_AUX_CTL_REG, CYREG_B1_UDB04_ACTL
- 649              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_CNT_REG, CYREG_B1_UDB04_ST_CTL
- 650              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_CONTROL_REG, CYREG_B1_UDB04_ST_CTL
- 651              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_REG, CYREG_B1_UDB04_ST
- 652              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_A0_REG, CYREG_B1_UDB07_08_A0
- 653              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_A1_REG, CYREG_B1_UDB07_08_A1
- 654              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_D0_REG, CYREG_B1_UDB07_08_D0
- 655              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_D1_REG, CYREG_B1_UDB07_08_D1
- 656              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_DP_AUX_CTL_REG, CYREG_B1_UDB07_08_ACTL
- 657              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_F0_REG, CYREG_B1_UDB07_08_F0
- 658              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_F1_REG, CYREG_B1_UDB07_08_F1
- 659              	.set UART_net_BUART_sRX_RxShifter_u0__A0_A1_REG, CYREG_B1_UDB07_A0_A1
- 660              	.set UART_net_BUART_sRX_RxShifter_u0__A0_REG, CYREG_B1_UDB07_A0
- 661              	.set UART_net_BUART_sRX_RxShifter_u0__A1_REG, CYREG_B1_UDB07_A1
- 662              	.set UART_net_BUART_sRX_RxShifter_u0__D0_D1_REG, CYREG_B1_UDB07_D0_D1
- 663              	.set UART_net_BUART_sRX_RxShifter_u0__D0_REG, CYREG_B1_UDB07_D0
- 664              	.set UART_net_BUART_sRX_RxShifter_u0__D1_REG, CYREG_B1_UDB07_D1
- 665              	.set UART_net_BUART_sRX_RxShifter_u0__DP_AUX_CTL_REG, CYREG_B1_UDB07_ACTL
- 666              	.set UART_net_BUART_sRX_RxShifter_u0__F0_F1_REG, CYREG_B1_UDB07_F0_F1
- 667              	.set UART_net_BUART_sRX_RxShifter_u0__F0_REG, CYREG_B1_UDB07_F0
- 668              	.set UART_net_BUART_sRX_RxShifter_u0__F1_REG, CYREG_B1_UDB07_F1
- 669              	.set UART_net_BUART_sRX_RxSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
- 670              	.set UART_net_BUART_sRX_RxSts__16BIT_STATUS_REG, CYREG_B0_UDB06_07_ST
+ 626              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
+ 627              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_CONTROL_REG, CYREG_B1_UDB05_06_CTL
+ 628              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_CONTROL_COUNT_REG, CYREG_B1_UDB05_06_CTL
+ 629              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_COUNT_CONTROL_REG, CYREG_B1_UDB05_06_CTL
+ 630              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_COUNT_COUNT_REG, CYREG_B1_UDB05_06_CTL
+ 631              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_MASK_MASK_REG, CYREG_B1_UDB05_06_MSK
+ 632              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_MASK_PERIOD_REG, CYREG_B1_UDB05_06_MSK
+ 633              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_PERIOD_MASK_REG, CYREG_B1_UDB05_06_MSK
+ 634              	.set UART_net_BUART_sRX_RxBitCounter__16BIT_PERIOD_PERIOD_REG, CYREG_B1_UDB05_06_MSK
+ 635              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
+ 636              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_REG, CYREG_B1_UDB05_CTL
+ 637              	.set UART_net_BUART_sRX_RxBitCounter__CONTROL_ST_REG, CYREG_B1_UDB05_ST_CTL
+ 638              	.set UART_net_BUART_sRX_RxBitCounter__COUNT_REG, CYREG_B1_UDB05_CTL
+ 639              	.set UART_net_BUART_sRX_RxBitCounter__COUNT_ST_REG, CYREG_B1_UDB05_ST_CTL
+ 640              	.set UART_net_BUART_sRX_RxBitCounter__MASK_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 641              	.set UART_net_BUART_sRX_RxBitCounter__PER_CTL_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 642              	.set UART_net_BUART_sRX_RxBitCounter__PERIOD_REG, CYREG_B1_UDB05_MSK
+ 643              	.set UART_net_BUART_sRX_RxBitCounter_ST__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB05_06_ACTL
+ 644              	.set UART_net_BUART_sRX_RxBitCounter_ST__16BIT_STATUS_REG, CYREG_B1_UDB05_06_ST
+ 645              	.set UART_net_BUART_sRX_RxBitCounter_ST__MASK_REG, CYREG_B1_UDB05_MSK
+ 646              	.set UART_net_BUART_sRX_RxBitCounter_ST__MASK_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 647              	.set UART_net_BUART_sRX_RxBitCounter_ST__PER_ST_AUX_CTL_REG, CYREG_B1_UDB05_MSK_ACTL
+ 648              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_AUX_CTL_REG, CYREG_B1_UDB05_ACTL
+ 649              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_CNT_REG, CYREG_B1_UDB05_ST_CTL
+ 650              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_CONTROL_REG, CYREG_B1_UDB05_ST_CTL
+ 651              	.set UART_net_BUART_sRX_RxBitCounter_ST__STATUS_REG, CYREG_B1_UDB05_ST
+ 652              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_A0_REG, CYREG_B0_UDB06_07_A0
+ 653              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_A1_REG, CYREG_B0_UDB06_07_A1
+ 654              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_D0_REG, CYREG_B0_UDB06_07_D0
+ 655              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_D1_REG, CYREG_B0_UDB06_07_D1
+ 656              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB06_07_ACTL
+ 657              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_F0_REG, CYREG_B0_UDB06_07_F0
+ 658              	.set UART_net_BUART_sRX_RxShifter_u0__16BIT_F1_REG, CYREG_B0_UDB06_07_F1
+ 659              	.set UART_net_BUART_sRX_RxShifter_u0__A0_A1_REG, CYREG_B0_UDB06_A0_A1
+ 660              	.set UART_net_BUART_sRX_RxShifter_u0__A0_REG, CYREG_B0_UDB06_A0
+ 661              	.set UART_net_BUART_sRX_RxShifter_u0__A1_REG, CYREG_B0_UDB06_A1
+ 662              	.set UART_net_BUART_sRX_RxShifter_u0__D0_D1_REG, CYREG_B0_UDB06_D0_D1
+ 663              	.set UART_net_BUART_sRX_RxShifter_u0__D0_REG, CYREG_B0_UDB06_D0
+ 664              	.set UART_net_BUART_sRX_RxShifter_u0__D1_REG, CYREG_B0_UDB06_D1
+ 665              	.set UART_net_BUART_sRX_RxShifter_u0__DP_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
+ 666              	.set UART_net_BUART_sRX_RxShifter_u0__F0_F1_REG, CYREG_B0_UDB06_F0_F1
+ 667              	.set UART_net_BUART_sRX_RxShifter_u0__F0_REG, CYREG_B0_UDB06_F0
+ 668              	.set UART_net_BUART_sRX_RxShifter_u0__F1_REG, CYREG_B0_UDB06_F1
+ 669              	.set UART_net_BUART_sRX_RxSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B1_UDB06_07_ACTL
+ 670              	.set UART_net_BUART_sRX_RxSts__16BIT_STATUS_REG, CYREG_B1_UDB06_07_ST
  671              	.set UART_net_BUART_sRX_RxSts__3__MASK, 0x08
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 201
 
@@ -12007,555 +12007,553 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  675              	.set UART_net_BUART_sRX_RxSts__5__MASK, 0x20
  676              	.set UART_net_BUART_sRX_RxSts__5__POS, 5
  677              	.set UART_net_BUART_sRX_RxSts__MASK, 0x38
- 678              	.set UART_net_BUART_sRX_RxSts__MASK_REG, CYREG_B0_UDB06_MSK
- 679              	.set UART_net_BUART_sRX_RxSts__STATUS_AUX_CTL_REG, CYREG_B0_UDB06_ACTL
- 680              	.set UART_net_BUART_sRX_RxSts__STATUS_REG, CYREG_B0_UDB06_ST
- 681              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_A0_REG, CYREG_B0_UDB04_05_A0
- 682              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_A1_REG, CYREG_B0_UDB04_05_A1
- 683              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_D0_REG, CYREG_B0_UDB04_05_D0
- 684              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_D1_REG, CYREG_B0_UDB04_05_D1
- 685              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB04_05_ACTL
- 686              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_F0_REG, CYREG_B0_UDB04_05_F0
- 687              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_F1_REG, CYREG_B0_UDB04_05_F1
- 688              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A0_A1_REG, CYREG_B0_UDB04_A0_A1
- 689              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A0_REG, CYREG_B0_UDB04_A0
- 690              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A1_REG, CYREG_B0_UDB04_A1
- 691              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D0_D1_REG, CYREG_B0_UDB04_D0_D1
- 692              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D0_REG, CYREG_B0_UDB04_D0
- 693              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D1_REG, CYREG_B0_UDB04_D1
- 694              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__DP_AUX_CTL_REG, CYREG_B0_UDB04_ACTL
- 695              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F0_F1_REG, CYREG_B0_UDB04_F0_F1
- 696              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F0_REG, CYREG_B0_UDB04_F0
- 697              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F1_REG, CYREG_B0_UDB04_F1
- 698              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_A0_REG, CYREG_B0_UDB07_08_A0
- 699              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_A1_REG, CYREG_B0_UDB07_08_A1
- 700              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_D0_REG, CYREG_B0_UDB07_08_D0
- 701              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_D1_REG, CYREG_B0_UDB07_08_D1
- 702              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB07_08_ACTL
- 703              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_F0_REG, CYREG_B0_UDB07_08_F0
- 704              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_F1_REG, CYREG_B0_UDB07_08_F1
- 705              	.set UART_net_BUART_sTX_TxShifter_u0__A0_A1_REG, CYREG_B0_UDB07_A0_A1
- 706              	.set UART_net_BUART_sTX_TxShifter_u0__A0_REG, CYREG_B0_UDB07_A0
- 707              	.set UART_net_BUART_sTX_TxShifter_u0__A1_REG, CYREG_B0_UDB07_A1
- 708              	.set UART_net_BUART_sTX_TxShifter_u0__D0_D1_REG, CYREG_B0_UDB07_D0_D1
- 709              	.set UART_net_BUART_sTX_TxShifter_u0__D0_REG, CYREG_B0_UDB07_D0
- 710              	.set UART_net_BUART_sTX_TxShifter_u0__D1_REG, CYREG_B0_UDB07_D1
- 711              	.set UART_net_BUART_sTX_TxShifter_u0__DP_AUX_CTL_REG, CYREG_B0_UDB07_ACTL
- 712              	.set UART_net_BUART_sTX_TxShifter_u0__F0_F1_REG, CYREG_B0_UDB07_F0_F1
- 713              	.set UART_net_BUART_sTX_TxShifter_u0__F0_REG, CYREG_B0_UDB07_F0
- 714              	.set UART_net_BUART_sTX_TxShifter_u0__F1_REG, CYREG_B0_UDB07_F1
- 715              	.set UART_net_BUART_sTX_TxShifter_u0__MSK_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 716              	.set UART_net_BUART_sTX_TxShifter_u0__PER_DP_AUX_CTL_REG, CYREG_B0_UDB07_MSK_ACTL
- 717              	.set UART_net_BUART_sTX_TxSts__0__MASK, 0x01
- 718              	.set UART_net_BUART_sTX_TxSts__0__POS, 0
- 719              	.set UART_net_BUART_sTX_TxSts__1__MASK, 0x02
- 720              	.set UART_net_BUART_sTX_TxSts__1__POS, 1
- 721              	.set UART_net_BUART_sTX_TxSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB08_09_ACTL
- 722              	.set UART_net_BUART_sTX_TxSts__16BIT_STATUS_REG, CYREG_B0_UDB08_09_ST
- 723              	.set UART_net_BUART_sTX_TxSts__2__MASK, 0x04
- 724              	.set UART_net_BUART_sTX_TxSts__2__POS, 2
- 725              	.set UART_net_BUART_sTX_TxSts__3__MASK, 0x08
- 726              	.set UART_net_BUART_sTX_TxSts__3__POS, 3
- 727              	.set UART_net_BUART_sTX_TxSts__MASK, 0x0F
- 728              	.set UART_net_BUART_sTX_TxSts__MASK_REG, CYREG_B0_UDB08_MSK
+ 678              	.set UART_net_BUART_sRX_RxSts__MASK_REG, CYREG_B1_UDB06_MSK
+ 679              	.set UART_net_BUART_sRX_RxSts__STATUS_AUX_CTL_REG, CYREG_B1_UDB06_ACTL
+ 680              	.set UART_net_BUART_sRX_RxSts__STATUS_REG, CYREG_B1_UDB06_ST
+ 681              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_A0_REG, CYREG_B0_UDB03_04_A0
+ 682              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_A1_REG, CYREG_B0_UDB03_04_A1
+ 683              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_D0_REG, CYREG_B0_UDB03_04_D0
+ 684              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_D1_REG, CYREG_B0_UDB03_04_D1
+ 685              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB03_04_ACTL
+ 686              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_F0_REG, CYREG_B0_UDB03_04_F0
+ 687              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__16BIT_F1_REG, CYREG_B0_UDB03_04_F1
+ 688              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A0_A1_REG, CYREG_B0_UDB03_A0_A1
+ 689              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A0_REG, CYREG_B0_UDB03_A0
+ 690              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__A1_REG, CYREG_B0_UDB03_A1
+ 691              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D0_D1_REG, CYREG_B0_UDB03_D0_D1
+ 692              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D0_REG, CYREG_B0_UDB03_D0
+ 693              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__D1_REG, CYREG_B0_UDB03_D1
+ 694              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__DP_AUX_CTL_REG, CYREG_B0_UDB03_ACTL
+ 695              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F0_F1_REG, CYREG_B0_UDB03_F0_F1
+ 696              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F0_REG, CYREG_B0_UDB03_F0
+ 697              	.set UART_net_BUART_sTX_sCLOCK_TxBitClkGen__F1_REG, CYREG_B0_UDB03_F1
+ 698              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_A0_REG, CYREG_B0_UDB02_03_A0
+ 699              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_A1_REG, CYREG_B0_UDB02_03_A1
+ 700              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_D0_REG, CYREG_B0_UDB02_03_D0
+ 701              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_D1_REG, CYREG_B0_UDB02_03_D1
+ 702              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_DP_AUX_CTL_REG, CYREG_B0_UDB02_03_ACTL
+ 703              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_F0_REG, CYREG_B0_UDB02_03_F0
+ 704              	.set UART_net_BUART_sTX_TxShifter_u0__16BIT_F1_REG, CYREG_B0_UDB02_03_F1
+ 705              	.set UART_net_BUART_sTX_TxShifter_u0__A0_A1_REG, CYREG_B0_UDB02_A0_A1
+ 706              	.set UART_net_BUART_sTX_TxShifter_u0__A0_REG, CYREG_B0_UDB02_A0
+ 707              	.set UART_net_BUART_sTX_TxShifter_u0__A1_REG, CYREG_B0_UDB02_A1
+ 708              	.set UART_net_BUART_sTX_TxShifter_u0__D0_D1_REG, CYREG_B0_UDB02_D0_D1
+ 709              	.set UART_net_BUART_sTX_TxShifter_u0__D0_REG, CYREG_B0_UDB02_D0
+ 710              	.set UART_net_BUART_sTX_TxShifter_u0__D1_REG, CYREG_B0_UDB02_D1
+ 711              	.set UART_net_BUART_sTX_TxShifter_u0__DP_AUX_CTL_REG, CYREG_B0_UDB02_ACTL
+ 712              	.set UART_net_BUART_sTX_TxShifter_u0__F0_F1_REG, CYREG_B0_UDB02_F0_F1
+ 713              	.set UART_net_BUART_sTX_TxShifter_u0__F0_REG, CYREG_B0_UDB02_F0
+ 714              	.set UART_net_BUART_sTX_TxShifter_u0__F1_REG, CYREG_B0_UDB02_F1
+ 715              	.set UART_net_BUART_sTX_TxSts__0__MASK, 0x01
+ 716              	.set UART_net_BUART_sTX_TxSts__0__POS, 0
+ 717              	.set UART_net_BUART_sTX_TxSts__1__MASK, 0x02
+ 718              	.set UART_net_BUART_sTX_TxSts__1__POS, 1
+ 719              	.set UART_net_BUART_sTX_TxSts__16BIT_STATUS_AUX_CTL_REG, CYREG_B0_UDB01_02_ACTL
+ 720              	.set UART_net_BUART_sTX_TxSts__16BIT_STATUS_REG, CYREG_B0_UDB01_02_ST
+ 721              	.set UART_net_BUART_sTX_TxSts__2__MASK, 0x04
+ 722              	.set UART_net_BUART_sTX_TxSts__2__POS, 2
+ 723              	.set UART_net_BUART_sTX_TxSts__3__MASK, 0x08
+ 724              	.set UART_net_BUART_sTX_TxSts__3__POS, 3
+ 725              	.set UART_net_BUART_sTX_TxSts__MASK, 0x0F
+ 726              	.set UART_net_BUART_sTX_TxSts__MASK_REG, CYREG_B0_UDB01_MSK
+ 727              	.set UART_net_BUART_sTX_TxSts__STATUS_AUX_CTL_REG, CYREG_B0_UDB01_ACTL
+ 728              	.set UART_net_BUART_sTX_TxSts__STATUS_REG, CYREG_B0_UDB01_ST
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 202
 
 
- 729              	.set UART_net_BUART_sTX_TxSts__STATUS_AUX_CTL_REG, CYREG_B0_UDB08_ACTL
- 730              	.set UART_net_BUART_sTX_TxSts__STATUS_REG, CYREG_B0_UDB08_ST
- 731              	
- 732              	/* UART_net_IntClock */
- 733              	.set UART_net_IntClock__CFG0, CYREG_CLKDIST_DCFG1_CFG0
- 734              	.set UART_net_IntClock__CFG1, CYREG_CLKDIST_DCFG1_CFG1
- 735              	.set UART_net_IntClock__CFG2, CYREG_CLKDIST_DCFG1_CFG2
- 736              	.set UART_net_IntClock__CFG2_SRC_SEL_MASK, 0x07
- 737              	.set UART_net_IntClock__INDEX, 0x01
- 738              	.set UART_net_IntClock__PM_ACT_CFG, CYREG_PM_ACT_CFG2
- 739              	.set UART_net_IntClock__PM_ACT_MSK, 0x02
- 740              	.set UART_net_IntClock__PM_STBY_CFG, CYREG_PM_STBY_CFG2
- 741              	.set UART_net_IntClock__PM_STBY_MSK, 0x02
- 742              	
- 743              	/* CAR_SPEED */
- 744              	.set CAR_SPEED__0__INTTYPE, CYREG_PICU6_INTTYPE0
- 745              	.set CAR_SPEED__0__MASK, 0x01
- 746              	.set CAR_SPEED__0__PC, CYREG_PRT6_PC0
- 747              	.set CAR_SPEED__0__PORT, 6
- 748              	.set CAR_SPEED__0__SHIFT, 0
- 749              	.set CAR_SPEED__AG, CYREG_PRT6_AG
- 750              	.set CAR_SPEED__AMUX, CYREG_PRT6_AMUX
- 751              	.set CAR_SPEED__BIE, CYREG_PRT6_BIE
- 752              	.set CAR_SPEED__BIT_MASK, CYREG_PRT6_BIT_MASK
- 753              	.set CAR_SPEED__BYP, CYREG_PRT6_BYP
- 754              	.set CAR_SPEED__CTL, CYREG_PRT6_CTL
- 755              	.set CAR_SPEED__DM0, CYREG_PRT6_DM0
- 756              	.set CAR_SPEED__DM1, CYREG_PRT6_DM1
- 757              	.set CAR_SPEED__DM2, CYREG_PRT6_DM2
- 758              	.set CAR_SPEED__DR, CYREG_PRT6_DR
- 759              	.set CAR_SPEED__INP_DIS, CYREG_PRT6_INP_DIS
- 760              	.set CAR_SPEED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU6_BASE
- 761              	.set CAR_SPEED__LCD_COM_SEG, CYREG_PRT6_LCD_COM_SEG
- 762              	.set CAR_SPEED__LCD_EN, CYREG_PRT6_LCD_EN
- 763              	.set CAR_SPEED__MASK, 0x01
- 764              	.set CAR_SPEED__PORT, 6
- 765              	.set CAR_SPEED__PRT, CYREG_PRT6_PRT
- 766              	.set CAR_SPEED__PRTDSI__CAPS_SEL, CYREG_PRT6_CAPS_SEL
- 767              	.set CAR_SPEED__PRTDSI__DBL_SYNC_IN, CYREG_PRT6_DBL_SYNC_IN
- 768              	.set CAR_SPEED__PRTDSI__OE_SEL0, CYREG_PRT6_OE_SEL0
- 769              	.set CAR_SPEED__PRTDSI__OE_SEL1, CYREG_PRT6_OE_SEL1
- 770              	.set CAR_SPEED__PRTDSI__OUT_SEL0, CYREG_PRT6_OUT_SEL0
- 771              	.set CAR_SPEED__PRTDSI__OUT_SEL1, CYREG_PRT6_OUT_SEL1
- 772              	.set CAR_SPEED__PRTDSI__SYNC_OUT, CYREG_PRT6_SYNC_OUT
- 773              	.set CAR_SPEED__PS, CYREG_PRT6_PS
- 774              	.set CAR_SPEED__SHIFT, 0
- 775              	.set CAR_SPEED__SLW, CYREG_PRT6_SLW
- 776              	
- 777              	/* isr_timer */
- 778              	.set isr_timer__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
- 779              	.set isr_timer__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 780              	.set isr_timer__INTC_MASK, 0x04
- 781              	.set isr_timer__INTC_NUMBER, 2
- 782              	.set isr_timer__INTC_PRIOR_NUM, 7
- 783              	.set isr_timer__INTC_PRIOR_REG, CYREG_NVIC_PRI_2
- 784              	.set isr_timer__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
- 785              	.set isr_timer__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
+ 729              	
+ 730              	/* UART_net_IntClock */
+ 731              	.set UART_net_IntClock__CFG0, CYREG_CLKDIST_DCFG1_CFG0
+ 732              	.set UART_net_IntClock__CFG1, CYREG_CLKDIST_DCFG1_CFG1
+ 733              	.set UART_net_IntClock__CFG2, CYREG_CLKDIST_DCFG1_CFG2
+ 734              	.set UART_net_IntClock__CFG2_SRC_SEL_MASK, 0x07
+ 735              	.set UART_net_IntClock__INDEX, 0x01
+ 736              	.set UART_net_IntClock__PM_ACT_CFG, CYREG_PM_ACT_CFG2
+ 737              	.set UART_net_IntClock__PM_ACT_MSK, 0x02
+ 738              	.set UART_net_IntClock__PM_STBY_CFG, CYREG_PM_STBY_CFG2
+ 739              	.set UART_net_IntClock__PM_STBY_MSK, 0x02
+ 740              	
+ 741              	/* CAR_SPEED */
+ 742              	.set CAR_SPEED__0__INTTYPE, CYREG_PICU0_INTTYPE4
+ 743              	.set CAR_SPEED__0__MASK, 0x10
+ 744              	.set CAR_SPEED__0__PC, CYREG_PRT0_PC4
+ 745              	.set CAR_SPEED__0__PORT, 0
+ 746              	.set CAR_SPEED__0__SHIFT, 4
+ 747              	.set CAR_SPEED__AG, CYREG_PRT0_AG
+ 748              	.set CAR_SPEED__AMUX, CYREG_PRT0_AMUX
+ 749              	.set CAR_SPEED__BIE, CYREG_PRT0_BIE
+ 750              	.set CAR_SPEED__BIT_MASK, CYREG_PRT0_BIT_MASK
+ 751              	.set CAR_SPEED__BYP, CYREG_PRT0_BYP
+ 752              	.set CAR_SPEED__CTL, CYREG_PRT0_CTL
+ 753              	.set CAR_SPEED__DM0, CYREG_PRT0_DM0
+ 754              	.set CAR_SPEED__DM1, CYREG_PRT0_DM1
+ 755              	.set CAR_SPEED__DM2, CYREG_PRT0_DM2
+ 756              	.set CAR_SPEED__DR, CYREG_PRT0_DR
+ 757              	.set CAR_SPEED__INP_DIS, CYREG_PRT0_INP_DIS
+ 758              	.set CAR_SPEED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
+ 759              	.set CAR_SPEED__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
+ 760              	.set CAR_SPEED__LCD_EN, CYREG_PRT0_LCD_EN
+ 761              	.set CAR_SPEED__MASK, 0x10
+ 762              	.set CAR_SPEED__PORT, 0
+ 763              	.set CAR_SPEED__PRT, CYREG_PRT0_PRT
+ 764              	.set CAR_SPEED__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
+ 765              	.set CAR_SPEED__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
+ 766              	.set CAR_SPEED__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
+ 767              	.set CAR_SPEED__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
+ 768              	.set CAR_SPEED__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
+ 769              	.set CAR_SPEED__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
+ 770              	.set CAR_SPEED__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
+ 771              	.set CAR_SPEED__PS, CYREG_PRT0_PS
+ 772              	.set CAR_SPEED__SHIFT, 4
+ 773              	.set CAR_SPEED__SLW, CYREG_PRT0_SLW
+ 774              	
+ 775              	/* isr_timer */
+ 776              	.set isr_timer__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
+ 777              	.set isr_timer__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
+ 778              	.set isr_timer__INTC_MASK, 0x04
+ 779              	.set isr_timer__INTC_NUMBER, 2
+ 780              	.set isr_timer__INTC_PRIOR_NUM, 7
+ 781              	.set isr_timer__INTC_PRIOR_REG, CYREG_NVIC_PRI_2
+ 782              	.set isr_timer__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
+ 783              	.set isr_timer__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
+ 784              	
+ 785              	/* isr_rx_net */
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 203
 
 
- 786              	
- 787              	/* isr_rx_net */
- 788              	.set isr_rx_net__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
- 789              	.set isr_rx_net__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 790              	.set isr_rx_net__INTC_MASK, 0x02
- 791              	.set isr_rx_net__INTC_NUMBER, 1
- 792              	.set isr_rx_net__INTC_PRIOR_NUM, 7
- 793              	.set isr_rx_net__INTC_PRIOR_REG, CYREG_NVIC_PRI_1
- 794              	.set isr_rx_net__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
- 795              	.set isr_rx_net__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
- 796              	
- 797              	/* isr_tx_net */
- 798              	.set isr_tx_net__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
- 799              	.set isr_tx_net__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 800              	.set isr_tx_net__INTC_MASK, 0x08
- 801              	.set isr_tx_net__INTC_NUMBER, 3
- 802              	.set isr_tx_net__INTC_PRIOR_NUM, 7
- 803              	.set isr_tx_net__INTC_PRIOR_REG, CYREG_NVIC_PRI_3
- 804              	.set isr_tx_net__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
- 805              	.set isr_tx_net__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
- 806              	
- 807              	/* WARNING_RED */
- 808              	.set WARNING_RED__0__INTTYPE, CYREG_PICU2_INTTYPE4
- 809              	.set WARNING_RED__0__MASK, 0x10
- 810              	.set WARNING_RED__0__PC, CYREG_PRT2_PC4
- 811              	.set WARNING_RED__0__PORT, 2
- 812              	.set WARNING_RED__0__SHIFT, 4
- 813              	.set WARNING_RED__AG, CYREG_PRT2_AG
- 814              	.set WARNING_RED__AMUX, CYREG_PRT2_AMUX
- 815              	.set WARNING_RED__BIE, CYREG_PRT2_BIE
- 816              	.set WARNING_RED__BIT_MASK, CYREG_PRT2_BIT_MASK
- 817              	.set WARNING_RED__BYP, CYREG_PRT2_BYP
- 818              	.set WARNING_RED__CTL, CYREG_PRT2_CTL
- 819              	.set WARNING_RED__DM0, CYREG_PRT2_DM0
- 820              	.set WARNING_RED__DM1, CYREG_PRT2_DM1
- 821              	.set WARNING_RED__DM2, CYREG_PRT2_DM2
- 822              	.set WARNING_RED__DR, CYREG_PRT2_DR
- 823              	.set WARNING_RED__INP_DIS, CYREG_PRT2_INP_DIS
- 824              	.set WARNING_RED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
- 825              	.set WARNING_RED__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
- 826              	.set WARNING_RED__LCD_EN, CYREG_PRT2_LCD_EN
- 827              	.set WARNING_RED__MASK, 0x10
- 828              	.set WARNING_RED__PORT, 2
- 829              	.set WARNING_RED__PRT, CYREG_PRT2_PRT
- 830              	.set WARNING_RED__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
- 831              	.set WARNING_RED__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
- 832              	.set WARNING_RED__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
- 833              	.set WARNING_RED__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
- 834              	.set WARNING_RED__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
- 835              	.set WARNING_RED__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
- 836              	.set WARNING_RED__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
- 837              	.set WARNING_RED__PS, CYREG_PRT2_PS
- 838              	.set WARNING_RED__SHIFT, 4
- 839              	.set WARNING_RED__SLW, CYREG_PRT2_SLW
- 840              	
- 841              	/* SWITCH_1_LOW */
- 842              	.set SWITCH_1_LOW__0__INTTYPE, CYREG_PICU4_INTTYPE5
+ 786              	.set isr_rx_net__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
+ 787              	.set isr_rx_net__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
+ 788              	.set isr_rx_net__INTC_MASK, 0x02
+ 789              	.set isr_rx_net__INTC_NUMBER, 1
+ 790              	.set isr_rx_net__INTC_PRIOR_NUM, 7
+ 791              	.set isr_rx_net__INTC_PRIOR_REG, CYREG_NVIC_PRI_1
+ 792              	.set isr_rx_net__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
+ 793              	.set isr_rx_net__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
+ 794              	
+ 795              	/* isr_tx_net */
+ 796              	.set isr_tx_net__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
+ 797              	.set isr_tx_net__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
+ 798              	.set isr_tx_net__INTC_MASK, 0x08
+ 799              	.set isr_tx_net__INTC_NUMBER, 3
+ 800              	.set isr_tx_net__INTC_PRIOR_NUM, 7
+ 801              	.set isr_tx_net__INTC_PRIOR_REG, CYREG_NVIC_PRI_3
+ 802              	.set isr_tx_net__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
+ 803              	.set isr_tx_net__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
+ 804              	
+ 805              	/* WARNING_RED */
+ 806              	.set WARNING_RED__0__INTTYPE, CYREG_PICU2_INTTYPE4
+ 807              	.set WARNING_RED__0__MASK, 0x10
+ 808              	.set WARNING_RED__0__PC, CYREG_PRT2_PC4
+ 809              	.set WARNING_RED__0__PORT, 2
+ 810              	.set WARNING_RED__0__SHIFT, 4
+ 811              	.set WARNING_RED__AG, CYREG_PRT2_AG
+ 812              	.set WARNING_RED__AMUX, CYREG_PRT2_AMUX
+ 813              	.set WARNING_RED__BIE, CYREG_PRT2_BIE
+ 814              	.set WARNING_RED__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 815              	.set WARNING_RED__BYP, CYREG_PRT2_BYP
+ 816              	.set WARNING_RED__CTL, CYREG_PRT2_CTL
+ 817              	.set WARNING_RED__DM0, CYREG_PRT2_DM0
+ 818              	.set WARNING_RED__DM1, CYREG_PRT2_DM1
+ 819              	.set WARNING_RED__DM2, CYREG_PRT2_DM2
+ 820              	.set WARNING_RED__DR, CYREG_PRT2_DR
+ 821              	.set WARNING_RED__INP_DIS, CYREG_PRT2_INP_DIS
+ 822              	.set WARNING_RED__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 823              	.set WARNING_RED__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 824              	.set WARNING_RED__LCD_EN, CYREG_PRT2_LCD_EN
+ 825              	.set WARNING_RED__MASK, 0x10
+ 826              	.set WARNING_RED__PORT, 2
+ 827              	.set WARNING_RED__PRT, CYREG_PRT2_PRT
+ 828              	.set WARNING_RED__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 829              	.set WARNING_RED__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
+ 830              	.set WARNING_RED__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 831              	.set WARNING_RED__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 832              	.set WARNING_RED__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 833              	.set WARNING_RED__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 834              	.set WARNING_RED__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 835              	.set WARNING_RED__PS, CYREG_PRT2_PS
+ 836              	.set WARNING_RED__SHIFT, 4
+ 837              	.set WARNING_RED__SLW, CYREG_PRT2_SLW
+ 838              	
+ 839              	/* SWITCH_1_LOW */
+ 840              	.set SWITCH_1_LOW__0__INTTYPE, CYREG_PICU4_INTTYPE5
+ 841              	.set SWITCH_1_LOW__0__MASK, 0x20
+ 842              	.set SWITCH_1_LOW__0__PC, CYREG_PRT4_PC5
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 204
 
 
- 843              	.set SWITCH_1_LOW__0__MASK, 0x20
- 844              	.set SWITCH_1_LOW__0__PC, CYREG_PRT4_PC5
- 845              	.set SWITCH_1_LOW__0__PORT, 4
- 846              	.set SWITCH_1_LOW__0__SHIFT, 5
- 847              	.set SWITCH_1_LOW__AG, CYREG_PRT4_AG
- 848              	.set SWITCH_1_LOW__AMUX, CYREG_PRT4_AMUX
- 849              	.set SWITCH_1_LOW__BIE, CYREG_PRT4_BIE
- 850              	.set SWITCH_1_LOW__BIT_MASK, CYREG_PRT4_BIT_MASK
- 851              	.set SWITCH_1_LOW__BYP, CYREG_PRT4_BYP
- 852              	.set SWITCH_1_LOW__CTL, CYREG_PRT4_CTL
- 853              	.set SWITCH_1_LOW__DM0, CYREG_PRT4_DM0
- 854              	.set SWITCH_1_LOW__DM1, CYREG_PRT4_DM1
- 855              	.set SWITCH_1_LOW__DM2, CYREG_PRT4_DM2
- 856              	.set SWITCH_1_LOW__DR, CYREG_PRT4_DR
- 857              	.set SWITCH_1_LOW__INP_DIS, CYREG_PRT4_INP_DIS
- 858              	.set SWITCH_1_LOW__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
- 859              	.set SWITCH_1_LOW__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
- 860              	.set SWITCH_1_LOW__LCD_EN, CYREG_PRT4_LCD_EN
- 861              	.set SWITCH_1_LOW__MASK, 0x20
- 862              	.set SWITCH_1_LOW__PORT, 4
- 863              	.set SWITCH_1_LOW__PRT, CYREG_PRT4_PRT
- 864              	.set SWITCH_1_LOW__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
- 865              	.set SWITCH_1_LOW__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
- 866              	.set SWITCH_1_LOW__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
- 867              	.set SWITCH_1_LOW__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
- 868              	.set SWITCH_1_LOW__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
- 869              	.set SWITCH_1_LOW__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
- 870              	.set SWITCH_1_LOW__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
- 871              	.set SWITCH_1_LOW__PS, CYREG_PRT4_PS
- 872              	.set SWITCH_1_LOW__SHIFT, 5
- 873              	.set SWITCH_1_LOW__SLW, CYREG_PRT4_SLW
- 874              	
- 875              	/* SWITCH_2_LOW */
- 876              	.set SWITCH_2_LOW__0__INTTYPE, CYREG_PICU4_INTTYPE7
- 877              	.set SWITCH_2_LOW__0__MASK, 0x80
- 878              	.set SWITCH_2_LOW__0__PC, CYREG_PRT4_PC7
- 879              	.set SWITCH_2_LOW__0__PORT, 4
- 880              	.set SWITCH_2_LOW__0__SHIFT, 7
- 881              	.set SWITCH_2_LOW__AG, CYREG_PRT4_AG
- 882              	.set SWITCH_2_LOW__AMUX, CYREG_PRT4_AMUX
- 883              	.set SWITCH_2_LOW__BIE, CYREG_PRT4_BIE
- 884              	.set SWITCH_2_LOW__BIT_MASK, CYREG_PRT4_BIT_MASK
- 885              	.set SWITCH_2_LOW__BYP, CYREG_PRT4_BYP
- 886              	.set SWITCH_2_LOW__CTL, CYREG_PRT4_CTL
- 887              	.set SWITCH_2_LOW__DM0, CYREG_PRT4_DM0
- 888              	.set SWITCH_2_LOW__DM1, CYREG_PRT4_DM1
- 889              	.set SWITCH_2_LOW__DM2, CYREG_PRT4_DM2
- 890              	.set SWITCH_2_LOW__DR, CYREG_PRT4_DR
- 891              	.set SWITCH_2_LOW__INP_DIS, CYREG_PRT4_INP_DIS
- 892              	.set SWITCH_2_LOW__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
- 893              	.set SWITCH_2_LOW__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
- 894              	.set SWITCH_2_LOW__LCD_EN, CYREG_PRT4_LCD_EN
- 895              	.set SWITCH_2_LOW__MASK, 0x80
- 896              	.set SWITCH_2_LOW__PORT, 4
- 897              	.set SWITCH_2_LOW__PRT, CYREG_PRT4_PRT
- 898              	.set SWITCH_2_LOW__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
- 899              	.set SWITCH_2_LOW__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 843              	.set SWITCH_1_LOW__0__PORT, 4
+ 844              	.set SWITCH_1_LOW__0__SHIFT, 5
+ 845              	.set SWITCH_1_LOW__AG, CYREG_PRT4_AG
+ 846              	.set SWITCH_1_LOW__AMUX, CYREG_PRT4_AMUX
+ 847              	.set SWITCH_1_LOW__BIE, CYREG_PRT4_BIE
+ 848              	.set SWITCH_1_LOW__BIT_MASK, CYREG_PRT4_BIT_MASK
+ 849              	.set SWITCH_1_LOW__BYP, CYREG_PRT4_BYP
+ 850              	.set SWITCH_1_LOW__CTL, CYREG_PRT4_CTL
+ 851              	.set SWITCH_1_LOW__DM0, CYREG_PRT4_DM0
+ 852              	.set SWITCH_1_LOW__DM1, CYREG_PRT4_DM1
+ 853              	.set SWITCH_1_LOW__DM2, CYREG_PRT4_DM2
+ 854              	.set SWITCH_1_LOW__DR, CYREG_PRT4_DR
+ 855              	.set SWITCH_1_LOW__INP_DIS, CYREG_PRT4_INP_DIS
+ 856              	.set SWITCH_1_LOW__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
+ 857              	.set SWITCH_1_LOW__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
+ 858              	.set SWITCH_1_LOW__LCD_EN, CYREG_PRT4_LCD_EN
+ 859              	.set SWITCH_1_LOW__MASK, 0x20
+ 860              	.set SWITCH_1_LOW__PORT, 4
+ 861              	.set SWITCH_1_LOW__PRT, CYREG_PRT4_PRT
+ 862              	.set SWITCH_1_LOW__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
+ 863              	.set SWITCH_1_LOW__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 864              	.set SWITCH_1_LOW__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
+ 865              	.set SWITCH_1_LOW__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
+ 866              	.set SWITCH_1_LOW__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
+ 867              	.set SWITCH_1_LOW__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
+ 868              	.set SWITCH_1_LOW__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
+ 869              	.set SWITCH_1_LOW__PS, CYREG_PRT4_PS
+ 870              	.set SWITCH_1_LOW__SHIFT, 5
+ 871              	.set SWITCH_1_LOW__SLW, CYREG_PRT4_SLW
+ 872              	
+ 873              	/* SWITCH_2_LOW */
+ 874              	.set SWITCH_2_LOW__0__INTTYPE, CYREG_PICU4_INTTYPE7
+ 875              	.set SWITCH_2_LOW__0__MASK, 0x80
+ 876              	.set SWITCH_2_LOW__0__PC, CYREG_PRT4_PC7
+ 877              	.set SWITCH_2_LOW__0__PORT, 4
+ 878              	.set SWITCH_2_LOW__0__SHIFT, 7
+ 879              	.set SWITCH_2_LOW__AG, CYREG_PRT4_AG
+ 880              	.set SWITCH_2_LOW__AMUX, CYREG_PRT4_AMUX
+ 881              	.set SWITCH_2_LOW__BIE, CYREG_PRT4_BIE
+ 882              	.set SWITCH_2_LOW__BIT_MASK, CYREG_PRT4_BIT_MASK
+ 883              	.set SWITCH_2_LOW__BYP, CYREG_PRT4_BYP
+ 884              	.set SWITCH_2_LOW__CTL, CYREG_PRT4_CTL
+ 885              	.set SWITCH_2_LOW__DM0, CYREG_PRT4_DM0
+ 886              	.set SWITCH_2_LOW__DM1, CYREG_PRT4_DM1
+ 887              	.set SWITCH_2_LOW__DM2, CYREG_PRT4_DM2
+ 888              	.set SWITCH_2_LOW__DR, CYREG_PRT4_DR
+ 889              	.set SWITCH_2_LOW__INP_DIS, CYREG_PRT4_INP_DIS
+ 890              	.set SWITCH_2_LOW__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
+ 891              	.set SWITCH_2_LOW__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
+ 892              	.set SWITCH_2_LOW__LCD_EN, CYREG_PRT4_LCD_EN
+ 893              	.set SWITCH_2_LOW__MASK, 0x80
+ 894              	.set SWITCH_2_LOW__PORT, 4
+ 895              	.set SWITCH_2_LOW__PRT, CYREG_PRT4_PRT
+ 896              	.set SWITCH_2_LOW__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
+ 897              	.set SWITCH_2_LOW__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 898              	.set SWITCH_2_LOW__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
+ 899              	.set SWITCH_2_LOW__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 205
 
 
- 900              	.set SWITCH_2_LOW__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
- 901              	.set SWITCH_2_LOW__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
- 902              	.set SWITCH_2_LOW__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
- 903              	.set SWITCH_2_LOW__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
- 904              	.set SWITCH_2_LOW__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
- 905              	.set SWITCH_2_LOW__PS, CYREG_PRT4_PS
- 906              	.set SWITCH_2_LOW__SHIFT, 7
- 907              	.set SWITCH_2_LOW__SLW, CYREG_PRT4_SLW
- 908              	
- 909              	/* WARNING_BLUE */
- 910              	.set WARNING_BLUE__0__INTTYPE, CYREG_PICU2_INTTYPE2
- 911              	.set WARNING_BLUE__0__MASK, 0x04
- 912              	.set WARNING_BLUE__0__PC, CYREG_PRT2_PC2
- 913              	.set WARNING_BLUE__0__PORT, 2
- 914              	.set WARNING_BLUE__0__SHIFT, 2
- 915              	.set WARNING_BLUE__AG, CYREG_PRT2_AG
- 916              	.set WARNING_BLUE__AMUX, CYREG_PRT2_AMUX
- 917              	.set WARNING_BLUE__BIE, CYREG_PRT2_BIE
- 918              	.set WARNING_BLUE__BIT_MASK, CYREG_PRT2_BIT_MASK
- 919              	.set WARNING_BLUE__BYP, CYREG_PRT2_BYP
- 920              	.set WARNING_BLUE__CTL, CYREG_PRT2_CTL
- 921              	.set WARNING_BLUE__DM0, CYREG_PRT2_DM0
- 922              	.set WARNING_BLUE__DM1, CYREG_PRT2_DM1
- 923              	.set WARNING_BLUE__DM2, CYREG_PRT2_DM2
- 924              	.set WARNING_BLUE__DR, CYREG_PRT2_DR
- 925              	.set WARNING_BLUE__INP_DIS, CYREG_PRT2_INP_DIS
- 926              	.set WARNING_BLUE__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
- 927              	.set WARNING_BLUE__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
- 928              	.set WARNING_BLUE__LCD_EN, CYREG_PRT2_LCD_EN
- 929              	.set WARNING_BLUE__MASK, 0x04
- 930              	.set WARNING_BLUE__PORT, 2
- 931              	.set WARNING_BLUE__PRT, CYREG_PRT2_PRT
- 932              	.set WARNING_BLUE__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
- 933              	.set WARNING_BLUE__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
- 934              	.set WARNING_BLUE__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
- 935              	.set WARNING_BLUE__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
- 936              	.set WARNING_BLUE__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
- 937              	.set WARNING_BLUE__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
- 938              	.set WARNING_BLUE__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
- 939              	.set WARNING_BLUE__PS, CYREG_PRT2_PS
- 940              	.set WARNING_BLUE__SHIFT, 2
- 941              	.set WARNING_BLUE__SLW, CYREG_PRT2_SLW
- 942              	
- 943              	/* SWITCH_1_HIGH */
- 944              	.set SWITCH_1_HIGH__0__INTTYPE, CYREG_PICU4_INTTYPE4
- 945              	.set SWITCH_1_HIGH__0__MASK, 0x10
- 946              	.set SWITCH_1_HIGH__0__PC, CYREG_PRT4_PC4
- 947              	.set SWITCH_1_HIGH__0__PORT, 4
- 948              	.set SWITCH_1_HIGH__0__SHIFT, 4
- 949              	.set SWITCH_1_HIGH__AG, CYREG_PRT4_AG
- 950              	.set SWITCH_1_HIGH__AMUX, CYREG_PRT4_AMUX
- 951              	.set SWITCH_1_HIGH__BIE, CYREG_PRT4_BIE
- 952              	.set SWITCH_1_HIGH__BIT_MASK, CYREG_PRT4_BIT_MASK
- 953              	.set SWITCH_1_HIGH__BYP, CYREG_PRT4_BYP
- 954              	.set SWITCH_1_HIGH__CTL, CYREG_PRT4_CTL
- 955              	.set SWITCH_1_HIGH__DM0, CYREG_PRT4_DM0
- 956              	.set SWITCH_1_HIGH__DM1, CYREG_PRT4_DM1
+ 900              	.set SWITCH_2_LOW__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
+ 901              	.set SWITCH_2_LOW__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
+ 902              	.set SWITCH_2_LOW__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
+ 903              	.set SWITCH_2_LOW__PS, CYREG_PRT4_PS
+ 904              	.set SWITCH_2_LOW__SHIFT, 7
+ 905              	.set SWITCH_2_LOW__SLW, CYREG_PRT4_SLW
+ 906              	
+ 907              	/* WARNING_BLUE */
+ 908              	.set WARNING_BLUE__0__INTTYPE, CYREG_PICU2_INTTYPE2
+ 909              	.set WARNING_BLUE__0__MASK, 0x04
+ 910              	.set WARNING_BLUE__0__PC, CYREG_PRT2_PC2
+ 911              	.set WARNING_BLUE__0__PORT, 2
+ 912              	.set WARNING_BLUE__0__SHIFT, 2
+ 913              	.set WARNING_BLUE__AG, CYREG_PRT2_AG
+ 914              	.set WARNING_BLUE__AMUX, CYREG_PRT2_AMUX
+ 915              	.set WARNING_BLUE__BIE, CYREG_PRT2_BIE
+ 916              	.set WARNING_BLUE__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 917              	.set WARNING_BLUE__BYP, CYREG_PRT2_BYP
+ 918              	.set WARNING_BLUE__CTL, CYREG_PRT2_CTL
+ 919              	.set WARNING_BLUE__DM0, CYREG_PRT2_DM0
+ 920              	.set WARNING_BLUE__DM1, CYREG_PRT2_DM1
+ 921              	.set WARNING_BLUE__DM2, CYREG_PRT2_DM2
+ 922              	.set WARNING_BLUE__DR, CYREG_PRT2_DR
+ 923              	.set WARNING_BLUE__INP_DIS, CYREG_PRT2_INP_DIS
+ 924              	.set WARNING_BLUE__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 925              	.set WARNING_BLUE__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 926              	.set WARNING_BLUE__LCD_EN, CYREG_PRT2_LCD_EN
+ 927              	.set WARNING_BLUE__MASK, 0x04
+ 928              	.set WARNING_BLUE__PORT, 2
+ 929              	.set WARNING_BLUE__PRT, CYREG_PRT2_PRT
+ 930              	.set WARNING_BLUE__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 931              	.set WARNING_BLUE__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
+ 932              	.set WARNING_BLUE__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 933              	.set WARNING_BLUE__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 934              	.set WARNING_BLUE__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 935              	.set WARNING_BLUE__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 936              	.set WARNING_BLUE__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 937              	.set WARNING_BLUE__PS, CYREG_PRT2_PS
+ 938              	.set WARNING_BLUE__SHIFT, 2
+ 939              	.set WARNING_BLUE__SLW, CYREG_PRT2_SLW
+ 940              	
+ 941              	/* SWITCH_1_HIGH */
+ 942              	.set SWITCH_1_HIGH__0__INTTYPE, CYREG_PICU4_INTTYPE4
+ 943              	.set SWITCH_1_HIGH__0__MASK, 0x10
+ 944              	.set SWITCH_1_HIGH__0__PC, CYREG_PRT4_PC4
+ 945              	.set SWITCH_1_HIGH__0__PORT, 4
+ 946              	.set SWITCH_1_HIGH__0__SHIFT, 4
+ 947              	.set SWITCH_1_HIGH__AG, CYREG_PRT4_AG
+ 948              	.set SWITCH_1_HIGH__AMUX, CYREG_PRT4_AMUX
+ 949              	.set SWITCH_1_HIGH__BIE, CYREG_PRT4_BIE
+ 950              	.set SWITCH_1_HIGH__BIT_MASK, CYREG_PRT4_BIT_MASK
+ 951              	.set SWITCH_1_HIGH__BYP, CYREG_PRT4_BYP
+ 952              	.set SWITCH_1_HIGH__CTL, CYREG_PRT4_CTL
+ 953              	.set SWITCH_1_HIGH__DM0, CYREG_PRT4_DM0
+ 954              	.set SWITCH_1_HIGH__DM1, CYREG_PRT4_DM1
+ 955              	.set SWITCH_1_HIGH__DM2, CYREG_PRT4_DM2
+ 956              	.set SWITCH_1_HIGH__DR, CYREG_PRT4_DR
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 206
 
 
- 957              	.set SWITCH_1_HIGH__DM2, CYREG_PRT4_DM2
- 958              	.set SWITCH_1_HIGH__DR, CYREG_PRT4_DR
- 959              	.set SWITCH_1_HIGH__INP_DIS, CYREG_PRT4_INP_DIS
- 960              	.set SWITCH_1_HIGH__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
- 961              	.set SWITCH_1_HIGH__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
- 962              	.set SWITCH_1_HIGH__LCD_EN, CYREG_PRT4_LCD_EN
- 963              	.set SWITCH_1_HIGH__MASK, 0x10
- 964              	.set SWITCH_1_HIGH__PORT, 4
- 965              	.set SWITCH_1_HIGH__PRT, CYREG_PRT4_PRT
- 966              	.set SWITCH_1_HIGH__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
- 967              	.set SWITCH_1_HIGH__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
- 968              	.set SWITCH_1_HIGH__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
- 969              	.set SWITCH_1_HIGH__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
- 970              	.set SWITCH_1_HIGH__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
- 971              	.set SWITCH_1_HIGH__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
- 972              	.set SWITCH_1_HIGH__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
- 973              	.set SWITCH_1_HIGH__PS, CYREG_PRT4_PS
- 974              	.set SWITCH_1_HIGH__SHIFT, 4
- 975              	.set SWITCH_1_HIGH__SLW, CYREG_PRT4_SLW
- 976              	
- 977              	/* SWITCH_2_HIGH */
- 978              	.set SWITCH_2_HIGH__0__INTTYPE, CYREG_PICU4_INTTYPE6
- 979              	.set SWITCH_2_HIGH__0__MASK, 0x40
- 980              	.set SWITCH_2_HIGH__0__PC, CYREG_PRT4_PC6
- 981              	.set SWITCH_2_HIGH__0__PORT, 4
- 982              	.set SWITCH_2_HIGH__0__SHIFT, 6
- 983              	.set SWITCH_2_HIGH__AG, CYREG_PRT4_AG
- 984              	.set SWITCH_2_HIGH__AMUX, CYREG_PRT4_AMUX
- 985              	.set SWITCH_2_HIGH__BIE, CYREG_PRT4_BIE
- 986              	.set SWITCH_2_HIGH__BIT_MASK, CYREG_PRT4_BIT_MASK
- 987              	.set SWITCH_2_HIGH__BYP, CYREG_PRT4_BYP
- 988              	.set SWITCH_2_HIGH__CTL, CYREG_PRT4_CTL
- 989              	.set SWITCH_2_HIGH__DM0, CYREG_PRT4_DM0
- 990              	.set SWITCH_2_HIGH__DM1, CYREG_PRT4_DM1
- 991              	.set SWITCH_2_HIGH__DM2, CYREG_PRT4_DM2
- 992              	.set SWITCH_2_HIGH__DR, CYREG_PRT4_DR
- 993              	.set SWITCH_2_HIGH__INP_DIS, CYREG_PRT4_INP_DIS
- 994              	.set SWITCH_2_HIGH__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
- 995              	.set SWITCH_2_HIGH__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
- 996              	.set SWITCH_2_HIGH__LCD_EN, CYREG_PRT4_LCD_EN
- 997              	.set SWITCH_2_HIGH__MASK, 0x40
- 998              	.set SWITCH_2_HIGH__PORT, 4
- 999              	.set SWITCH_2_HIGH__PRT, CYREG_PRT4_PRT
- 1000              	.set SWITCH_2_HIGH__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
- 1001              	.set SWITCH_2_HIGH__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
- 1002              	.set SWITCH_2_HIGH__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
- 1003              	.set SWITCH_2_HIGH__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
- 1004              	.set SWITCH_2_HIGH__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
- 1005              	.set SWITCH_2_HIGH__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
- 1006              	.set SWITCH_2_HIGH__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
- 1007              	.set SWITCH_2_HIGH__PS, CYREG_PRT4_PS
- 1008              	.set SWITCH_2_HIGH__SHIFT, 6
- 1009              	.set SWITCH_2_HIGH__SLW, CYREG_PRT4_SLW
- 1010              	
- 1011              	/* WARNING_GREEN */
- 1012              	.set WARNING_GREEN__0__INTTYPE, CYREG_PICU2_INTTYPE3
- 1013              	.set WARNING_GREEN__0__MASK, 0x08
+ 957              	.set SWITCH_1_HIGH__INP_DIS, CYREG_PRT4_INP_DIS
+ 958              	.set SWITCH_1_HIGH__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
+ 959              	.set SWITCH_1_HIGH__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
+ 960              	.set SWITCH_1_HIGH__LCD_EN, CYREG_PRT4_LCD_EN
+ 961              	.set SWITCH_1_HIGH__MASK, 0x10
+ 962              	.set SWITCH_1_HIGH__PORT, 4
+ 963              	.set SWITCH_1_HIGH__PRT, CYREG_PRT4_PRT
+ 964              	.set SWITCH_1_HIGH__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
+ 965              	.set SWITCH_1_HIGH__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 966              	.set SWITCH_1_HIGH__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
+ 967              	.set SWITCH_1_HIGH__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
+ 968              	.set SWITCH_1_HIGH__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
+ 969              	.set SWITCH_1_HIGH__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
+ 970              	.set SWITCH_1_HIGH__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
+ 971              	.set SWITCH_1_HIGH__PS, CYREG_PRT4_PS
+ 972              	.set SWITCH_1_HIGH__SHIFT, 4
+ 973              	.set SWITCH_1_HIGH__SLW, CYREG_PRT4_SLW
+ 974              	
+ 975              	/* SWITCH_2_HIGH */
+ 976              	.set SWITCH_2_HIGH__0__INTTYPE, CYREG_PICU4_INTTYPE6
+ 977              	.set SWITCH_2_HIGH__0__MASK, 0x40
+ 978              	.set SWITCH_2_HIGH__0__PC, CYREG_PRT4_PC6
+ 979              	.set SWITCH_2_HIGH__0__PORT, 4
+ 980              	.set SWITCH_2_HIGH__0__SHIFT, 6
+ 981              	.set SWITCH_2_HIGH__AG, CYREG_PRT4_AG
+ 982              	.set SWITCH_2_HIGH__AMUX, CYREG_PRT4_AMUX
+ 983              	.set SWITCH_2_HIGH__BIE, CYREG_PRT4_BIE
+ 984              	.set SWITCH_2_HIGH__BIT_MASK, CYREG_PRT4_BIT_MASK
+ 985              	.set SWITCH_2_HIGH__BYP, CYREG_PRT4_BYP
+ 986              	.set SWITCH_2_HIGH__CTL, CYREG_PRT4_CTL
+ 987              	.set SWITCH_2_HIGH__DM0, CYREG_PRT4_DM0
+ 988              	.set SWITCH_2_HIGH__DM1, CYREG_PRT4_DM1
+ 989              	.set SWITCH_2_HIGH__DM2, CYREG_PRT4_DM2
+ 990              	.set SWITCH_2_HIGH__DR, CYREG_PRT4_DR
+ 991              	.set SWITCH_2_HIGH__INP_DIS, CYREG_PRT4_INP_DIS
+ 992              	.set SWITCH_2_HIGH__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU4_BASE
+ 993              	.set SWITCH_2_HIGH__LCD_COM_SEG, CYREG_PRT4_LCD_COM_SEG
+ 994              	.set SWITCH_2_HIGH__LCD_EN, CYREG_PRT4_LCD_EN
+ 995              	.set SWITCH_2_HIGH__MASK, 0x40
+ 996              	.set SWITCH_2_HIGH__PORT, 4
+ 997              	.set SWITCH_2_HIGH__PRT, CYREG_PRT4_PRT
+ 998              	.set SWITCH_2_HIGH__PRTDSI__CAPS_SEL, CYREG_PRT4_CAPS_SEL
+ 999              	.set SWITCH_2_HIGH__PRTDSI__DBL_SYNC_IN, CYREG_PRT4_DBL_SYNC_IN
+ 1000              	.set SWITCH_2_HIGH__PRTDSI__OE_SEL0, CYREG_PRT4_OE_SEL0
+ 1001              	.set SWITCH_2_HIGH__PRTDSI__OE_SEL1, CYREG_PRT4_OE_SEL1
+ 1002              	.set SWITCH_2_HIGH__PRTDSI__OUT_SEL0, CYREG_PRT4_OUT_SEL0
+ 1003              	.set SWITCH_2_HIGH__PRTDSI__OUT_SEL1, CYREG_PRT4_OUT_SEL1
+ 1004              	.set SWITCH_2_HIGH__PRTDSI__SYNC_OUT, CYREG_PRT4_SYNC_OUT
+ 1005              	.set SWITCH_2_HIGH__PS, CYREG_PRT4_PS
+ 1006              	.set SWITCH_2_HIGH__SHIFT, 6
+ 1007              	.set SWITCH_2_HIGH__SLW, CYREG_PRT4_SLW
+ 1008              	
+ 1009              	/* WARNING_GREEN */
+ 1010              	.set WARNING_GREEN__0__INTTYPE, CYREG_PICU2_INTTYPE3
+ 1011              	.set WARNING_GREEN__0__MASK, 0x08
+ 1012              	.set WARNING_GREEN__0__PC, CYREG_PRT2_PC3
+ 1013              	.set WARNING_GREEN__0__PORT, 2
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 207
 
 
- 1014              	.set WARNING_GREEN__0__PC, CYREG_PRT2_PC3
- 1015              	.set WARNING_GREEN__0__PORT, 2
- 1016              	.set WARNING_GREEN__0__SHIFT, 3
- 1017              	.set WARNING_GREEN__AG, CYREG_PRT2_AG
- 1018              	.set WARNING_GREEN__AMUX, CYREG_PRT2_AMUX
- 1019              	.set WARNING_GREEN__BIE, CYREG_PRT2_BIE
- 1020              	.set WARNING_GREEN__BIT_MASK, CYREG_PRT2_BIT_MASK
- 1021              	.set WARNING_GREEN__BYP, CYREG_PRT2_BYP
- 1022              	.set WARNING_GREEN__CTL, CYREG_PRT2_CTL
- 1023              	.set WARNING_GREEN__DM0, CYREG_PRT2_DM0
- 1024              	.set WARNING_GREEN__DM1, CYREG_PRT2_DM1
- 1025              	.set WARNING_GREEN__DM2, CYREG_PRT2_DM2
- 1026              	.set WARNING_GREEN__DR, CYREG_PRT2_DR
- 1027              	.set WARNING_GREEN__INP_DIS, CYREG_PRT2_INP_DIS
- 1028              	.set WARNING_GREEN__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
- 1029              	.set WARNING_GREEN__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
- 1030              	.set WARNING_GREEN__LCD_EN, CYREG_PRT2_LCD_EN
- 1031              	.set WARNING_GREEN__MASK, 0x08
- 1032              	.set WARNING_GREEN__PORT, 2
- 1033              	.set WARNING_GREEN__PRT, CYREG_PRT2_PRT
- 1034              	.set WARNING_GREEN__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
- 1035              	.set WARNING_GREEN__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
- 1036              	.set WARNING_GREEN__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
- 1037              	.set WARNING_GREEN__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
- 1038              	.set WARNING_GREEN__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
- 1039              	.set WARNING_GREEN__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
- 1040              	.set WARNING_GREEN__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
- 1041              	.set WARNING_GREEN__PS, CYREG_PRT2_PS
- 1042              	.set WARNING_GREEN__SHIFT, 3
- 1043              	.set WARNING_GREEN__SLW, CYREG_PRT2_SLW
- 1044              	
- 1045              	/* Miscellaneous */
- 1046              	.set BCLK__BUS_CLK__HZ, 24000000
- 1047              	.set BCLK__BUS_CLK__KHZ, 24000
- 1048              	.set BCLK__BUS_CLK__MHZ, 24
- 1049              	.set CYDEV_CHIP_DIE_LEOPARD, 1
- 1050              	.set CYDEV_CHIP_DIE_PANTHER, 18
- 1051              	.set CYDEV_CHIP_DIE_PSOC4A, 10
- 1052              	.set CYDEV_CHIP_DIE_PSOC5LP, 17
- 1053              	.set CYDEV_CHIP_DIE_TMA4, 2
- 1054              	.set CYDEV_CHIP_DIE_UNKNOWN, 0
- 1055              	.set CYDEV_CHIP_FAMILY_PSOC3, 1
- 1056              	.set CYDEV_CHIP_FAMILY_PSOC4, 2
- 1057              	.set CYDEV_CHIP_FAMILY_PSOC5, 3
- 1058              	.set CYDEV_CHIP_FAMILY_UNKNOWN, 0
- 1059              	.set CYDEV_CHIP_FAMILY_USED, CYDEV_CHIP_FAMILY_PSOC5
- 1060              	.set CYDEV_CHIP_JTAG_ID, 0x2E133069
- 1061              	.set CYDEV_CHIP_MEMBER_3A, 1
- 1062              	.set CYDEV_CHIP_MEMBER_4A, 10
- 1063              	.set CYDEV_CHIP_MEMBER_4C, 15
- 1064              	.set CYDEV_CHIP_MEMBER_4D, 6
- 1065              	.set CYDEV_CHIP_MEMBER_4E, 4
- 1066              	.set CYDEV_CHIP_MEMBER_4F, 11
- 1067              	.set CYDEV_CHIP_MEMBER_4G, 2
- 1068              	.set CYDEV_CHIP_MEMBER_4H, 9
- 1069              	.set CYDEV_CHIP_MEMBER_4I, 14
- 1070              	.set CYDEV_CHIP_MEMBER_4J, 7
+ 1014              	.set WARNING_GREEN__0__SHIFT, 3
+ 1015              	.set WARNING_GREEN__AG, CYREG_PRT2_AG
+ 1016              	.set WARNING_GREEN__AMUX, CYREG_PRT2_AMUX
+ 1017              	.set WARNING_GREEN__BIE, CYREG_PRT2_BIE
+ 1018              	.set WARNING_GREEN__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 1019              	.set WARNING_GREEN__BYP, CYREG_PRT2_BYP
+ 1020              	.set WARNING_GREEN__CTL, CYREG_PRT2_CTL
+ 1021              	.set WARNING_GREEN__DM0, CYREG_PRT2_DM0
+ 1022              	.set WARNING_GREEN__DM1, CYREG_PRT2_DM1
+ 1023              	.set WARNING_GREEN__DM2, CYREG_PRT2_DM2
+ 1024              	.set WARNING_GREEN__DR, CYREG_PRT2_DR
+ 1025              	.set WARNING_GREEN__INP_DIS, CYREG_PRT2_INP_DIS
+ 1026              	.set WARNING_GREEN__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 1027              	.set WARNING_GREEN__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 1028              	.set WARNING_GREEN__LCD_EN, CYREG_PRT2_LCD_EN
+ 1029              	.set WARNING_GREEN__MASK, 0x08
+ 1030              	.set WARNING_GREEN__PORT, 2
+ 1031              	.set WARNING_GREEN__PRT, CYREG_PRT2_PRT
+ 1032              	.set WARNING_GREEN__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 1033              	.set WARNING_GREEN__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
+ 1034              	.set WARNING_GREEN__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 1035              	.set WARNING_GREEN__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 1036              	.set WARNING_GREEN__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 1037              	.set WARNING_GREEN__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 1038              	.set WARNING_GREEN__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 1039              	.set WARNING_GREEN__PS, CYREG_PRT2_PS
+ 1040              	.set WARNING_GREEN__SHIFT, 3
+ 1041              	.set WARNING_GREEN__SLW, CYREG_PRT2_SLW
+ 1042              	
+ 1043              	/* Miscellaneous */
+ 1044              	.set BCLK__BUS_CLK__HZ, 24000000
+ 1045              	.set BCLK__BUS_CLK__KHZ, 24000
+ 1046              	.set BCLK__BUS_CLK__MHZ, 24
+ 1047              	.set CYDEV_CHIP_DIE_LEOPARD, 1
+ 1048              	.set CYDEV_CHIP_DIE_PANTHER, 18
+ 1049              	.set CYDEV_CHIP_DIE_PSOC4A, 10
+ 1050              	.set CYDEV_CHIP_DIE_PSOC5LP, 17
+ 1051              	.set CYDEV_CHIP_DIE_TMA4, 2
+ 1052              	.set CYDEV_CHIP_DIE_UNKNOWN, 0
+ 1053              	.set CYDEV_CHIP_FAMILY_PSOC3, 1
+ 1054              	.set CYDEV_CHIP_FAMILY_PSOC4, 2
+ 1055              	.set CYDEV_CHIP_FAMILY_PSOC5, 3
+ 1056              	.set CYDEV_CHIP_FAMILY_UNKNOWN, 0
+ 1057              	.set CYDEV_CHIP_FAMILY_USED, CYDEV_CHIP_FAMILY_PSOC5
+ 1058              	.set CYDEV_CHIP_JTAG_ID, 0x2E133069
+ 1059              	.set CYDEV_CHIP_MEMBER_3A, 1
+ 1060              	.set CYDEV_CHIP_MEMBER_4A, 10
+ 1061              	.set CYDEV_CHIP_MEMBER_4C, 15
+ 1062              	.set CYDEV_CHIP_MEMBER_4D, 6
+ 1063              	.set CYDEV_CHIP_MEMBER_4E, 4
+ 1064              	.set CYDEV_CHIP_MEMBER_4F, 11
+ 1065              	.set CYDEV_CHIP_MEMBER_4G, 2
+ 1066              	.set CYDEV_CHIP_MEMBER_4H, 9
+ 1067              	.set CYDEV_CHIP_MEMBER_4I, 14
+ 1068              	.set CYDEV_CHIP_MEMBER_4J, 7
+ 1069              	.set CYDEV_CHIP_MEMBER_4K, 8
+ 1070              	.set CYDEV_CHIP_MEMBER_4L, 13
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 208
 
 
- 1071              	.set CYDEV_CHIP_MEMBER_4K, 8
- 1072              	.set CYDEV_CHIP_MEMBER_4L, 13
- 1073              	.set CYDEV_CHIP_MEMBER_4M, 12
- 1074              	.set CYDEV_CHIP_MEMBER_4N, 5
- 1075              	.set CYDEV_CHIP_MEMBER_4U, 3
- 1076              	.set CYDEV_CHIP_MEMBER_5A, 17
- 1077              	.set CYDEV_CHIP_MEMBER_5B, 16
- 1078              	.set CYDEV_CHIP_MEMBER_UNKNOWN, 0
- 1079              	.set CYDEV_CHIP_MEMBER_USED, CYDEV_CHIP_MEMBER_5B
- 1080              	.set CYDEV_CHIP_DIE_EXPECT, CYDEV_CHIP_MEMBER_USED
- 1081              	.set CYDEV_CHIP_DIE_ACTUAL, CYDEV_CHIP_DIE_EXPECT
- 1082              	.set CYDEV_CHIP_REV_LEOPARD_ES1, 0
- 1083              	.set CYDEV_CHIP_REV_LEOPARD_ES2, 1
- 1084              	.set CYDEV_CHIP_REV_LEOPARD_ES3, 3
- 1085              	.set CYDEV_CHIP_REV_LEOPARD_PRODUCTION, 3
- 1086              	.set CYDEV_CHIP_REV_PANTHER_ES0, 0
- 1087              	.set CYDEV_CHIP_REV_PANTHER_ES1, 1
- 1088              	.set CYDEV_CHIP_REV_PANTHER_PRODUCTION, 1
- 1089              	.set CYDEV_CHIP_REV_PSOC4A_ES0, 17
- 1090              	.set CYDEV_CHIP_REV_PSOC4A_PRODUCTION, 17
- 1091              	.set CYDEV_CHIP_REV_PSOC5LP_ES0, 0
- 1092              	.set CYDEV_CHIP_REV_PSOC5LP_PRODUCTION, 0
- 1093              	.set CYDEV_CHIP_REV_TMA4_ES, 17
- 1094              	.set CYDEV_CHIP_REV_TMA4_ES2, 33
- 1095              	.set CYDEV_CHIP_REV_TMA4_PRODUCTION, 17
- 1096              	.set CYDEV_CHIP_REVISION_3A_ES1, 0
- 1097              	.set CYDEV_CHIP_REVISION_3A_ES2, 1
- 1098              	.set CYDEV_CHIP_REVISION_3A_ES3, 3
- 1099              	.set CYDEV_CHIP_REVISION_3A_PRODUCTION, 3
- 1100              	.set CYDEV_CHIP_REVISION_4A_ES0, 17
- 1101              	.set CYDEV_CHIP_REVISION_4A_PRODUCTION, 17
- 1102              	.set CYDEV_CHIP_REVISION_4C_PRODUCTION, 0
- 1103              	.set CYDEV_CHIP_REVISION_4D_PRODUCTION, 0
- 1104              	.set CYDEV_CHIP_REVISION_4E_PRODUCTION, 0
- 1105              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION, 0
- 1106              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA, 0
- 1107              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256K, 0
- 1108              	.set CYDEV_CHIP_REVISION_4G_ES, 17
- 1109              	.set CYDEV_CHIP_REVISION_4G_ES2, 33
- 1110              	.set CYDEV_CHIP_REVISION_4G_PRODUCTION, 17
- 1111              	.set CYDEV_CHIP_REVISION_4H_PRODUCTION, 0
- 1112              	.set CYDEV_CHIP_REVISION_4I_PRODUCTION, 0
- 1113              	.set CYDEV_CHIP_REVISION_4J_PRODUCTION, 0
- 1114              	.set CYDEV_CHIP_REVISION_4K_PRODUCTION, 0
- 1115              	.set CYDEV_CHIP_REVISION_4L_PRODUCTION, 0
- 1116              	.set CYDEV_CHIP_REVISION_4M_PRODUCTION, 0
- 1117              	.set CYDEV_CHIP_REVISION_4N_PRODUCTION, 0
- 1118              	.set CYDEV_CHIP_REVISION_4U_PRODUCTION, 0
- 1119              	.set CYDEV_CHIP_REVISION_5A_ES0, 0
- 1120              	.set CYDEV_CHIP_REVISION_5A_ES1, 1
- 1121              	.set CYDEV_CHIP_REVISION_5A_PRODUCTION, 1
- 1122              	.set CYDEV_CHIP_REVISION_5B_ES0, 0
- 1123              	.set CYDEV_CHIP_REVISION_5B_PRODUCTION, 0
- 1124              	.set CYDEV_CHIP_REVISION_USED, CYDEV_CHIP_REVISION_5B_PRODUCTION
- 1125              	.set CYDEV_CHIP_REV_EXPECT, CYDEV_CHIP_REVISION_USED
- 1126              	.set CYDEV_CONFIG_FASTBOOT_ENABLED, 1
- 1127              	.set CYDEV_CONFIG_UNUSED_IO_AllowButWarn, 0
+ 1071              	.set CYDEV_CHIP_MEMBER_4M, 12
+ 1072              	.set CYDEV_CHIP_MEMBER_4N, 5
+ 1073              	.set CYDEV_CHIP_MEMBER_4U, 3
+ 1074              	.set CYDEV_CHIP_MEMBER_5A, 17
+ 1075              	.set CYDEV_CHIP_MEMBER_5B, 16
+ 1076              	.set CYDEV_CHIP_MEMBER_UNKNOWN, 0
+ 1077              	.set CYDEV_CHIP_MEMBER_USED, CYDEV_CHIP_MEMBER_5B
+ 1078              	.set CYDEV_CHIP_DIE_EXPECT, CYDEV_CHIP_MEMBER_USED
+ 1079              	.set CYDEV_CHIP_DIE_ACTUAL, CYDEV_CHIP_DIE_EXPECT
+ 1080              	.set CYDEV_CHIP_REV_LEOPARD_ES1, 0
+ 1081              	.set CYDEV_CHIP_REV_LEOPARD_ES2, 1
+ 1082              	.set CYDEV_CHIP_REV_LEOPARD_ES3, 3
+ 1083              	.set CYDEV_CHIP_REV_LEOPARD_PRODUCTION, 3
+ 1084              	.set CYDEV_CHIP_REV_PANTHER_ES0, 0
+ 1085              	.set CYDEV_CHIP_REV_PANTHER_ES1, 1
+ 1086              	.set CYDEV_CHIP_REV_PANTHER_PRODUCTION, 1
+ 1087              	.set CYDEV_CHIP_REV_PSOC4A_ES0, 17
+ 1088              	.set CYDEV_CHIP_REV_PSOC4A_PRODUCTION, 17
+ 1089              	.set CYDEV_CHIP_REV_PSOC5LP_ES0, 0
+ 1090              	.set CYDEV_CHIP_REV_PSOC5LP_PRODUCTION, 0
+ 1091              	.set CYDEV_CHIP_REV_TMA4_ES, 17
+ 1092              	.set CYDEV_CHIP_REV_TMA4_ES2, 33
+ 1093              	.set CYDEV_CHIP_REV_TMA4_PRODUCTION, 17
+ 1094              	.set CYDEV_CHIP_REVISION_3A_ES1, 0
+ 1095              	.set CYDEV_CHIP_REVISION_3A_ES2, 1
+ 1096              	.set CYDEV_CHIP_REVISION_3A_ES3, 3
+ 1097              	.set CYDEV_CHIP_REVISION_3A_PRODUCTION, 3
+ 1098              	.set CYDEV_CHIP_REVISION_4A_ES0, 17
+ 1099              	.set CYDEV_CHIP_REVISION_4A_PRODUCTION, 17
+ 1100              	.set CYDEV_CHIP_REVISION_4C_PRODUCTION, 0
+ 1101              	.set CYDEV_CHIP_REVISION_4D_PRODUCTION, 0
+ 1102              	.set CYDEV_CHIP_REVISION_4E_PRODUCTION, 0
+ 1103              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION, 0
+ 1104              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256DMA, 0
+ 1105              	.set CYDEV_CHIP_REVISION_4F_PRODUCTION_256K, 0
+ 1106              	.set CYDEV_CHIP_REVISION_4G_ES, 17
+ 1107              	.set CYDEV_CHIP_REVISION_4G_ES2, 33
+ 1108              	.set CYDEV_CHIP_REVISION_4G_PRODUCTION, 17
+ 1109              	.set CYDEV_CHIP_REVISION_4H_PRODUCTION, 0
+ 1110              	.set CYDEV_CHIP_REVISION_4I_PRODUCTION, 0
+ 1111              	.set CYDEV_CHIP_REVISION_4J_PRODUCTION, 0
+ 1112              	.set CYDEV_CHIP_REVISION_4K_PRODUCTION, 0
+ 1113              	.set CYDEV_CHIP_REVISION_4L_PRODUCTION, 0
+ 1114              	.set CYDEV_CHIP_REVISION_4M_PRODUCTION, 0
+ 1115              	.set CYDEV_CHIP_REVISION_4N_PRODUCTION, 0
+ 1116              	.set CYDEV_CHIP_REVISION_4U_PRODUCTION, 0
+ 1117              	.set CYDEV_CHIP_REVISION_5A_ES0, 0
+ 1118              	.set CYDEV_CHIP_REVISION_5A_ES1, 1
+ 1119              	.set CYDEV_CHIP_REVISION_5A_PRODUCTION, 1
+ 1120              	.set CYDEV_CHIP_REVISION_5B_ES0, 0
+ 1121              	.set CYDEV_CHIP_REVISION_5B_PRODUCTION, 0
+ 1122              	.set CYDEV_CHIP_REVISION_USED, CYDEV_CHIP_REVISION_5B_PRODUCTION
+ 1123              	.set CYDEV_CHIP_REV_EXPECT, CYDEV_CHIP_REVISION_USED
+ 1124              	.set CYDEV_CONFIG_FASTBOOT_ENABLED, 1
+ 1125              	.set CYDEV_CONFIG_UNUSED_IO_AllowButWarn, 0
+ 1126              	.set CYDEV_CONFIG_UNUSED_IO, CYDEV_CONFIG_UNUSED_IO_AllowButWarn
+ 1127              	.set CYDEV_CONFIG_UNUSED_IO_AllowWithInfo, 1
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 209
 
 
- 1128              	.set CYDEV_CONFIG_UNUSED_IO, CYDEV_CONFIG_UNUSED_IO_AllowButWarn
- 1129              	.set CYDEV_CONFIG_UNUSED_IO_AllowWithInfo, 1
- 1130              	.set CYDEV_CONFIG_UNUSED_IO_Disallowed, 2
- 1131              	.set CYDEV_CONFIGURATION_COMPRESSED, 1
- 1132              	.set CYDEV_CONFIGURATION_DMA, 0
- 1133              	.set CYDEV_CONFIGURATION_ECC, 1
- 1134              	.set CYDEV_CONFIGURATION_IMOENABLED, CYDEV_CONFIG_FASTBOOT_ENABLED
- 1135              	.set CYDEV_CONFIGURATION_MODE_COMPRESSED, 0
- 1136              	.set CYDEV_CONFIGURATION_MODE, CYDEV_CONFIGURATION_MODE_COMPRESSED
- 1137              	.set CYDEV_CONFIGURATION_MODE_DMA, 2
- 1138              	.set CYDEV_CONFIGURATION_MODE_UNCOMPRESSED, 1
- 1139              	.set CYDEV_DEBUG_ENABLE_MASK, 0x20
- 1140              	.set CYDEV_DEBUG_ENABLE_REGISTER, CYREG_MLOGIC_DEBUG
- 1141              	.set CYDEV_DEBUGGING_DPS_Disable, 3
- 1142              	.set CYDEV_DEBUGGING_DPS_JTAG_4, 1
- 1143              	.set CYDEV_DEBUGGING_DPS_JTAG_5, 0
- 1144              	.set CYDEV_DEBUGGING_DPS_SWD, 2
- 1145              	.set CYDEV_DEBUGGING_DPS_SWD_SWV, 6
- 1146              	.set CYDEV_DEBUGGING_DPS, CYDEV_DEBUGGING_DPS_SWD_SWV
- 1147              	.set CYDEV_DEBUGGING_ENABLE, 1
- 1148              	.set CYDEV_DEBUGGING_XRES, 0
- 1149              	.set CYDEV_DMA_CHANNELS_AVAILABLE, 24
- 1150              	.set CYDEV_ECC_ENABLE, 0
- 1151              	.set CYDEV_HEAP_SIZE, 0x400
- 1152              	.set CYDEV_INSTRUCT_CACHE_ENABLED, 1
- 1153              	.set CYDEV_INTR_RISING, 0x0000000B
- 1154              	.set CYDEV_IS_EXPORTING_CODE, 0
- 1155              	.set CYDEV_IS_IMPORTING_CODE, 0
- 1156              	.set CYDEV_PROJ_TYPE, 0
- 1157              	.set CYDEV_PROJ_TYPE_BOOTLOADER, 1
- 1158              	.set CYDEV_PROJ_TYPE_LAUNCHER, 5
- 1159              	.set CYDEV_PROJ_TYPE_LOADABLE, 2
- 1160              	.set CYDEV_PROJ_TYPE_LOADABLEANDBOOTLOADER, 4
- 1161              	.set CYDEV_PROJ_TYPE_MULTIAPPBOOTLOADER, 3
- 1162              	.set CYDEV_PROJ_TYPE_STANDARD, 0
- 1163              	.set CYDEV_PROTECTION_ENABLE, 0
- 1164              	.set CYDEV_STACK_SIZE, 0x0800
- 1165              	.set CYDEV_USE_BUNDLED_CMSIS, 1
- 1166              	.set CYDEV_VARIABLE_VDDA, 0
- 1167              	.set CYDEV_VDDA_MV, 5000
- 1168              	.set CYDEV_VDDD_MV, 5000
- 1169              	.set CYDEV_VDDIO0_MV, 5000
- 1170              	.set CYDEV_VDDIO1_MV, 5000
- 1171              	.set CYDEV_VDDIO2_MV, 5000
- 1172              	.set CYDEV_VDDIO3_MV, 5000
- 1173              	.set CYDEV_VIO0_MV, 5000
- 1174              	.set CYDEV_VIO1_MV, 5000
- 1175              	.set CYDEV_VIO2_MV, 5000
- 1176              	.set CYDEV_VIO3_MV, 5000
- 1177              	.set CYIPBLOCK_ARM_CM3_VERSION, 0
- 1178              	.set CYIPBLOCK_P3_ANAIF_VERSION, 0
- 1179              	.set CYIPBLOCK_P3_CAPSENSE_VERSION, 0
- 1180              	.set CYIPBLOCK_P3_COMP_VERSION, 0
- 1181              	.set CYIPBLOCK_P3_DMA_VERSION, 0
- 1182              	.set CYIPBLOCK_P3_DRQ_VERSION, 0
- 1183              	.set CYIPBLOCK_P3_EMIF_VERSION, 0
- 1184              	.set CYIPBLOCK_P3_I2C_VERSION, 0
+ 1128              	.set CYDEV_CONFIG_UNUSED_IO_Disallowed, 2
+ 1129              	.set CYDEV_CONFIGURATION_COMPRESSED, 1
+ 1130              	.set CYDEV_CONFIGURATION_DMA, 0
+ 1131              	.set CYDEV_CONFIGURATION_ECC, 1
+ 1132              	.set CYDEV_CONFIGURATION_IMOENABLED, CYDEV_CONFIG_FASTBOOT_ENABLED
+ 1133              	.set CYDEV_CONFIGURATION_MODE_COMPRESSED, 0
+ 1134              	.set CYDEV_CONFIGURATION_MODE, CYDEV_CONFIGURATION_MODE_COMPRESSED
+ 1135              	.set CYDEV_CONFIGURATION_MODE_DMA, 2
+ 1136              	.set CYDEV_CONFIGURATION_MODE_UNCOMPRESSED, 1
+ 1137              	.set CYDEV_DEBUG_ENABLE_MASK, 0x20
+ 1138              	.set CYDEV_DEBUG_ENABLE_REGISTER, CYREG_MLOGIC_DEBUG
+ 1139              	.set CYDEV_DEBUGGING_DPS_Disable, 3
+ 1140              	.set CYDEV_DEBUGGING_DPS_JTAG_4, 1
+ 1141              	.set CYDEV_DEBUGGING_DPS_JTAG_5, 0
+ 1142              	.set CYDEV_DEBUGGING_DPS_SWD, 2
+ 1143              	.set CYDEV_DEBUGGING_DPS_SWD_SWV, 6
+ 1144              	.set CYDEV_DEBUGGING_DPS, CYDEV_DEBUGGING_DPS_SWD_SWV
+ 1145              	.set CYDEV_DEBUGGING_ENABLE, 1
+ 1146              	.set CYDEV_DEBUGGING_XRES, 0
+ 1147              	.set CYDEV_DMA_CHANNELS_AVAILABLE, 24
+ 1148              	.set CYDEV_ECC_ENABLE, 0
+ 1149              	.set CYDEV_HEAP_SIZE, 0x400
+ 1150              	.set CYDEV_INSTRUCT_CACHE_ENABLED, 1
+ 1151              	.set CYDEV_INTR_RISING, 0x0000000B
+ 1152              	.set CYDEV_IS_EXPORTING_CODE, 0
+ 1153              	.set CYDEV_IS_IMPORTING_CODE, 0
+ 1154              	.set CYDEV_PROJ_TYPE, 0
+ 1155              	.set CYDEV_PROJ_TYPE_BOOTLOADER, 1
+ 1156              	.set CYDEV_PROJ_TYPE_LAUNCHER, 5
+ 1157              	.set CYDEV_PROJ_TYPE_LOADABLE, 2
+ 1158              	.set CYDEV_PROJ_TYPE_LOADABLEANDBOOTLOADER, 4
+ 1159              	.set CYDEV_PROJ_TYPE_MULTIAPPBOOTLOADER, 3
+ 1160              	.set CYDEV_PROJ_TYPE_STANDARD, 0
+ 1161              	.set CYDEV_PROTECTION_ENABLE, 0
+ 1162              	.set CYDEV_STACK_SIZE, 0x0800
+ 1163              	.set CYDEV_USE_BUNDLED_CMSIS, 1
+ 1164              	.set CYDEV_VARIABLE_VDDA, 0
+ 1165              	.set CYDEV_VDDA_MV, 5000
+ 1166              	.set CYDEV_VDDD_MV, 5000
+ 1167              	.set CYDEV_VDDIO0_MV, 5000
+ 1168              	.set CYDEV_VDDIO1_MV, 5000
+ 1169              	.set CYDEV_VDDIO2_MV, 5000
+ 1170              	.set CYDEV_VDDIO3_MV, 5000
+ 1171              	.set CYDEV_VIO0_MV, 5000
+ 1172              	.set CYDEV_VIO1_MV, 5000
+ 1173              	.set CYDEV_VIO2_MV, 5000
+ 1174              	.set CYDEV_VIO3_MV, 5000
+ 1175              	.set CYIPBLOCK_ARM_CM3_VERSION, 0
+ 1176              	.set CYIPBLOCK_P3_ANAIF_VERSION, 0
+ 1177              	.set CYIPBLOCK_P3_CAPSENSE_VERSION, 0
+ 1178              	.set CYIPBLOCK_P3_COMP_VERSION, 0
+ 1179              	.set CYIPBLOCK_P3_DMA_VERSION, 0
+ 1180              	.set CYIPBLOCK_P3_DRQ_VERSION, 0
+ 1181              	.set CYIPBLOCK_P3_EMIF_VERSION, 0
+ 1182              	.set CYIPBLOCK_P3_I2C_VERSION, 0
+ 1183              	.set CYIPBLOCK_P3_LCD_VERSION, 0
+ 1184              	.set CYIPBLOCK_P3_LPF_VERSION, 0
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 210
 
 
- 1185              	.set CYIPBLOCK_P3_LCD_VERSION, 0
- 1186              	.set CYIPBLOCK_P3_LPF_VERSION, 0
- 1187              	.set CYIPBLOCK_P3_PM_VERSION, 0
- 1188              	.set CYIPBLOCK_P3_TIMER_VERSION, 0
- 1189              	.set CYIPBLOCK_P3_USB_VERSION, 0
- 1190              	.set CYIPBLOCK_P3_VIDAC_VERSION, 0
- 1191              	.set CYIPBLOCK_P3_VREF_VERSION, 0
- 1192              	.set CYIPBLOCK_S8_GPIO_VERSION, 0
- 1193              	.set CYIPBLOCK_S8_IRQ_VERSION, 0
- 1194              	.set CYIPBLOCK_S8_SAR_VERSION, 0
- 1195              	.set CYIPBLOCK_S8_SIO_VERSION, 0
- 1196              	.set CYIPBLOCK_S8_UDB_VERSION, 0
- 1197              	.set DMA_CHANNELS_USED__MASK0, 0x00000003
- 1198              	.set CYDEV_BOOTLOADER_ENABLE, 0
- 1199              	.endif
+ 1185              	.set CYIPBLOCK_P3_PM_VERSION, 0
+ 1186              	.set CYIPBLOCK_P3_TIMER_VERSION, 0
+ 1187              	.set CYIPBLOCK_P3_USB_VERSION, 0
+ 1188              	.set CYIPBLOCK_P3_VIDAC_VERSION, 0
+ 1189              	.set CYIPBLOCK_P3_VREF_VERSION, 0
+ 1190              	.set CYIPBLOCK_S8_GPIO_VERSION, 0
+ 1191              	.set CYIPBLOCK_S8_IRQ_VERSION, 0
+ 1192              	.set CYIPBLOCK_S8_SAR_VERSION, 0
+ 1193              	.set CYIPBLOCK_S8_SIO_VERSION, 0
+ 1194              	.set CYIPBLOCK_S8_UDB_VERSION, 0
+ 1195              	.set DMA_CHANNELS_USED__MASK0, 0x00000003
+ 1196              	.set CYDEV_BOOTLOADER_ENABLE, 0
+ 1197              	.endif
   16              	
   17              	.syntax unified
   18              	.text
@@ -12598,11 +12596,11 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
   55              	
   56              	CyDelayCycles_done:
   57 000e 7047     	    BX lr                     /*  3    2 */
+  58              	
+  59              	.else
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 211
 
 
-  58              	
-  59              	.else
   60              	
   61              	    CMP r0, #20               /*  1    2   If delay is short - jump to cycle */
   62              	    BLS CyDelayCycles_short   /*  1    2  */
@@ -12658,11 +12656,11 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  112              	* Summary:
  113              	*  CyEnterCriticalSection disables interrupts and returns a value indicating
  114              	*  whether interrupts were previously enabled (the actual value depends on
+ 115              	*  whether the device is PSoC 3 or PSoC 5).
+ 116              	*
 ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 212
 
 
- 115              	*  whether the device is PSoC 3 or PSoC 5).
- 116              	*
  117              	*  Note Implementation of CyEnterCriticalSection manipulates the IRQ enable bit
  118              	*  with interrupts still enabled. The test and set of the interrupt bits is not
  119              	*  atomic; this is true for both PSoC 3 and PSoC 5. Therefore, to avoid
@@ -12718,6 +12716,3 @@ ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  169              	.endfunc
  170              	
  171 001e 00BF     	.end
-ARM GAS  .\Generated_Source\PSoC5\CyBootAsmGnu.s 			page 213
-
-
